@@ -6,6 +6,8 @@ lunch lineage_fuxi-bp2a-userdebug
 
 m evolution -j12
 
+test
+
 #  Device Tree for Xiaomi 13 (fuxi)
 
 ## Spec Sheet
