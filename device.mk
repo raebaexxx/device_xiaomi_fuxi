@@ -4,6 +4,10 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.1-impl \
+    android.hardware.bluetooth@1.1-service
+
 # Inherit from sm8550-common
 $(call inherit-product, device/xiaomi/sm8550-common/common.mk)
 
