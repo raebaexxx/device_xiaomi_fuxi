@@ -1,10 +1,18 @@
+```bash
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
+```
 
+```bash
 . build/envsetup.sh
+```
 
+```bash
 lunch lineage_fuxi-bp2a-userdebug
+```
 
+```bash
 m evolution -j12
+```
 
 #  Device Tree for Xiaomi 13 (fuxi)
 
