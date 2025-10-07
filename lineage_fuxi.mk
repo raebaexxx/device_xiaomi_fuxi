@@ -16,11 +16,10 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 TARGET_DISABLE_EPPE := true
 
-# Maintainer Flag
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.paranoid.maintainer=RaeBaeXXX
-
+# LunarisAOSP Flags
+LUNARIS_BUILD_TYPE := UNOFFICIAL
 WITH_GMS := true
+TARGET_OPTIMIZED_DEXOPT := true
 
 # UDFPS
 TARGET_HAS_UDFPS := true
