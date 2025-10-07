@@ -16,9 +16,11 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 TARGET_DISABLE_EPPE := true
 
-WITH_GMS := true
+# Maintainer Flag
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.paranoid.maintainer=RaeBaeXXX
 
-ro.paranoid.maintainer=RaeBaeXXX
+WITH_GMS := true
 
 # UDFPS
 TARGET_HAS_UDFPS := true
