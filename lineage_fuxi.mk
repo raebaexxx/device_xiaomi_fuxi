@@ -16,6 +16,10 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 TARGET_DISABLE_EPPE := true
 
+WITH_GMS := true
+
+ro.paranoid.maintainer=RaeBaeXXX
+
 # UDFPS
 TARGET_HAS_UDFPS := true
 
