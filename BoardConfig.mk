@@ -6,6 +6,9 @@
 
 DEVICE_PATH := device/xiaomi/fuxi
 
+# Camera
+TARGET_USES_MIUI_CAMERA := true
+
 # Inherit from sm8550-common
 include device/xiaomi/sm8550-common/BoardConfigCommon.mk
 
