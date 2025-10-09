@@ -22,7 +22,6 @@ from extract_utils.main import (
 )
 
 namespace_imports = [
-    'device/xiaomi/fuxi',
     'device/xiaomi/sm8550-common',
     'hardware/qcom-caf/sm8550',
     'hardware/xiaomi',
