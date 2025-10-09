@@ -1119,6 +1119,15 @@ vendor/etc/qvr/qvr_hid_device_list.txt
 vendor/etc/qvr/qvr_usb_device_list.txt
 vendor/etc/qvr/qvrservice_config.txt
 
+# Sensors
+odm/lib64/libssccalapi@2.0.so
+
+# Sensors (CIT)
+odm/bin/hw/vendor.xiaomi.sensor.citsensorservice@2.0-service
+odm/etc/init/vendor.xiaomi.sensor.citsensorservice@2.0-service.rc
+odm/etc/vintf/manifest/vendor.xiaomi.sensor.citsensorservice@2.0-service.xml
+odm/lib64/hw/vendor.xiaomi.sensor.citsensorservice@2.0-impl.so
+
 # Sensors (Config)
 odm/etc/sensors/config/ak991x_dri_0.json
 odm/etc/sensors/config/kailua_qsh_ble_0.json
