@@ -31,7 +31,7 @@ PRODUCT_NAME := lineage_fuxi
 PRODUCT_DEVICE := fuxi
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := Xiaomi 13 5G
+PRODUCT_MODEL := Xiaomi 13
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
