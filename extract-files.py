@@ -33,6 +33,8 @@ lib_fixups: lib_fixups_user_type = {
     libs_proto_3_9_1: lib_fixup_vendorcompat,
 }
 
+sensor_simbol = b'_ZN13DisplayConfig10ClientImpl4InitENSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEEPNS_14ConfigCallbackE\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+
 blob_fixups: blob_fixups_user_type = {
     (
         'odm/etc/camera/enhance_motiontuning.xml',
@@ -53,6 +55,11 @@ blob_fixups: blob_fixups_user_type = {
     ): blob_fixup()
         .add_needed('libprocessgroup_shim.so'),
     (
+    'odm/lib64/hw/camera.xiaomi.so'
+    ): blob_fixup()
+        .replace_needed('libui.so', 'libui-v34.so')
+        .add_needed('libprocessgroup_shim.so'),
+    (
         'odm/lib64/libMiVideoFilter.so',
     ): blob_fixup()
         .clear_symbol_version('AHardwareBuffer_allocate')
@@ -65,11 +72,6 @@ blob_fixups: blob_fixups_user_type = {
         'odm/lib64/libxmi_high_dynamic_range_cdsp.so',
     ): blob_fixup()
         .strip_debug_sections(),
-    (
-    'odm/lib64/hw/camera.xiaomi.so'
-    ): blob_fixup()
-        .replace_needed('libui.so', 'libui-v34.so')
-        .add_needed('libprocessgroup_shim.so'),
 }
 
 module = ExtractUtilsModule(
