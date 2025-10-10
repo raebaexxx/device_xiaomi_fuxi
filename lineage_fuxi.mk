@@ -14,9 +14,6 @@ $(call inherit-product, device/xiaomi/fuxi/device.mk)
 # Inherit from common lineage configuration
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-# Camera
-$(call inherit-product-if-exists, vendor/xiaomi/camera/miuicamera.mk)
-
 TARGET_DISABLE_EPPE := true
 
 # LunarisAOSP Flags
