@@ -10,8 +10,11 @@ $(call inherit-product, device/xiaomi/sm8550-common/common.mk)
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/xiaomi/fuxi/fuxi-vendor.mk)
 
-# Camera
+# Camera MIUI
 $(call inherit-product-if-exists, vendor/xiaomi/camera/miuicamera.mk)
+
+# Camera Google
+$(call inherit-product-if-exists, vendor/xiaomi/GoogleCamera/config.mk)
 
 # Audio
 PRODUCT_COPY_FILES += \
