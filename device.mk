@@ -11,7 +11,7 @@ $(call inherit-product, device/xiaomi/sm8550-common/common.mk)
 $(call inherit-product, vendor/xiaomi/fuxi/fuxi-vendor.mk)
 
 # Camera MIUI
-$(call inherit-product-if-exists, device/xiaomi/miuicamera-fuxi/device.mk)
+$(call inherit-product-if-exists, vendor/xiaomi/camera/miuicamera.mk)
 
 # Camera Google
 $(call inherit-product-if-exists, vendor/xiaomi/GoogleCamera/config.mk)
