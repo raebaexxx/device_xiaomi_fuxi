@@ -5,7 +5,7 @@
 #
 
 # Inherit from proprietary files for miuicamera
-include device/xiaomi/miuicamera-fuxi/BoardConfig.mk
+-include device/xiaomi/miuicamera-fuxi/BoardConfig.mk
 
 DEVICE_PATH := device/xiaomi/fuxi
 
