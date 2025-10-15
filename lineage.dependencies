@@ -1,38 +1,6 @@
 [
   {
-    "remote"     : "github-non-los",
-    "repository" : "raebaexxx/device_xiaomi_fuxi",
-    "target_path": "device/xiaomi/fuxi",
-    "branch"     : "lunaris_a16"
-  },
-  {
-    "remote"     : "github-non-los",
-    "repository" : "raebaexxx/device_xiaomi_sm8550-common",
-    "target_path": "device/xiaomi/sm8550-common",
-    "branch"     : "lunaris_a16"
-  },
-  {
-    "remote"     : "github-non-los",
-    "repository" : "raebaexxx/hardware_xiaomi",
-    "target_path": "hardware/xiaomi",
-    "branch"     : "evox_a16"
-  },
-  {
-    "remote"     : "github-non-los",
-    "repository" : "raebaexxx/kernel_xiaomi_sm8550-new",
-    "target_path": "kernel/xiaomi/sm8550",
-    "branch"     : "16.0"
-  },
-  {
-    "remote"     : "github-non-los",
-    "repository" : "raebaexxx/kernel_xiaomi_sm8550-modules-new",
-    "target_path": "kernel/xiaomi/sm8550-modules",
-    "branch"     : "lunaris_a16"
-  },
-  {
-    "remote"     : "github-non-los",
-    "repository" : "raebaexxx/kernel_xiaomi_sm8550-devicetrees",
-    "target_path": "kernel/xiaomi/sm8550-devicetrees",
-    "branch"     : "lunaris_a16"
-  },
+    "repository": "android_device_xiaomi_sm8550-common",
+    "target_path": "device/xiaomi/sm8550-common"
+  }
 ]
