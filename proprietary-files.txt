@@ -278,7 +278,7 @@ odm/lib64/camera/fdconfigvideo.bin
 odm/lib64/camera/fdconfigvideolite.bin
 odm/lib64/camera/libchxlogicalcameratable.so
 odm/lib64/hw/camera.qcom.so
-odm/lib64/hw/camera.xiaomi.so
+odm/lib64/hw/camera.xiaomi.so;DISABLE_CHECKELF
 odm/lib64/hw/com.qti.chi.offline.so
 odm/lib64/hw/com.qti.chi.override.so
 odm/lib64/camx.device-impl.so
