@@ -20,3 +20,10 @@ on post-fs && property:ro.boot.hwc=CN
     mount none /dev/null /product/etc/permissions/android.hardware.telephony.euicc.xml bind
     mount none /dev/null /product/priv-app/EuiccGoogle/EuiccGoogle.apk bind
     mount none /dev/null /product/app/XiaomiEuicc/XiaomiEuicc.apk bind
+
+service citsensor-hal-2-0 /odm/bin/hw/vendor.xiaomi.sensor.citsensorservice@2.0-service
+    class late_start
+    user system
+    group system input
+    override
+    task_profiles ServiceCapacityLow
