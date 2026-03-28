@@ -64,10 +64,10 @@ void vendor_load_properties() {
 
     if (sku == "fuxi") { // Xiaomi 13
         if (region == "CN") { // China
-            set_ro_build_prop("model", "2211133C");
+            set_ro_build_prop("model", "Xiaomi 13");
             set_ro_build_prop("name", "fuxi");
         } else {              // Global
-            set_ro_build_prop("model", "2211133G");
+            set_ro_build_prop("model", "Xiaomi 13");
             set_ro_build_prop("name", "fuxi_global");
         }
     }

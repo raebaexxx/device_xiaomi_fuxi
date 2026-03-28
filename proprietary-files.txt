@@ -1,4 +1,4 @@
-# Unpinned blobs from fuxi (OS2.0.200.7.VMCCNXM)
+# Unpinned blobs from fuxi (OS3.0.2.0.WMCCNXM)
 
 # ACDB
 odm/etc/acdbdata/Tutu/Tutu_acdb_cal.acdb:vendor/etc/acdbdata/kalama_mtp/Tutu_acdb_cal.acdb
@@ -113,14 +113,10 @@ vendor/lib/rfsa/adsp/libvpp_frc.so
 vendor/lib/rfsa/adsp/libvpp_svc_skel.so
 vendor/lib/rfsa/adsp/libvpp_vqa_networks.so
 vendor/lib/rfsa/adsp/libvpt_action_recognition.so
-vendor/lib/rfsa/adsp/nearby.napp_header;MODULE=nearby.napp_header
+vendor/lib/rfsa/adsp/nearby.napp_header
 vendor/lib/rfsa/adsp/nearby.so
 
 # Audio (Configs)
-odm/etc/audio/sku_kalama/mixer_paths_kalama_mtp.xml
-odm/etc/audio/sku_kalama/mixer_paths_overlay_dynamic.xml
-odm/etc/audio/sku_kalama/mixer_paths_overlay_static.xml
-odm/etc/audio/sku_kalama/resourcemanager_kalama_mtp.xml
 odm/etc/backend_conf.xml
 
 # Audio (Firmware)
@@ -161,7 +157,8 @@ odm/etc/camera/beauty_config_cn.json
 odm/etc/camera/beauty_config_gl.json
 odm/etc/camera/beauty_style_nude.cng
 odm/etc/camera/bokehParams.json
-odm/etc/camera/camerabooster.json
+odm/etc/camera/cameradfx_config.json
+odm/etc/camera/cameraopt_reclaim.json
 odm/etc/camera/camxoverridesettings.txt
 odm/etc/camera/CFR_para_UW_V01.bin
 odm/etc/camera/com.xiaomi.dcal.wt.data
@@ -237,6 +234,16 @@ odm/etc/camera/portrait_segmentation_qat.dlc
 odm/etc/camera/preview_bokeh_params_mono.json
 odm/etc/camera/preview_bokeh_params_pro.json
 odm/etc/camera/preview_mdbokeh_params_pro.json
+odm/etc/camera/sceneDetection.xml
+odm/etc/camera/sky_segmentation_qat.dlc
+odm/etc/camera/snsc.bin
+odm/etc/camera/snsc_params.json
+odm/etc/camera/ultrazoom.bin
+odm/etc/camera/ultrazoom_ii.bin
+odm/etc/camera/VideoNight4K/ellv.bin
+odm/etc/camera/VideoNight4K/ellv_params.xml
+odm/etc/camera/video_stabilizer.xml
+odm/etc/camera/vidhance_calibration
 odm/etc/camera/xiaomi/dualbokehjpegsnapshot.json
 odm/etc/camera/xiaomi/dualbokehsnapshot.json
 odm/etc/camera/xiaomi/EcoCloudInfo.json
@@ -267,6 +274,8 @@ odm/etc/camera/xiaomi/thirdpartyrawsupernightjpeg.json
 odm/etc/camera/xiaomi/thirdpartyrawsupernightyuv_ext.json
 odm/etc/camera/xiaomi/thirdpartyrawsupernightyuv.json
 odm/etc/camera/xiaomi/thirdpartysnapshot.json
+odm/etc/camera/xmi_slmt_4x_1080p.dlc
+odm/etc/camera/xmi_slmt_4x_720p.dlc
 odm/etc/init/vendor.qti.camera.provider-service_64.rc
 odm/etc/cit_camera_resolution.json
 odm/etc/cit_param_config.json
@@ -278,7 +287,7 @@ odm/lib64/camera/fdconfigvideo.bin
 odm/lib64/camera/fdconfigvideolite.bin
 odm/lib64/camera/libchxlogicalcameratable.so
 odm/lib64/hw/camera.qcom.so
-odm/lib64/hw/camera.xiaomi.so;DISABLE_CHECKELF
+odm/lib64/hw/camera.xiaomi.so
 odm/lib64/hw/com.qti.chi.offline.so
 odm/lib64/hw/com.qti.chi.override.so
 odm/lib64/camx.device-impl.so
@@ -323,6 +332,7 @@ odm/lib64/com.qualcomm.mcx.nonlinearmapper.so
 odm/lib64/com.qualcomm.mcx.policy.mfl.so
 odm/lib64/com.qualcomm.mcx.policy.xr.so
 odm/lib64/com.qualcomm.qti.mcx.usecase.extension.so
+odm/lib64/com.xiaomi.camdfx.so
 odm/lib64/com.xiaomi.camhal.overlap.so
 odm/lib64/com.xiaomi.camhal.submodel.camxfrag.so
 odm/lib64/com.xiaomi.camhal.submodel.chifrag.so
@@ -375,7 +385,9 @@ odm/lib64/libcom.xiaomi.mawutils.so
 odm/lib64/libcom.xiaomi.mawutilsold.so
 odm/lib64/libcom.xiaomi.metadatautils.so
 odm/lib64/libcom.xiaomi.pluginutils.so
+odm/lib64/libcom.xiaomi.providercallback.so
 odm/lib64/libcommonchiutils.so
+odm/lib64/libdeflickerNM.so
 odm/lib64/libdeflicker.so
 odm/lib64/libdualcam_optical_zoom_control.so
 odm/lib64/libdualcam_video_optical_zoom.so
@@ -423,6 +435,8 @@ odm/lib64/libmiphone_preview_bokeh_mono.so
 odm/lib64/libmiphone_preview_depth.so
 odm/lib64/libmiphone_preview_ldc.so
 odm/lib64/libmiphone_preview_mdbokeh.so
+odm/lib64/libMiPhotoFilter.so;DISABLE_CHECKELF
+odm/lib64/libmiSensorCtrl.so
 odm/lib64/libmis_plugin_dummy.so
 odm/lib64/libmis_plugin_gme.so
 odm/lib64/libmis_plugin_his.so
@@ -461,7 +475,6 @@ odm/lib64/libtriplecam_optical_zoom_control.so
 odm/lib64/libtriplecam_video_optical_zoom.so
 odm/lib64/libubifocus.so
 odm/lib64/libvideoBokeh.so
-odm/lib64/libMiVideoFilter.so
 odm/lib64/libvideoml.so
 odm/lib64/libvidhance.so
 odm/lib64/libvidhance_active_ois.so
@@ -482,8 +495,6 @@ odm/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
 odm/lib64/vendor.xiaomi.hardware.bgservice@1.0-impl.so
 
 # Camera Vendor
-vendor/lib64/camera/libQnnHtpV69.so
-vendor/lib64/camera/libQnnHtpV69Skel.so
 vendor/bin/hw/android.hardware.camera.provider@2.7-virtual-camera-service
 vendor/etc/init/android.hardware.camera.provider@2.7-virtual-camera-service.rc
 vendor/lib64/hw/android.hardware.camera.provider@2.7-impl-vcamera.so
@@ -665,6 +676,7 @@ odm/lib64/camera/plugins/com.xiaomi.plugin.arcsoftsll.so
 odm/lib64/camera/plugins/com.xiaomi.plugin.capbokeh.so
 odm/lib64/camera/plugins/com.xiaomi.plugin.capdepth.so
 odm/lib64/camera/plugins/com.xiaomi.plugin.caphdr.so
+odm/lib64/camera/plugins/com.xiaomi.plugin.deflicker.so
 odm/lib64/camera/plugins/com.xiaomi.plugin.depurple.so
 odm/lib64/camera/plugins/com.xiaomi.plugin.frontbokeh.so
 odm/lib64/camera/plugins/com.xiaomi.plugin.gpu.so
@@ -1100,9 +1112,6 @@ odm/etc/disp0/mdss_dsi_m3_38_0c_0a_dsc_cmd/mi_gc_2.txt
 odm/etc/disp0/mdss_dsi_m3_38_0c_0a_dsc_cmd/mi_gc_3.txt
 odm/etc/df_default.xml
 
-# eUICC - from lynx-user 14 UQ1A.240105.004
-product/priv-app/EuiccGoogle/EuiccGoogle.apk|29f8c2d4301cc1c0c023dd1c205cfdec5bfc73aa;PRESIGNED
-
 # Fingerprint
 odm/lib64/hw/fingerprint.goodix_fod.so:odm/lib64/hw/fingerprint.goodix_fod.default.so;FIX_SONAME
 odm/lib64/libgf_hal.so
@@ -1118,15 +1127,6 @@ vendor/etc/qvr/cfg/519/0/65536/mtpkailua_qvr_3dof_tracker_config.txt
 vendor/etc/qvr/qvr_hid_device_list.txt
 vendor/etc/qvr/qvr_usb_device_list.txt
 vendor/etc/qvr/qvrservice_config.txt
-
-# Sensors
-odm/lib64/libssccalapi@2.0.so
-
-# Sensors (CIT)
-odm/bin/hw/vendor.xiaomi.sensor.citsensorservice@2.0-service
-odm/etc/init/vendor.xiaomi.sensor.citsensorservice@2.0-service.rc
-odm/etc/vintf/manifest/vendor.xiaomi.sensor.citsensorservice@2.0-service.xml
-odm/lib64/hw/vendor.xiaomi.sensor.citsensorservice@2.0-impl.so
 
 # Sensors (Config)
 odm/etc/sensors/config/ak991x_dri_0.json

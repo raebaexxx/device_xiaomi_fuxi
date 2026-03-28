@@ -10,8 +10,8 @@ $(call inherit-product, device/xiaomi/sm8550-common/common.mk)
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/xiaomi/fuxi/fuxi-vendor.mk)
 
-# Camera MIUI
-$(call inherit-product-if-exists, vendor/xiaomi/camera/miuicamera.mk)
+$(call soong_config_set,surfaceflinger,frame_rate_category_high,120)
+$(call soong_config_set,surfaceflinger,frame_rate_category_min,60)
 
 # Audio
 PRODUCT_COPY_FILES += \
@@ -23,7 +23,6 @@ PRODUCT_PACKAGES += \
     XiaomiEuicc
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/permissions/privapp-permissions-euiccgoogle.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-euiccgoogle.xml \
     frameworks/native/data/etc/android.hardware.telephony.euicc.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.telephony.euicc.xml
 
 # Init
@@ -32,16 +31,11 @@ PRODUCT_COPY_FILES += \
 
 $(call soong_config_set,libinit,vendor_init_lib,//$(LOCAL_PATH):libinit_fuxi)
 
-# Power
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/power/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
-    
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage
 
 PRODUCT_PACKAGES += \
-    ApertureResFuxi \
     EuiccResFuxi \
     FrameworkResOverlayFuxi \
     FuxiWifiRes \
@@ -49,21 +43,10 @@ PRODUCT_PACKAGES += \
     SettingsProviderResfuxi \
     SettingsOverlayFuxi
 
-# Sensors
-PRODUCT_PACKAGES += \
-    sensors.xiaomi.v2
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_ODM)/etc/sensors/hals.conf
-
 # PowerShare
 $(call soong_config_set,lineage_powershare,powershare_path,/sys/class/qcom-battery/reverse_chg_mode)
 PRODUCT_PACKAGES += \
     vendor.lineage.powershare-service.default
-
-# Maintainer Flag
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.paranoid.maintainer=RaeBaeXXX
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \

@@ -1,40 +1,39 @@
 #
-# Copyright (C) 2025 The LineageOS Project
+# Copyright (C) 2024 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Inherit from those products. Most specific first.
+# Inherit common AOSP configurations
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit from fuxi device
+# Inherit device-specific configurations
 $(call inherit-product, device/xiaomi/fuxi/device.mk)
 
-# Inherit from common lineage configuration
+# Inherit LineageOS configurations
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-TARGET_DISABLE_EPPE := true
+# Camera
+$(call inherit-product-if-exists, vendor/xiaomi/camera/miuicamera.mk)
 
-# LunarisAOSP Flags
-LUNARIS_BUILD_TYPE := UNOFFICIAL
+# Rom flags
+TARGET_ENABLE_BLUR := true
+TARGET_EXCLUDES_AUDIOFX := true
+TARGET_CUSTOM_UDFPS := true
+TARGET_SUPPORTS_QUICK_TAP := true
+WITH_BCR := false
+TARGET_DISABLE_EPPE := true
 WITH_GMS := true
 TARGET_OPTIMIZED_DEXOPT := true
-TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_DISABLE_MATLOG := true
+TARGET_SUPPORTED_REFRESH_RATES := 60,120
 
-# UDFPS
-TARGET_HAS_UDFPS := true
-
-# disable/enable blur support, default is false
-TARGET_ENABLE_BLUR := true
-
-PRODUCT_NAME := lineage_fuxi
+# Device identifier
 PRODUCT_DEVICE := fuxi
-PRODUCT_MANUFACTURER := Xiaomi
+PRODUCT_NAME := lineage_fuxi
 PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := Xiaomi 13
+PRODUCT_MODEL := 2211133C
+PRODUCT_MANUFACTURER := Xiaomi
 
-PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
-
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildFingerprint=Xiaomi/fuxi/fuxi:15/AQ3A.240912.001/OS2.0.200.2.VMBEUXM:user/release-keys
+BUILD_FINGERPRINT := Xiaomi/fuxi/fuxi:16/BP2A.250605.031.A3/OS3.0.2.0.WMCCNXM:user/release-keys

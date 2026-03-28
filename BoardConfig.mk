@@ -9,9 +9,6 @@ DEVICE_PATH := device/xiaomi/fuxi
 # Inherit from sm8550-common
 include device/xiaomi/sm8550-common/BoardConfigCommon.mk
 
-# HWUI
-HWUI_COMPILE_FOR_PERF := true
-
 # Init
 TARGET_RECOVERY_DEVICE_MODULES := libinit_fuxi
 
@@ -32,6 +29,7 @@ TARGET_OTA_ASSERT_DEVICE := fuxi
 
 # Properties
 TARGET_ODM_PROP += $(DEVICE_PATH)/configs/properties/odm.prop
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/configs/properties/system.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/configs/properties/vendor.prop
 
 # Sepolicy
