@@ -488,4 +488,7 @@
         config_mainBuiltInDisplayCutout
         -->
     <string name="config_mainBuiltInDisplayCutoutRectApproximation">M 0,0 H -34 V 104 H 34 V 0 H 0 Z</string>
+
+    <!-- AOD wallpaper -->
+    <bool name="config_dozeSupportsAodWallpaper">true</bool>
 </resources>

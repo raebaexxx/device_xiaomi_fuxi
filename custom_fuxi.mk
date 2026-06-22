@@ -19,6 +19,7 @@ $(call inherit-product-if-exists, vendor/xiaomi/camera/miuicamera.mk)
 
 # Rom flags
 TARGET_DISABLE_EPPE := true
+TARGET_HAS_UDFPS := true
 
 # Device identifier
 PRODUCT_DEVICE := fuxi
