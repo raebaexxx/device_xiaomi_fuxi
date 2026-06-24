@@ -9,6 +9,9 @@ DEVICE_PATH := device/xiaomi/fuxi
 # Inherit from sm8550-common
 include device/xiaomi/sm8550-common/BoardConfigCommon.mk
 
+# Inherit from MiuiCamera
+-include device/xiaomi/nuwa-miuicamera/BoardConfig.mk
+
 # Init
 TARGET_RECOVERY_DEVICE_MODULES := libinit_fuxi
 

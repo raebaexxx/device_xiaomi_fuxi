@@ -14,9 +14,6 @@ $(call inherit-product, device/xiaomi/fuxi/device.mk)
 # Inherit LineageOS configurations
 $(call inherit-product, vendor/infinity/config/common_full_phone.mk)
 
-# Camera
-$(call inherit-product-if-exists, vendor/xiaomi/camera/miuicamera.mk)
-
 # Rom flags
 TARGET_DISABLE_EPPE := true
 TARGET_OPTIMIZED_DEXOPT := true
@@ -25,7 +22,6 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 TARGET_HAS_UDFPS := true
 INFINITY_MAINTAINER := "RaeBaeXXX"
 WITH_GAPPS := true
-
 
 # Device identifier
 PRODUCT_DEVICE := fuxi
