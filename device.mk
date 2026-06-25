@@ -4,9 +4,6 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Camera
-$(call inherit-product-if-exists, device/xiaomi/fuxi-miuicamera/device.mk)
-
 # Inherit from sm8550-common
 $(call inherit-product, device/xiaomi/sm8550-common/common.mk)
 
