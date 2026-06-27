@@ -28,7 +28,6 @@ WITH_GAPPS := true
 TARGET_INCLUDES_OEM_APP := true
 TARGET_INCLUDES_DolbyVision := true
 
-
 # Device identifier
 PRODUCT_DEVICE := fuxi
 PRODUCT_NAME := infinity_fuxi
