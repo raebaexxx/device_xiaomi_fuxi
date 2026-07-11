@@ -23,13 +23,12 @@ PRODUCT_PACKAGES += \
     XiaomiEuicc
 
 PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/permissions/privapp-permissions-euiccgoogle.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-euiccgoogle.xml \
     frameworks/native/data/etc/android.hardware.telephony.euicc.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.telephony.euicc.xml
 
 # Init
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/init/init.fuxi.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.fuxi.rc
-
-$(call soong_config_set,libinit,vendor_init_lib,//$(LOCAL_PATH):libinit_fuxi)
+    $(LOCAL_PATH)/init/init.fuxi.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.fuxi.rc \
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
