@@ -14,19 +14,15 @@ $(call inherit-product, device/xiaomi/fuxi/device.mk)
 # Inherit LineageOS configurations
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-# Toggle Google Apps (NikGapps) inclusion. true = gapps in ROM, false = no gapps.
-# Before enabling: run vendor/addons/gapps/extract.sh. Default: false.
-WITH_GAPPS := true
-
-ifeq ($(WITH_GAPPS),true)
-    $(call inherit-product, vendor/addons/gapps/gapps.mk)
-endif
-
 # Camera
 $(call inherit-product-if-exists, vendor/xiaomi/camera/miuicamera.mk)
 
 # Rom flags
+TARGET_DISABLE_EPPE := true
+TARGET_OPTIMIZED_DEXOPT := true
+TARGET_ENABLE_BLUR := true
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+WITH_GMS := true
 TARGET_HAS_UDFPS := true
 TARGET_INCLUDES_OEM_APP := true
 TARGET_INCLUDES_DolbyVision := true

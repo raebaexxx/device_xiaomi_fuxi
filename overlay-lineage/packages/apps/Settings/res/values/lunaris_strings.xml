@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2015-2016 The CyanogenMod Project
-                   2017-2021 The LineageOS Project
+     Copyright (C) 2018 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -15,7 +14,12 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<resources>
-    <!-- Whether the device supports wireless charging or not -->
-    <bool name="config_deviceSupportsWirelessCharging">true</bool>
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- Model and Hardware -->
+    <string name="lunaris_device_message">Xiaomi 13</string>
+    <string name="lunaris_processor_code_message">Snapdragon® 8 gen 2</string>
+    <string name="lunaris_battery_type_message">4500 mAh</string>
+    <string name="lunaris_screen_message">Amoled 120hz</string>
 </resources>

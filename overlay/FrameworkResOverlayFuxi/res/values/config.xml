@@ -64,9 +64,9 @@
          array. The brightness values must be non-negative and non-decreasing. This must be
          overridden in platform specific overlays -->
     <array name="config_autoBrightnessDisplayValuesNits">
-        <item>2.9</item>
-        <item>3.4</item>
-        <item>3.6</item>
+        <item>5.9</item>
+        <item>7.4</item>
+        <item>12.6</item>
         <item>17.0</item>
         <item>24.0</item>
         <item>31.0</item>
@@ -357,8 +357,8 @@
          the screen brightness is recalculated. See the config_ambientThresholdLevels
          description for how the constraint value is chosen. -->
      <integer-array name="config_ambientBrighteningThresholds">
-        <item>2</item>
-        <item>6</item>
+        <item>50</item>
+        <item>30</item>
         <item>10</item>
         <item>30</item>
         <item>100</item>
@@ -404,6 +404,16 @@
         <item>0</item>
     </integer-array>
 
+     <!-- The default refresh rate for a given device. Change this value to set a higher default
+         refresh rate. If the hardware composer on the device supports display modes with a higher
+         refresh rate than the default value specified here, the framework may use those higher
+         refresh rate modes if an app chooses one by setting preferredDisplayModeId or calling
+         setFrameRate().
+         If a non-zero value is set for config_defaultPeakRefreshRate, then
+         config_defaultRefreshRate may be set to 0, in which case the value set for
+         config_defaultPeakRefreshRate will act as the default frame rate. -->
+    <integer name="config_defaultRefreshRateInZone">120</integer>
+
     <!-- The display uses different gamma curves for different refresh rates. It's hard for panel
          vendors to tune the curves to have exact same brightness for different refresh rate. So
          flicker could be observed at switch time. The issue is worse at the gamma lower end.
@@ -415,13 +425,13 @@
              || display brightness <= disp1 && ambient brightness <= amb1 -->
     <integer-array name="config_brightnessThresholdsOfPeakRefreshRate">
         <!-- System brightness for 10 nits: round((10-2)/(1000-2)*(255-1)+1) = 3 -->
-        <item>3</item> <!-- 20% UI brightness -->
+        <item>4</item> <!-- 20% UI brightness -->
         <!-- System brightness for 15 nits: round((15-2)/(1000-2)*(255-1)+1) = 4 -->
-        <item>4</item> <!-- 24% UI brightness -->
+        <item>6</item> <!-- 24% UI brightness -->
     </integer-array>
     <integer-array name="config_ambientThresholdsOfPeakRefreshRate">
         <item>-1</item>
-        <item>5</item>
+        <item>100</item>
     </integer-array>
 
     <!-- Stability requirements in milliseconds for accepting a new brightness level.  This is used
