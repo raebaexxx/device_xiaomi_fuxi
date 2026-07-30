@@ -12,8 +12,9 @@ from extract_utils.fixups_blob import (
     blob_fixups_user_type,
 )
 from extract_utils.fixups_lib import (
-    lib_fixups,
+    lib_fixup_vendorcompat,
     lib_fixups_user_type,
+    libs_proto_3_9_1,
 )
 from extract_utils.main import (
     ExtractUtils,
@@ -29,7 +30,7 @@ namespace_imports = [
 ]
 
 lib_fixups: lib_fixups_user_type = {
-    **lib_fixups,
+    libs_proto_3_9_1: lib_fixup_vendorcompat,
 }
 
 blob_fixups: blob_fixups_user_type = {

@@ -9,6 +9,9 @@ DEVICE_PATH := device/xiaomi/fuxi
 # Inherit from sm8550-common
 include device/xiaomi/sm8550-common/BoardConfigCommon.mk
 
+# Vendor MiuiCamera
+-include device/xiaomi/fuxi-miuicamera/BoardConfig.mk
+
 # Display
 TARGET_SCREEN_DENSITY := 420
 
@@ -25,9 +28,8 @@ BOARD_VENDOR_KERNEL_MODULES_LOAD += \
 TARGET_OTA_ASSERT_DEVICE := fuxi
 
 # Properties
-TARGET_ODM_PROP += $(DEVICE_PATH)/configs/properties/odm.prop
-TARGET_SYSTEM_PROP += $(DEVICE_PATH)/configs/properties/system.prop
-TARGET_VENDOR_PROP += $(DEVICE_PATH)/configs/properties/vendor.prop
+TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
 # Sepolicy
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
