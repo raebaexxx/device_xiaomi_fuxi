@@ -4,10 +4,11 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-import extract_utils.tools
-
-
+import os
+import stat
 from extract_utils.fixups_blob import (
+    BlobFixupCtx,
+    File,
     blob_fixup,
     blob_fixups_user_type,
 )
@@ -20,6 +21,12 @@ from extract_utils.main import (
     ExtractUtils,
     ExtractUtilsModule,
 )
+from extract_utils.tools import (
+    llvm_objdump_path,
+)
+from extract_utils.utils import (
+    run_cmd,
+)
 
 namespace_imports = [
     'device/xiaomi/sm8550-common',
@@ -28,6 +35,39 @@ namespace_imports = [
     'vendor/qcom/opensource/commonsys-intf/display',
     'vendor/xiaomi/sm8550-common',
 ]
+
+
+def blob_fixup_graphic_buffer_size(
+    ctx: BlobFixupCtx,
+    file: File,
+    file_path: str,
+    *args,
+    **kwargs,
+):
+    # The A17 framework grew GraphicBuffer from 0x100 to 0xd30 bytes
+    # (DependencyMonitor). These blobs allocate it via operator new with
+    # the old compile-time size before calling the new constructor, which
+    # corrupts the heap and produces null buffer handles in the MIVI
+    # capture pipeline. Patch every "mov w0, #0x100" that is followed by
+    # a call to operator new.
+    patch_offset = None
+
+    for line in run_cmd([llvm_objdump_path, '-d', file_path]).splitlines():
+        parts = line.split(maxsplit=3)
+        if len(parts) < 4:
+            continue
+
+        offset, _, instruction, operands = parts
+
+        if patch_offset is not None:
+            if '_Znwm@plt' in line:
+                with open(file_path, 'rb+') as f:
+                    f.seek(patch_offset)
+                    f.write(b'\x00\xa6\x81\x52')  # AArch64 mov w0, #0xd30
+            patch_offset = None
+        elif instruction == 'mov' and operands.startswith('w0, #0x100'):
+            patch_offset = int(offset[:-1], 16)
+
 
 lib_fixups: lib_fixups_user_type = {
     libs_proto_3_9_1: lib_fixup_vendorcompat,
@@ -68,6 +108,12 @@ blob_fixups: blob_fixups_user_type = {
     'odm/lib64/hw/camera.xiaomi.so': blob_fixup()
         .add_needed('libprocessgroup_shim.so')
         .replace_needed('libui.so', 'libui-v34.so'),
+    (
+        'odm/lib64/libcom.xiaomi.grallocutils.so',
+        'odm/lib64/libmis_plugin_vidhance.so',
+        'odm/lib64/libcom.xiaomi.mawutils.so',
+    ): blob_fixup()
+        .call(blob_fixup_graphic_buffer_size),
 }
 
 module = ExtractUtilsModule(
