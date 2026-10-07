@@ -1233,3 +1233,16 @@ odm/firmware/2_tick_P_RTP.bin:vendor/etc/vibrator/effect_2.bin
 odm/firmware/3_thud_P_RTP.bin:vendor/etc/vibrator/effect_3.bin
 odm/firmware/4_pop_P_RTP.bin:vendor/etc/vibrator/effect_4.bin
 odm/firmware/5_heavyClick_P_RTP.bin:vendor/etc/vibrator/effect_5.bin
+
+# Vibrator primitives (CompositePrimitive). Separate bank from the effects
+# above: the same index means a different thing in each. Pick by what the
+# effect does, not by matching the source file number.
+odm/firmware/0_click_P_RTP.bin:vendor/etc/vibrator/primitive_effect_0.bin
+odm/firmware/1_doubelClick_P_RTP.bin:vendor/etc/vibrator/primitive_effect_1.bin
+odm/firmware/2_tick_P_RTP.bin:vendor/etc/vibrator/primitive_effect_2.bin
+odm/firmware/3_thud_P_RTP.bin:vendor/etc/vibrator/primitive_effect_3.bin
+odm/firmware/4_pop_P_RTP.bin:vendor/etc/vibrator/primitive_effect_4.bin
+odm/firmware/5_heavyClick_P_RTP.bin:vendor/etc/vibrator/primitive_effect_5.bin
+odm/firmware/162_GestureBackPull_P_RTP.bin:vendor/etc/vibrator/primitive_effect_6.bin
+odm/firmware/91_newIconFolder_P_RTP.bin:vendor/etc/vibrator/primitive_effect_7.bin
+odm/firmware/92_notificationRemove_P_RTP.bin:vendor/etc/vibrator/primitive_effect_8.bin
