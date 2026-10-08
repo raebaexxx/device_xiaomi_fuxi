@@ -428,6 +428,23 @@
         <ctl name="B AMP Enable Switch" value="1" />
         <ctl name="T Fast Use Case Delta File" value="T-handfree.txt" />
         <ctl name="B Fast Use Case Delta File" value="B-handfree.txt" />
+
+        <!-- The speaker sits behind an external SoundWire amplifier (WSA). Upstream
+             never drives it, so handsfree call audio plays through the internal
+             amplifier only: noticeably quieter and with no low end. These are the
+             controls MIUI uses for this path. Added on top of the existing graph
+             rather than replacing it, so the ASP/DSP routing above keeps working
+             and the change is easy to revert. PBR is what supplies the bass. -->
+        <ctl name="WSA RX1 MUX" value="AIF1_PB" />
+        <ctl name="WSA_RX1 INP0" value="RX1" />
+        <ctl name="WSA_COMP2 Switch" value="1" />
+        <ctl name="SpkrRight COMP Switch" value="1" />
+        <ctl name="SpkrRight VISENSE Switch" value="1" />
+        <ctl name="SpkrRight CPS Switch" value="1" />
+        <ctl name="SpkrRight SWR DAC_Port Switch" value="1" />
+        <ctl name="SpkrRight PBR Switch" value="1" />
+        <ctl name="WSA PBR Enable" value="1" />
+        <ctl name="Idle Detect" value="1" />
     </path>
 
    <path name="speaker-mono-vbat">
