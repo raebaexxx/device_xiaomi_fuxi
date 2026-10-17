@@ -24,6 +24,11 @@
      entries do not follow the convention, but all new entries should. -->
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Use the legacy UDFPS enrollment UI: the "Do it later" footer button is
+         replaced by a side-aligned skip text, so it cannot overlap the sensor
+         area of the low-positioned fingerprint reader. -->
+    <bool name="config_useLegacyUdfpsUi" translatable="false">true</bool>
+
     <!-- The radius of the enrollment progress bar, in dp -->
     <integer name="config_udfpsEnrollProgressBar">
         113
