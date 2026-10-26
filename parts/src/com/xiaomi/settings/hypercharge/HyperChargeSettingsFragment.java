@@ -13,7 +13,7 @@ import android.util.Log;
 
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
-import androidx.preference.PreferenceFragment;
+import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.PreferenceManager;
 
 import com.android.settingslib.widget.MainSwitchPreference;
@@ -21,7 +21,7 @@ import com.android.settingslib.widget.MainSwitchPreference;
 import org.lineageos.settings.Constants;
 import org.lineageos.settings.R;
 
-public class HyperChargeSettingsFragment extends PreferenceFragment
+public class HyperChargeSettingsFragment extends PreferenceFragmentCompat
         implements Preference.OnPreferenceChangeListener {
 
     private static final String TAG = "ChargingControl";
@@ -31,11 +31,9 @@ public class HyperChargeSettingsFragment extends PreferenceFragment
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        Context context = getContext();
-        if (context != null) {
-            sanitizePreferences(context);
-        }
-        addPreferencesFromResource(R.xml.hypercharge_settings);
+        final Context context = requireContext();
+        sanitizePreferences(context);
+        setPreferencesFromResource(R.xml.hypercharge_settings, rootKey);
 
         mMainSwitch = findPreference(Constants.KEY_CHARGE_LIMIT_ENABLED);
         mMainSwitch.setOnPreferenceChangeListener(this);
@@ -66,10 +64,7 @@ public class HyperChargeSettingsFragment extends PreferenceFragment
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        Context context = getContext();
-        if (context == null) {
-            return false;
-        }
+        final Context context = requireContext();
 
         boolean enabled = preference == mMainSwitch
                 ? (Boolean) newValue : mMainSwitch.isChecked();
