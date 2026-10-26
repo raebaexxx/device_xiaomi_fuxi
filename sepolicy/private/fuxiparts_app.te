@@ -1,3 +1,5 @@
+type fuxiparts_app, domain, coredomain, fuxiparts_app_domain;
+
 app_domain(fuxiparts_app)
 typeattribute fuxiparts_app mlstrustedsubject;
 

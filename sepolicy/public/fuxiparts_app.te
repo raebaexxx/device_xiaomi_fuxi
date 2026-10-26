@@ -1,2 +1,4 @@
-# Export the app domain so vendor policy can grant access to device sysfs types.
-type fuxiparts_app, domain, coredomain;
+# Export only an attribute for vendor policy. The app domain type itself stays
+# private; otherwise adding a device-specific public type would require a
+# platform compatibility mapping entry.
+attribute fuxiparts_app_domain;
