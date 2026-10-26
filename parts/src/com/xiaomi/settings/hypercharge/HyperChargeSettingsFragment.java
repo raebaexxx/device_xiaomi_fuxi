@@ -31,7 +31,10 @@ public class HyperChargeSettingsFragment extends PreferenceFragment
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        sanitizePreferences(requireContext());
+        Context context = getContext();
+        if (context != null) {
+            sanitizePreferences(context);
+        }
         addPreferencesFromResource(R.xml.hypercharge_settings);
 
         mMainSwitch = findPreference(Constants.KEY_CHARGE_LIMIT_ENABLED);
@@ -63,6 +66,11 @@ public class HyperChargeSettingsFragment extends PreferenceFragment
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+        Context context = getContext();
+        if (context == null) {
+            return false;
+        }
+
         boolean enabled = preference == mMainSwitch
                 ? (Boolean) newValue : mMainSwitch.isChecked();
         String limit = preference == mLimitPref
@@ -88,14 +96,14 @@ public class HyperChargeSettingsFragment extends PreferenceFragment
 
         // OnPreferenceChange runs before the preference framework persists the
         // new value, so write it before asking the service to re-evaluate.
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(requireContext());
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
         prefs.edit()
                 .putBoolean(Constants.KEY_CHARGE_LIMIT_ENABLED, enabled)
                 .putString(Constants.KEY_CHARGE_LIMIT, limit)
                 .apply();
 
         updateEnabledStates(enabled);
-        HyperChargeService.update(requireContext());
+        HyperChargeService.update(context);
         return true;
     }
 
