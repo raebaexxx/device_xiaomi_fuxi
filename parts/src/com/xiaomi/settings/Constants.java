@@ -44,7 +44,11 @@ public final class Constants {
     public static final int HBM_FEATURE_ID = 1;
     public static final int AUTO_HBM_DEFAULT_THRESHOLD = 8000;
     public static final int AUTO_HBM_DEFAULT_ENABLE_TIME = 0;
-    public static final int AUTO_HBM_DEFAULT_DISABLE_TIME = 1;
+    public static final int AUTO_HBM_DEFAULT_DISABLE_TIME = 3;
+    // fuxi's df_default.xml uses 8000 lux to enter HBM and 5000 lux to
+    // leave it. Keep that ratio when the user changes the trigger level.
+    public static final int AUTO_HBM_EXIT_THRESHOLD_NUMERATOR = 5;
+    public static final int AUTO_HBM_EXIT_THRESHOLD_DENOMINATOR = 8;
 
     // Charging control
     public static final String KEY_CHARGE_LIMIT_ENABLED = "charge_limit_enabled";

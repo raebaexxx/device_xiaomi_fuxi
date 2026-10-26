@@ -31,11 +31,11 @@
     <string name="auto_hbm_main_switch_title">Use automatic HBM</string>
     <string name="auto_hbm_summary">Automatically enable HBM based on ambient light</string>
     <string name="auto_hbm_threshold_title">Light threshold</string>
-    <string name="auto_hbm_threshold_summary">Ambient light level (lux) at which HBM is activated</string>
+    <string name="auto_hbm_threshold_summary">Ambient light level (lux) at which HBM is activated; it turns off below 5/8 of this level</string>
     <string name="auto_hbm_enable_time_title">Enable time</string>
     <string name="auto_hbm_enable_time_summary">Seconds the light threshold must be continuously met before HBM is enabled</string>
     <string name="auto_hbm_disable_time_title">Disable time</string>
-    <string name="auto_hbm_disable_time_summary">Seconds below the threshold before HBM is disabled</string>
+    <string name="auto_hbm_disable_time_summary">Seconds below the exit level before HBM is disabled</string>
     <string name="tile_auto_hbm">Auto HBM</string>
     <string name="tile_hbm">HBM</string>
     <string name="tile_hbm_on">Enabled</string>

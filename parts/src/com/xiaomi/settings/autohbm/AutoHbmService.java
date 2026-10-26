@@ -29,6 +29,7 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.IBinder;
 import android.os.PowerManager;
+import android.os.SystemClock;
 import android.os.UserHandle;
 
 import androidx.preference.PreferenceManager;
@@ -85,14 +86,15 @@ public class AutoHbmService extends Service {
                 ? mLastManualBrightness : FALLBACK_BRIGHTNESS);
     }
 
-    private boolean isCurrentlyEnabled() {
-        return HbmUtils.isHbmEnabled();
+    private static int getExitThreshold(int threshold) {
+        return threshold * Constants.AUTO_HBM_EXIT_THRESHOLD_NUMERATOR
+                / Constants.AUTO_HBM_EXIT_THRESHOLD_DENOMINATOR;
     }
 
     private final SensorEventListener mSensorEventListener = new SensorEventListener() {
         private boolean mCrossedThreshold = false;
         private long mCrossedThresholdTime = 0;
-        private long mLastTriggerTime = 0;
+        private long mBelowExitThresholdTime = 0;
 
         @Override
         public void onSensorChanged(SensorEvent event) {
@@ -105,38 +107,48 @@ public class AutoHbmService extends Service {
             boolean keyguardShowing = km != null && km.inKeyguardRestrictedInputMode();
             int luxThreshold = mSharedPrefs.getInt(Constants.KEY_AUTO_HBM_THRESHOLD,
                     Constants.AUTO_HBM_DEFAULT_THRESHOLD);
+            int exitThreshold = getExitThreshold(luxThreshold);
             int timeToEnableHbm = mSharedPrefs.getInt(Constants.KEY_AUTO_HBM_ENABLE_TIME,
                     Constants.AUTO_HBM_DEFAULT_ENABLE_TIME);
             int timeToDisableHbm = mSharedPrefs.getInt(Constants.KEY_AUTO_HBM_DISABLE_TIME,
                     Constants.AUTO_HBM_DEFAULT_DISABLE_TIME);
+            long now = SystemClock.elapsedRealtime();
+
+            if (mAutoHbmActive) {
+                // Keep HBM on until the light has stayed below the lower exit
+                // threshold for the configured delay. The delay starts when
+                // the light crosses the exit level, not when HBM was enabled.
+                if (lux > exitThreshold) {
+                    mBelowExitThresholdTime = 0;
+                    return;
+                }
+                if (mBelowExitThresholdTime == 0) {
+                    mBelowExitThresholdTime = now;
+                }
+                if (now - mBelowExitThresholdTime >= timeToDisableHbm * 1000L) {
+                    mAutoHbmActive = false;
+                    mBelowExitThresholdTime = 0;
+                    HbmUtils.setHbmEnabled(false);
+                    restoreBrightness();
+                }
+                return;
+            }
 
             if (lux > luxThreshold) {
                 if (!mCrossedThreshold) {
                     mCrossedThreshold = true;
-                    mCrossedThresholdTime = System.currentTimeMillis();
-                } else {
-                    long currentTime = System.currentTimeMillis();
-                    if (currentTime - mCrossedThresholdTime >= timeToEnableHbm * 1000L
-                            && (!mAutoHbmActive || !isCurrentlyEnabled())
-                            && !keyguardShowing) {
-                        mAutoHbmActive = true;
-                        saveCurrentBrightness();
-                        HbmUtils.setHbmEnabled(true);
-                        setBrightnessDirectly(HbmUtils.getMaxBrightness());
-                        mLastTriggerTime = currentTime;
-                    }
+                    mCrossedThresholdTime = now;
+                } else if (now - mCrossedThresholdTime >= timeToEnableHbm * 1000L
+                        && !keyguardShowing) {
+                    mAutoHbmActive = true;
+                    mCrossedThreshold = false;
+                    mBelowExitThresholdTime = 0;
+                    saveCurrentBrightness();
+                    HbmUtils.setHbmEnabled(true);
+                    setBrightnessDirectly(HbmUtils.getMaxBrightness());
                 }
             } else {
                 mCrossedThreshold = false;
-
-                if (mAutoHbmActive) {
-                    long currentTime = System.currentTimeMillis();
-                    if (currentTime - mLastTriggerTime >= timeToDisableHbm * 1000L) {
-                        mAutoHbmActive = false;
-                        HbmUtils.setHbmEnabled(false);
-                        restoreBrightness();
-                    }
-                }
             }
         }
 

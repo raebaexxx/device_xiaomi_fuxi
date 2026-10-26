@@ -52,5 +52,5 @@
         android:max="10"
         android:min="0"
         settings:units=""
-        android:defaultValue="1" />
+        android:defaultValue="3" />
 </PreferenceScreen>
