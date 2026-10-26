@@ -14,7 +14,7 @@ import android.util.Log;
 
 import androidx.preference.PreferenceManager;
 
-import org.lineageos.settings.autohbm.AutoHbmFragment;
+import org.lineageos.settings.autohbm.AutoHbmService;
 import org.lineageos.settings.autohbm.HbmUtils;
 import org.lineageos.settings.hypercharge.HyperChargeService;
 
@@ -44,7 +44,7 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         }
 
         try {
-            AutoHbmFragment.toggleAutoHbmService(context);
+            AutoHbmService.update(context);
         } catch (Exception e) {
             Log.e(TAG, "Failed to restore Auto HBM state", e);
         }

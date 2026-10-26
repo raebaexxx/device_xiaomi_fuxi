@@ -29,50 +29,39 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.IBinder;
 import android.os.PowerManager;
-import android.util.Log;
+import android.os.UserHandle;
 
 import androidx.preference.PreferenceManager;
-
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 import org.lineageos.settings.Constants;
 import org.lineageos.settings.utils.FileUtils;
 
 public class AutoHbmService extends Service {
 
-    private static final String TAG = "AutoHbmService";
     private static final int FALLBACK_BRIGHTNESS = 200;
-    private static boolean mAutoHbmActive = false;
 
-    private ExecutorService mExecutorService;
     private SensorManager mSensorManager;
     private Sensor mLightSensor;
     private SharedPreferences mSharedPrefs;
+    private boolean mAutoHbmActive;
+    private boolean mSensorRegistered;
     private int mLastManualBrightness = FALLBACK_BRIGHTNESS;
-    private boolean mIsAutoBrightnessEnabled = false;
+    private boolean mIsAutoBrightnessEnabled;
 
-    public void activateLightSensorRead() {
-        submit(() -> {
-            mSensorManager = (SensorManager) getApplicationContext()
-                    .getSystemService(Context.SENSOR_SERVICE);
-            if (mSensorManager == null) {
-                return;
-            }
-            mLightSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_LIGHT);
-            if (mLightSensor == null) {
-                Log.w(TAG, "No light sensor available");
-                return;
-            }
-            mSensorManager.registerListener(mSensorEventListener, mLightSensor,
-                    SensorManager.SENSOR_DELAY_NORMAL);
-        });
+    private void activateLightSensorRead() {
+        if (mSensorRegistered || mSensorManager == null || mLightSensor == null) {
+            return;
+        }
+        mSensorRegistered = mSensorManager.registerListener(
+                mSensorEventListener, mLightSensor, SensorManager.SENSOR_DELAY_NORMAL);
     }
 
-    public void deactivateLightSensorRead() {
-        if (mSensorManager != null) {
+    private void deactivateLightSensorRead() {
+        if (mSensorManager != null && mSensorRegistered) {
             mSensorManager.unregisterListener(mSensorEventListener);
+            mSensorRegistered = false;
         }
+
         boolean wasActive = mAutoHbmActive;
         mAutoHbmActive = false;
         if (wasActive || HbmUtils.isHbmEnabled()) {
@@ -179,20 +168,20 @@ public class AutoHbmService extends Service {
     @Override
     public void onCreate() {
         super.onCreate();
-        mExecutorService = Executors.newSingleThreadExecutor();
+
+        mSharedPrefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
+        if (mSensorManager != null) {
+            mLightSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_LIGHT);
+        }
+
         IntentFilter screenStateFilter = new IntentFilter(Intent.ACTION_SCREEN_ON);
         screenStateFilter.addAction(Intent.ACTION_SCREEN_OFF);
         registerReceiver(mScreenStateReceiver, screenStateFilter);
-        mSharedPrefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+
         PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
         if (pm != null && pm.isInteractive()) {
             activateLightSensorRead();
-        }
-    }
-
-    private void submit(Runnable runnable) {
-        if (mExecutorService != null) {
-            mExecutorService.submit(runnable);
         }
     }
 
@@ -203,21 +192,51 @@ public class AutoHbmService extends Service {
             stopSelf();
             return START_NOT_STICKY;
         }
+
+        PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
+        if (pm != null && pm.isInteractive()) {
+            activateLightSensorRead();
+        }
         return START_STICKY;
     }
 
     @Override
     public void onDestroy() {
-        super.onDestroy();
         unregisterReceiver(mScreenStateReceiver);
         deactivateLightSensorRead();
-        if (mExecutorService != null) {
-            mExecutorService.shutdownNow();
-        }
+        super.onDestroy();
     }
 
     @Override
     public IBinder onBind(Intent intent) {
         return null;
+    }
+
+    public static void setEnabled(Context context, boolean enabled) {
+        PreferenceManager.getDefaultSharedPreferences(context)
+                .edit()
+                .putBoolean(Constants.KEY_AUTO_HBM, enabled)
+                .apply();
+        update(context);
+    }
+
+    /**
+     * Starts or stops the service according to the current preference. The
+     * service owns the sensor registration and HBM state; callers only toggle
+     * the preference through {@link #setEnabled(Context, boolean)}.
+     */
+    public static void update(Context context) {
+        boolean enabled = PreferenceManager.getDefaultSharedPreferences(context)
+                .getBoolean(Constants.KEY_AUTO_HBM, false);
+
+        Intent intent = new Intent(context, AutoHbmService.class);
+        if (enabled) {
+            // Manual HBM and Auto HBM must not fight over brightness.
+            HbmUtils.disableManual(context);
+            HbmNotification.cancel(context);
+            context.startServiceAsUser(intent, UserHandle.CURRENT);
+        } else {
+            context.stopServiceAsUser(intent, UserHandle.CURRENT);
+        }
     }
 }

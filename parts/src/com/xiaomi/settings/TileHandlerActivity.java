@@ -23,7 +23,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.service.quicksettings.TileService;
-import android.util.Log;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -35,8 +34,6 @@ import org.lineageos.settings.hypercharge.HyperChargeSettingsActivity;
 import org.lineageos.settings.hypercharge.HyperChargeTileService;
 
 public final class TileHandlerActivity extends Activity {
-
-    private static final String TAG = "TileHandlerActivity";
 
     private static final Map<String, Class<?>> TILE_ACTIVITY_MAP = new HashMap<>();
 

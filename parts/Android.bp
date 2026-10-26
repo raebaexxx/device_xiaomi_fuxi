@@ -24,7 +24,6 @@ android_app {
     ],
     required: [
         "init.fuxiparts.rc",
-        "privapp_whitelist_org.lineageos.settings.xml",
     ],
 }
 
@@ -32,12 +31,5 @@ prebuilt_etc {
     name: "init.fuxiparts.rc",
     src: "init/init.fuxiparts.rc",
     sub_dir: "init",
-    system_ext_specific: true,
-}
-
-prebuilt_etc {
-    name: "privapp_whitelist_org.lineageos.settings.xml",
-    src: "permissions/privapp_whitelist_org.lineageos.settings.xml",
-    sub_dir: "permissions",
     system_ext_specific: true,
 }

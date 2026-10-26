@@ -16,12 +16,6 @@
 
 package org.lineageos.settings.autohbm;
 
-import android.app.Notification;
-import android.app.NotificationChannel;
-import android.app.NotificationManager;
-import android.app.PendingIntent;
-import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.service.quicksettings.Tile;
 import android.service.quicksettings.TileService;
@@ -33,18 +27,7 @@ import org.lineageos.settings.R;
 
 public class HbmTileService extends TileService {
 
-    private static final String NOTIFICATION_CHANNEL_ID = "hbm_tile_service_channel";
-    private static final int NOTIFICATION_ID = 2;
-
-    private NotificationManager mNotificationManager;
     private boolean mAutoHbmEnabled;
-
-    @Override
-    public void onCreate() {
-        super.onCreate();
-        mNotificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-        setupNotificationChannel();
-    }
 
     @Override
     public void onStartListening() {
@@ -52,7 +35,7 @@ public class HbmTileService extends TileService {
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
         mAutoHbmEnabled = sharedPrefs.getBoolean(Constants.KEY_AUTO_HBM, false);
         if (mAutoHbmEnabled || !HbmUtils.isHbmEnabled()) {
-            cancelHbmNotification(this);
+            HbmNotification.cancel(this);
         }
         updateTile();
     }
@@ -69,10 +52,9 @@ public class HbmTileService extends TileService {
 
         if (HbmUtils.isHbmEnabled()) {
             HbmUtils.disableManual(this);
-            cancelHbmNotification(this);
-        } else {
-            HbmUtils.enableManual(this);
-            showHbmNotification();
+            HbmNotification.cancel(this);
+        } else if (HbmUtils.enableManual(this)) {
+            HbmNotification.show(this);
         }
         updateTile();
     }
@@ -82,7 +64,7 @@ public class HbmTileService extends TileService {
         super.onTileRemoved();
         if (!mAutoHbmEnabled && HbmUtils.isHbmEnabled()) {
             HbmUtils.disableManual(this);
-            cancelHbmNotification(this);
+            HbmNotification.cancel(this);
         }
     }
 
@@ -113,45 +95,5 @@ public class HbmTileService extends TileService {
                     : getString(R.string.tile_hbm_off));
         }
         tile.updateTile();
-    }
-
-    private void setupNotificationChannel() {
-        if (mNotificationManager == null) {
-            return;
-        }
-        NotificationChannel channel = new NotificationChannel(
-                NOTIFICATION_CHANNEL_ID,
-                getString(R.string.hbm_mode_title),
-                NotificationManager.IMPORTANCE_DEFAULT
-        );
-        channel.setBlockable(true);
-        mNotificationManager.createNotificationChannel(channel);
-    }
-
-    private void showHbmNotification() {
-        if (mNotificationManager == null) {
-            return;
-        }
-        Intent intent = new Intent(Intent.ACTION_POWER_USAGE_SUMMARY)
-                .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        PendingIntent pendingIntent = PendingIntent.getActivity(
-                this, 0, intent, PendingIntent.FLAG_IMMUTABLE);
-        Notification notification = new Notification.Builder(this, NOTIFICATION_CHANNEL_ID)
-                .setContentTitle(getString(R.string.hbm_mode_title))
-                .setContentText(getString(R.string.hbm_mode_notification))
-                .setSmallIcon(R.drawable.ic_hbm_tile)
-                .setContentIntent(pendingIntent)
-                .setOngoing(true)
-                .setFlag(Notification.FLAG_NO_CLEAR, true)
-                .build();
-        mNotificationManager.notify(NOTIFICATION_ID, notification);
-    }
-
-    public static void cancelHbmNotification(Context context) {
-        NotificationManager notificationManager =
-                (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
-        if (notificationManager != null) {
-            notificationManager.cancel(NOTIFICATION_ID);
-        }
     }
 }

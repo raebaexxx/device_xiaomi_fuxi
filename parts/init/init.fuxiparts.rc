@@ -1,6 +1,7 @@
 # FuxiParts runs with the system UID. Keep access limited to its controls.
 on boot
-    wait /sys/class/power_supply/battery
+    wait /sys/class/power_supply/battery/constant_charge_current
+    wait /sys/class/backlight/panel0-backlight/brightness
 
     # Battery charge-current limit used by the charging service.
     chown system system /sys/class/power_supply/battery/constant_charge_current

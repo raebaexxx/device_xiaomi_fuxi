@@ -19,6 +19,7 @@ package org.lineageos.settings.autohbm;
 import android.content.SharedPreferences;
 import android.service.quicksettings.Tile;
 import android.service.quicksettings.TileService;
+
 import androidx.preference.PreferenceManager;
 
 import org.lineageos.settings.Constants;
@@ -33,17 +34,11 @@ public class AutoHbmTileService extends TileService {
     }
 
     @Override
-    public void onStopListening() {
-        super.onStopListening();
-    }
-
-    @Override
     public void onClick() {
         super.onClick();
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
         final boolean enabled = !(sharedPrefs.getBoolean(Constants.KEY_AUTO_HBM, false));
-        sharedPrefs.edit().putBoolean(Constants.KEY_AUTO_HBM, enabled).commit();
-        AutoHbmFragment.toggleAutoHbmService(this);
+        AutoHbmService.setEnabled(this, enabled);
         updateTile(enabled);
     }
 

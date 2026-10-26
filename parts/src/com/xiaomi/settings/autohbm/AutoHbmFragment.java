@@ -17,14 +17,12 @@
 package org.lineageos.settings.autohbm;
 
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
-import android.os.UserHandle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -87,12 +85,13 @@ public class AutoHbmFragment extends PreferenceFragmentCompat
                 return;
             }
             if (isChecked) {
-                HbmUtils.enableManual(context);
+                if (!HbmUtils.enableManual(context)) {
+                    mManualHbmSwitch.setChecked(false);
+                }
             } else {
                 HbmUtils.disableManual(context);
-                HbmTileService.cancelHbmNotification(context);
+                HbmNotification.cancel(context);
             }
-            sharedPrefs.edit().putBoolean(Constants.KEY_HBM_MANUAL, isChecked).apply();
         });
 
         mAutoHbmThresholdPreference.setOnPreferenceChangeListener(this);
@@ -154,19 +153,16 @@ public class AutoHbmFragment extends PreferenceFragmentCompat
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
         final Context context = requireContext();
-        SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
-        sharedPrefs.edit().putBoolean(Constants.KEY_AUTO_HBM, isChecked).apply();
+        AutoHbmService.setEnabled(context, isChecked);
 
         if (isChecked) {
             // Manual HBM and Auto HBM must not fight over brightness.
-            HbmUtils.disableManual(context);
             mManualHbmSwitch.setChecked(false);
             mManualHbmSwitch.setEnabled(false);
         } else {
             mManualHbmSwitch.setEnabled(true);
         }
 
-        toggleAutoHbmService(context);
         toggleAutoHbmPreferencesVisibility(isChecked);
 
         if (mSensorManager == null || mLightSensor == null) {
@@ -225,22 +221,6 @@ public class AutoHbmFragment extends PreferenceFragmentCompat
             if (pref != null) {
                 pref.setVisible(show);
             }
-        }
-    }
-
-    public static void toggleAutoHbmService(Context context) {
-        boolean isAutoHbmEnabled = PreferenceManager.getDefaultSharedPreferences(context)
-                .getBoolean(Constants.KEY_AUTO_HBM, false);
-
-        if (isAutoHbmEnabled) {
-            // Auto HBM owns brightness while it is active.
-            HbmUtils.disableManual(context);
-            HbmTileService.cancelHbmNotification(context);
-            context.startServiceAsUser(new Intent(context, AutoHbmService.class),
-                    UserHandle.CURRENT);
-        } else {
-            context.stopServiceAsUser(new Intent(context, AutoHbmService.class),
-                    UserHandle.CURRENT);
         }
     }
 }
