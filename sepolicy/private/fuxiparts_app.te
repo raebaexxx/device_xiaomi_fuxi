@@ -1,0 +1,8 @@
+app_domain(fuxiparts_app)
+typeattribute fuxiparts_app mlstrustedsubject;
+
+# Platform-signed system-UID app: preferences, Settings integration and
+# notifications.
+allow fuxiparts_app system_app_data_file:dir create_dir_perms;
+allow fuxiparts_app system_app_data_file:{ file lnk_file } create_file_perms;
+allow fuxiparts_app { app_api_service system_api_service }:service_manager find;

@@ -41,6 +41,10 @@ PRODUCT_PACKAGES += \
     SystemUIOverlayFuxi \
     SettingsOverlayFuxi
 
+# FuxiParts
+PRODUCT_PACKAGES += \
+    FuxiParts
+
 # PowerShare
 $(call soong_config_set,lineage_powershare,powershare_path,/sys/class/qcom-battery/reverse_chg_mode)
 PRODUCT_PACKAGES += \

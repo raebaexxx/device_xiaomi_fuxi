@@ -1,0 +1,2 @@
+# Export the app domain so vendor policy can grant access to device sysfs types.
+type fuxiparts_app, domain, coredomain;

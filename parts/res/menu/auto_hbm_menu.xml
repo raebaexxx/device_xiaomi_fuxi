@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2025-2026 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/add_auto_hbm_tile"
+        android:title="@string/tile_add_auto_hbm" />
+    <item
+        android:id="@+id/add_hbm_tile"
+        android:title="@string/tile_add_hbm" />
+</menu>

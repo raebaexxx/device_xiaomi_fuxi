@@ -1,0 +1,14 @@
+# Manual and automatic panel brightness.
+allow fuxiparts_app vendor_sysfs_graphics:dir search;
+allow fuxiparts_app vendor_sysfs_graphics:lnk_file r_file_perms;
+allow fuxiparts_app vendor_sysfs_graphics:file rw_file_perms;
+
+# HBM feature 1 in the display-feature parameter block.
+allow fuxiparts_app vendor_sysfs_displayfeature:dir r_dir_perms;
+allow fuxiparts_app vendor_sysfs_displayfeature:lnk_file r_file_perms;
+allow fuxiparts_app vendor_sysfs_displayfeature:file rw_file_perms;
+
+# Charging current ceiling and battery state.
+allow fuxiparts_app vendor_sysfs_battery_supply:dir r_dir_perms;
+allow fuxiparts_app vendor_sysfs_battery_supply:lnk_file r_file_perms;
+allow fuxiparts_app vendor_sysfs_battery_supply:file rw_file_perms;
