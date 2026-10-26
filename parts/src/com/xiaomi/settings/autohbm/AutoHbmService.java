@@ -238,13 +238,17 @@ public class AutoHbmService extends Service {
      * the preference through {@link #setEnabled(Context, boolean)}.
      */
     public static void update(Context context) {
-        boolean enabled = PreferenceManager.getDefaultSharedPreferences(context)
-                .getBoolean(Constants.KEY_AUTO_HBM, false);
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
+        boolean enabled = prefs.getBoolean(Constants.KEY_AUTO_HBM, false);
 
         Intent intent = new Intent(context, AutoHbmService.class);
         if (enabled) {
-            // Manual HBM and Auto HBM must not fight over brightness.
-            HbmUtils.disableManual(context);
+            // Manual HBM and Auto HBM must not fight over brightness, but do
+            // not touch the panel at all when manual HBM is already inactive.
+            if (prefs.getBoolean(Constants.KEY_HBM_MANUAL, false)
+                    || HbmUtils.isHbmEnabled()) {
+                HbmUtils.disableManual(context);
+            }
             HbmNotification.cancel(context);
             context.startServiceAsUser(intent, UserHandle.CURRENT);
         } else {

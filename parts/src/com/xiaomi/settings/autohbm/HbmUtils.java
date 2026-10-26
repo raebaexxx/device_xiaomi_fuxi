@@ -129,9 +129,14 @@ public final class HbmUtils {
         boolean savedAutoBrightness = prefs.getBoolean(
                 Constants.KEY_HBM_SAVED_AUTO_BRIGHTNESS, false);
 
-        setHbmEnabled(false);
-        if (!savedAutoBrightness && savedBrightness >= 0) {
-            setBrightness(savedBrightness);
+        // Only restore the saved panel brightness if manual HBM was actually
+        // active. A stale saved value must not overwrite the user's current
+        // brightness when switching to automatic HBM.
+        if (isHbmEnabled()) {
+            setHbmEnabled(false);
+            if (!savedAutoBrightness && savedBrightness >= 0) {
+                setBrightness(savedBrightness);
+            }
         }
 
         prefs.edit()
