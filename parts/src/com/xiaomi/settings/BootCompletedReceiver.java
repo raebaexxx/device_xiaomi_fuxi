@@ -16,7 +16,6 @@ import androidx.preference.PreferenceManager;
 
 import org.lineageos.settings.autohbm.AutoHbmService;
 import org.lineageos.settings.autohbm.HbmUtils;
-import org.lineageos.settings.hypercharge.HyperChargeService;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
 
@@ -33,7 +32,6 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         }
 
         PreferenceManager.setDefaultValues(context, R.xml.auto_hbm, false);
-        PreferenceManager.setDefaultValues(context, R.xml.hypercharge_settings, false);
 
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
         boolean autoHbmEnabled = prefs.getBoolean(Constants.KEY_AUTO_HBM, false);
@@ -47,12 +45,6 @@ public class BootCompletedReceiver extends BroadcastReceiver {
             AutoHbmService.update(context);
         } catch (Exception e) {
             Log.e(TAG, "Failed to restore Auto HBM state", e);
-        }
-
-        try {
-            HyperChargeService.update(context);
-        } catch (Exception e) {
-            Log.e(TAG, "Failed to restore charging limit", e);
         }
     }
 }

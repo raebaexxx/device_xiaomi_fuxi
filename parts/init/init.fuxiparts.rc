@@ -1,12 +1,7 @@
 # FuxiParts runs with the system UID. Keep access limited to its controls.
 on boot
-    wait /sys/class/power_supply/battery/constant_charge_current
     wait /sys/class/backlight/panel0-backlight/brightness
 
-    # Battery charge-current limit used by the charging service.
-    chown system system /sys/class/power_supply/battery/constant_charge_current
-    chmod 0660 /sys/class/power_supply/battery/constant_charge_current
-
-    # Manual HBM needs to adjust the panel backlight directly.
+    # HBM needs to adjust the panel backlight directly.
     chown system system /sys/class/backlight/panel0-backlight/brightness
     chmod 0664 /sys/class/backlight/panel0-backlight/brightness

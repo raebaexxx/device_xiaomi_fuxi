@@ -1,7 +1,4 @@
-# init gives FuxiParts ownership of the low-level brightness and charge nodes.
+# init gives FuxiParts ownership of the low-level brightness node.
 allow init vendor_sysfs_graphics:dir search;
 allow init vendor_sysfs_graphics:lnk_file r_file_perms;
 allow init vendor_sysfs_graphics:file setattr;
-allow init vendor_sysfs_battery_supply:dir search;
-allow init vendor_sysfs_battery_supply:lnk_file r_file_perms;
-allow init vendor_sysfs_battery_supply:file setattr;

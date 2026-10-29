@@ -30,8 +30,6 @@ import java.util.Map;
 import org.lineageos.settings.autohbm.AutoHbmActivity;
 import org.lineageos.settings.autohbm.AutoHbmTileService;
 import org.lineageos.settings.autohbm.HbmTileService;
-import org.lineageos.settings.hypercharge.HyperChargeSettingsActivity;
-import org.lineageos.settings.hypercharge.HyperChargeTileService;
 
 public final class TileHandlerActivity extends Activity {
 
@@ -40,8 +38,6 @@ public final class TileHandlerActivity extends Activity {
     static {
         TILE_ACTIVITY_MAP.put(AutoHbmTileService.class.getName(), AutoHbmActivity.class);
         TILE_ACTIVITY_MAP.put(HbmTileService.class.getName(), AutoHbmActivity.class);
-        TILE_ACTIVITY_MAP.put(HyperChargeTileService.class.getName(),
-                HyperChargeSettingsActivity.class);
     }
 
     @Override

@@ -45,33 +45,4 @@
     <string name="hbm_mode_title">High brightness mode</string>
     <string name="hbm_mode_notification">High brightness mode is active. Long use may damage the display.</string>
 
-    <!-- Charging control -->
-    <string name="hypercharge_title">Charging control</string>
-    <string name="hypercharge_summary">Limit charging speed to reduce heat and battery wear</string>
-    <string name="hypercharge_tile_label">Charging limit</string>
-    <string name="hypercharge_main_switch_title">Limit charging speed</string>
-    <string name="hypercharge_main_switch_summary">Cap the battery charge current while charging. Off leaves the OEM charger at full speed.</string>
-    <string name="hypercharge_settings_category">Charging configuration</string>
-    <string name="hypercharge_limit_title">Maximum charging speed</string>
-    <string name="hypercharge_speed_67w">67W (full)</string>
-    <string name="hypercharge_speed_50w">50W</string>
-    <string name="hypercharge_speed_33w">33W</string>
-    <string name="hypercharge_speed_30w">30W</string>
-    <string name="hypercharge_description_title">About charging control</string>
-    <string name="hypercharge_description_summary">The selected speed caps the battery charge current while charging. 67W leaves the OEM charger and thermal protection in control. Lower values can reduce heat and battery wear; actual speed depends on the charger, battery level, and temperature. The system thermal limit is never raised.</string>
-
-    <string-array name="hypercharge_limit_entries">
-        <item>@string/hypercharge_speed_67w</item>
-        <item>@string/hypercharge_speed_50w</item>
-        <item>@string/hypercharge_speed_33w</item>
-        <item>@string/hypercharge_speed_30w</item>
-    </string-array>
-
-    <string-array name="hypercharge_limit_values" translatable="false">
-        <item>full</item>
-        <item>9200000</item>
-        <item>6000000</item>
-        <item>5500000</item>
-    </string-array>
-
 </resources>

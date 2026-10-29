@@ -49,23 +49,4 @@ public final class Constants {
     // leave it. Keep that ratio when the user changes the trigger level.
     public static final int AUTO_HBM_EXIT_THRESHOLD_NUMERATOR = 5;
     public static final int AUTO_HBM_EXIT_THRESHOLD_DENOMINATOR = 8;
-
-    // Charging control
-    public static final String KEY_CHARGE_LIMIT_ENABLED = "charge_limit_enabled";
-    public static final String KEY_CHARGE_LIMIT = "charge_limit";
-    public static final String KEY_CHARGE_LIMIT_ORIGINAL = "charge_limit_original_current";
-    public static final String KEY_CHARGE_LIMIT_APPLIED = "charge_limit_applied_current";
-
-    public static final String NODE_CONSTANT_CHARGE_CURRENT =
-            "/sys/class/power_supply/battery/constant_charge_current";
-    public static final String NODE_BATTERY_STATUS =
-            "/sys/class/power_supply/battery/status";
-    public static final String NODE_BATTERY_CAPACITY =
-            "/sys/class/power_supply/battery/capacity";
-
-    public static final String CHARGE_LIMIT_FULL = "full";
-    public static final String CHARGE_LIMIT_50W = "9200000";
-    public static final String CHARGE_LIMIT_33W = "6000000";
-    public static final String CHARGE_LIMIT_30W = "5500000";
-    public static final String DEFAULT_CHARGE_LIMIT = CHARGE_LIMIT_33W;
 }
