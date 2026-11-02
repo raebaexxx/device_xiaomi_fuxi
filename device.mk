@@ -4,8 +4,9 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Dolby: install fuxi's stock tuning into both ODM and vendor. The shared
-# sm8550-common-dolby repo no longer ships a device-specific dax-default.xml.
+# Dolby: use the fuxi stock tuning instead of the Nuwa one. This has to be
+# added before the sm8550-common inherit, because the first copy to a given
+# destination wins.
 PRODUCT_COPY_FILES += \
     vendor/xiaomi/fuxi/proprietary/odm/etc/dolby/dax-default.xml:$(TARGET_COPY_OUT_ODM)/etc/dolby/dax-default.xml \
     vendor/xiaomi/fuxi/proprietary/odm/etc/dolby/dax-default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-default.xml
