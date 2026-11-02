@@ -11,6 +11,14 @@ $(call inherit-product, device/xiaomi/sm8550-common/common.mk)
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/xiaomi/fuxi/fuxi-vendor.mk)
 
+PRODUCT_COPY_FILES := $(filter-out \
+    vendor/xiaomi/sm8550-common-dolby/proprietary/odm/etc/dolby/dax-default.xml:%, \
+    vendor/xiaomi/sm8550-common-dolby/proprietary/vendor/etc/dolby/dax-default.xml:%, \
+    $(PRODUCT_COPY_FILES))
+
+PRODUCT_COPY_FILES += \
+    vendor/xiaomi/fuxi/proprietary/odm/etc/dolby/dax-default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-default.xml
+
 # Inherit Google Camera
 # $(call inherit-product-if-exists, vendor/xiaomi/GoogleCamera/config.mk) 
 
