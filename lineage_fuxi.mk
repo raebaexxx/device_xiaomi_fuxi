@@ -11,14 +11,13 @@ $(call inherit-product, build/make/target/product/core_64_bit.mk)
 # Inherit device-specific configurations
 $(call inherit-product, device/xiaomi/fuxi/device.mk)
 
-# Camera
-$(call inherit-product-if-exists, vendor/xiaomi/camera/miuicamera.mk)
+# Inherit crDroid configurations
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-# Inherit PixelOS configurations
-$(call inherit-product, vendor/custom/config/common_full_phone.mk)
+-include vendor/lineage-priv/keys/keys.mk
 
 PRODUCT_DEVICE := fuxi
-PRODUCT_NAME := custom_fuxi
+PRODUCT_NAME := lineage_fuxi
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := 2211133C
 PRODUCT_MANUFACTURER := Xiaomi
