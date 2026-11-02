@@ -4,6 +4,9 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# GMS
+WITH_GMS := true
+
 # Inherit common AOSP configurations
 $(call inherit-product, build/make/target/product/full_base_telephony.mk)
 $(call inherit-product, build/make/target/product/core_64_bit.mk)
