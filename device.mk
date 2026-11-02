@@ -12,7 +12,7 @@ $(call inherit-product, device/xiaomi/sm8550-common/common.mk)
 $(call inherit-product, vendor/xiaomi/fuxi/fuxi-vendor.mk)
 
 # Inherit Google Camera
-$(call inherit-product-if-exists, vendor/xiaomi/GoogleCamera/config.mk) 
+# $(call inherit-product-if-exists, vendor/xiaomi/GoogleCamera/config.mk) 
 
 # Vendor MiuiCamera
 $(call inherit-product-if-exists, device/xiaomi/fuxi-miuicamera/device.mk)
@@ -32,7 +32,7 @@ PRODUCT_COPY_FILES += \
 
 # Init
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/init/init.fuxi.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.fuxi.rc \
+    $(LOCAL_PATH)/init/init.fuxi.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.fuxi.rc
 
 # Overlay
 PRODUCT_PACKAGES += \
@@ -53,6 +53,3 @@ PRODUCT_PACKAGES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
-
-# Inherit from the proprietary version
-$(call inherit-product, vendor/xiaomi/fuxi/fuxi-vendor.mk)
