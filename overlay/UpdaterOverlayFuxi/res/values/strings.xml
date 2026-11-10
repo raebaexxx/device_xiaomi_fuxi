@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="updater_server_url" translatable="false">https://raw.githubusercontent.com/raebaexxx/pixelos-ota/{branch}/API/updater/{device}.json</string>
+    <string name="changelog_url" translatable="false">https://raw.githubusercontent.com/raebaexxx/pixelos-ota/{branch}/API/updater/changelogs/{device}.md</string>
+</resources>

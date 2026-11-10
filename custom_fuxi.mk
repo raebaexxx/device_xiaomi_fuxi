@@ -8,6 +8,9 @@
 $(call inherit-product, build/make/target/product/full_base_telephony.mk)
 $(call inherit-product, build/make/target/product/core_64_bit.mk)
 
+# Official build & updater configuration
+IS_OFFICIAL := true
+
 # Inherit device-specific configurations
 $(call inherit-product, device/xiaomi/fuxi/device.mk)
 

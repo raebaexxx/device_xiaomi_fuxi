@@ -43,7 +43,8 @@ PRODUCT_PACKAGES += \
     EuiccResFuxi \
     FrameworkResOverlayFuxi \
     SystemUIOverlayFuxi \
-    SettingsOverlayFuxi
+    SettingsOverlayFuxi \
+    UpdaterOverlayFuxi
 
 # FuxiParts
 PRODUCT_PACKAGES += \
