@@ -17,6 +17,10 @@ TARGET_DISABLE_MATLOG := true
 # Inherit crDroid configurations
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# Remove unwanted packages
+PRODUCT_PACKAGES += \
+    RemovePackages
+
 -include vendor/lineage-priv/keys/keys.mk
 
 PRODUCT_DEVICE := fuxi
