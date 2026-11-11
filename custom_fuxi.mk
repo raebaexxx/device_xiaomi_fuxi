@@ -14,6 +14,9 @@ IS_OFFICIAL := true
 # Inherit device-specific configurations
 $(call inherit-product, device/xiaomi/fuxi/device.mk)
 
+# Bootanimation resolution (used by vendor/custom/config/common.mk)
+TARGET_SCREEN_WIDTH := 1080
+
 # Inherit PixelOS configurations
 $(call inherit-product, vendor/custom/config/common_full_phone.mk)
 
