@@ -14,6 +14,9 @@ $(call inherit-product, device/xiaomi/fuxi/device.mk)
 # Skip MatLog
 TARGET_DISABLE_MATLOG := true
 
+# CrDroid faceunlock support
+TARGET_FACE_UNLOCK_SUPPORTED := true
+
 # Inherit crDroid configurations
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
