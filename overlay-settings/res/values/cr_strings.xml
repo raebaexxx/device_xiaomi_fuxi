@@ -7,5 +7,5 @@
 -->
 <resources>
     <string name="build_maintainer_summary" translatable="false">RaeBaeXXX</string>
-    <string name="build_maintainer_unofficial" translatable="false">RaeBaeXXX</string>
+    <string name="build_maintainer_unofficial">RaeBaeXXX</string>
 </resources>
