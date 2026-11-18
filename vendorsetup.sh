@@ -40,4 +40,7 @@ _fuxi_apply_patch() {
 _fuxi_apply_patch "frameworks/base" \
     "$_fuxi_patches/frameworks_base/0001-telephony-report-real-hardware-CA.patch"
 
+_fuxi_apply_patch "packages/apps/crDroidSettings" \
+    "$_fuxi_patches/packages_apps_crDroidSettings/0001-fuxi-show-maintainer-name.patch"
+
 unset _fuxi_top _fuxi_patches

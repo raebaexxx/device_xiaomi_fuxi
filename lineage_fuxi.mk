@@ -20,10 +20,6 @@ TARGET_FACE_UNLOCK_SUPPORTED := true
 # Inherit crDroid configurations
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-# Build-time resource overlay: show the actual maintainer instead of the
-# "Unofficial" label on self-signed builds.
-PRODUCT_PACKAGE_OVERLAYS += device/xiaomi/fuxi/overlay-settings
-
 # Remove unwanted packages
 PRODUCT_PACKAGES += \
     RemovePackages
