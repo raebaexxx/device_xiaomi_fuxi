@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Build-time resource overlay for the fuxi product.
+     The Settings maintainer preference checks the platform signature and
+     falls back to the "Unofficial" label on self-signed builds. Override
+     both strings so the About phone screen shows the actual maintainer.
+-->
+<resources>
+    <string name="build_maintainer_summary" translatable="false">RaeBaeXXX</string>
+    <string name="build_maintainer_unofficial" translatable="false">RaeBaeXXX</string>
+</resources>
