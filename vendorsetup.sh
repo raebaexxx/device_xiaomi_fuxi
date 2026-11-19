@@ -2,10 +2,10 @@
 #
 # Device-specific patches for repositories that are not forked.
 #
-# The LTE+ carrier-aggregation fix lives in frameworks/base, but the fuxi
-# device tree is the source of truth for it. Apply the patch here so a
-# plain `repo sync` followed by `. build/envsetup.sh` restores it without
-# maintaining a separate frameworks/base fork.
+# The LTE+ carrier-aggregation fix lives in frameworks/base and cannot be
+# expressed as a resource overlay, so keep it as a local patch. The device
+# tree stays the source of truth and a plain `repo sync` followed by
+# `. build/envsetup.sh` restores it without a separate frameworks/base fork.
 
 _fuxi_top="$(gettop 2>/dev/null)"
 if [ -z "$_fuxi_top" ]; then
@@ -39,8 +39,5 @@ _fuxi_apply_patch() {
 
 _fuxi_apply_patch "frameworks/base" \
     "$_fuxi_patches/frameworks_base/0001-telephony-report-real-hardware-CA.patch"
-
-_fuxi_apply_patch "packages/apps/crDroidSettings" \
-    "$_fuxi_patches/packages_apps_crDroidSettings/0001-fuxi-show-maintainer-name.patch"
 
 unset _fuxi_top _fuxi_patches

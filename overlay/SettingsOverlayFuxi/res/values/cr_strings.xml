@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     BuildMaintainerPreference only trusts builds signed with the official
+     crDroid platform key and falls back to the "Unofficial" label otherwise.
+     Since local builds are self-signed, show the maintainer name here.
+-->
+<resources>
+    <string name="build_maintainer_unofficial">RaeBaeXXX</string>
+    <string name="build_maintainer_summary" translatable="false">RaeBaeXXX</string>
+</resources>
