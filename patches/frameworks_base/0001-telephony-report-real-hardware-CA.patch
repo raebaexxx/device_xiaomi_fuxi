@@ -1,24 +1,8 @@
-From c3ea3976127c0a938407cefce4337b214210edb9 Mon Sep 17 00:00:00 2001
-From: raebaexxx <vadimfeda@yandex.ru>
-Date: Wed, 18 Nov 2026 10:02:05 +0300
-Subject: [PATCH] telephony: report real hardware CA when Force LTE_CA is unset
-
-The per-SIM Force LTE_CA feature changed isUsingCarrierAggregation() to
-return false whenever the override is unset, so NetworkTypeController
-never produced OVERRIDE_NETWORK_TYPE_LTE_CA for real carrier aggregation
-and the LTE+ icon stayed hidden.
-
-Return the detected hardware CA state by default. An explicit per-SIM
-override (0 or 1) still wins.
----
- telephony/java/android/telephony/ServiceState.java | 7 ++++---
- 1 file changed, 4 insertions(+), 3 deletions(-)
-
 diff --git a/telephony/java/android/telephony/ServiceState.java b/telephony/java/android/telephony/ServiceState.java
-index 57405cb0a..169ff6cdc 100644
+index 6cabae02f..41fc168cd 100644
 --- a/telephony/java/android/telephony/ServiceState.java
 +++ b/telephony/java/android/telephony/ServiceState.java
-@@ -1450,9 +1450,10 @@ public class ServiceState implements Parcelable {
+@@ -1456,9 +1456,10 @@ public class ServiceState implements Parcelable {
          if (mForceLteCA != null) {
              return mForceLteCA.booleanValue();
          }

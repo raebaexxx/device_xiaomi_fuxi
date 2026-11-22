@@ -1,2 +1,5 @@
 # Device identity
 ro.product.marketname=Xiaomi 13
+
+# Lunaris
+ro.lunaris.maintainer=RaeBaeXXX

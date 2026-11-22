@@ -18,6 +18,10 @@ $(call inherit-product, device/xiaomi/sm8550-common/common.mk)
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/xiaomi/fuxi/fuxi-vendor.mk)
 
+# Display
+$(call soong_config_set,surfaceflinger,frame_rate_category_high,120)
+$(call soong_config_set,surfaceflinger,frame_rate_category_min,60)
+
 # Inherit Google Camera
 # $(call inherit-product-if-exists, vendor/xiaomi/GoogleCamera/config.mk) 
 

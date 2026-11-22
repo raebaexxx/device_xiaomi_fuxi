@@ -40,4 +40,9 @@ _fuxi_apply_patch() {
 _fuxi_apply_patch "frameworks/base" \
     "$_fuxi_patches/frameworks_base/0001-telephony-report-real-hardware-CA.patch"
 
+# The stock WFD blobs are built against display config AIDL V16. Lunaris'
+# display commonsys-intf repo only ships V1-V15, so add the frozen V16 API.
+_fuxi_apply_patch "vendor/qcom/opensource/commonsys-intf/display" \
+    "$_fuxi_patches/vendor_qcom_opensource_commonsys-intf_display/0001-display-config-add-frozen-V16.patch"
+
 unset _fuxi_top _fuxi_patches

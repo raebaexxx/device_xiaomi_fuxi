@@ -11,18 +11,20 @@ $(call inherit-product, build/make/target/product/core_64_bit.mk)
 # Inherit device-specific configurations
 $(call inherit-product, device/xiaomi/fuxi/device.mk)
 
+# Lunaris
+WITH_GMS := true
+TARGET_CUSTOM_UDFPS := true
+TARGET_BOOT_ANIMATION_RES := 1080
+PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
 # Skip MatLog
 TARGET_DISABLE_MATLOG := true
 
-# CrDroid faceunlock support
+# Face unlock
 TARGET_FACE_UNLOCK_SUPPORTED := true
 
-# Inherit crDroid configurations
+# Inherit Lunaris configurations
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
-
-# Remove unwanted packages
-PRODUCT_PACKAGES += \
-    RemovePackages
 
 -include vendor/lineage-priv/keys/keys.mk
 

@@ -14,6 +14,8 @@ include device/xiaomi/sm8550-common/BoardConfigCommon.mk
 
 # Display
 TARGET_SCREEN_DENSITY := 420
+TARGET_SCREEN_HEIGHT := 2400
+TARGET_SCREEN_WIDTH := 1080
 
 # Kernel
 BOOT_KERNEL_MODULES += \
