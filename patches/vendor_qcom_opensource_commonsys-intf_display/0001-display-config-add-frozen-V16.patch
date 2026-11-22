@@ -1,7 +1,7 @@
-diff --git a/aidl/config/Android.bp b/aidl/config/Android.bp
+diff --git c/aidl/config/Android.bp i/aidl/config/Android.bp
 index bada2aa..0b596f1 100644
---- a/aidl/config/Android.bp
-+++ b/aidl/config/Android.bp
+--- c/aidl/config/Android.bp
++++ i/aidl/config/Android.bp
 @@ -80,6 +80,10 @@ aidl_interface {
              version: "15",
              imports: ["android.hardware.common-V2"],
@@ -13,18 +13,18 @@ index bada2aa..0b596f1 100644
  
      ],
      frozen: true,
-diff --git a/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/.hash b/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/.hash
+diff --git c/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/.hash i/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/.hash
 new file mode 100644
-index 0000000..6d215bc
+index 0000000..7488209
 --- /dev/null
-+++ b/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/.hash
++++ i/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/.hash
 @@ -0,0 +1 @@
-+564c08d739ffd66534006c6bd24cc1b24a6ff866
-diff --git a/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/Attributes.aidl b/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/Attributes.aidl
++ef53443149dff9a33e447202e38852b8252c4622
+diff --git c/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/Attributes.aidl i/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/Attributes.aidl
 new file mode 100644
 index 0000000..3f4f9d6
 --- /dev/null
-+++ b/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/Attributes.aidl
++++ i/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/Attributes.aidl
 @@ -0,0 +1,67 @@
 +/*
 + * Copyright (c) 2021 The Linux Foundation. All rights reserved.
@@ -93,11 +93,11 @@ index 0000000..3f4f9d6
 +  vendor.qti.hardware.display.config.DisplayPortType panelType;
 +  boolean isYuv;
 +}
-diff --git a/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/CacV2Config.aidl b/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/CacV2Config.aidl
+diff --git c/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/CacV2Config.aidl i/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/CacV2Config.aidl
 new file mode 100644
 index 0000000..61bb9ba
 --- /dev/null
-+++ b/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/CacV2Config.aidl
++++ i/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/CacV2Config.aidl
 @@ -0,0 +1,37 @@
 +/*
 + * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
@@ -136,11 +136,11 @@ index 0000000..61bb9ba
 +  double pixel_pitch;
 +  double normalization;
 +}
-diff --git a/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/CacV2ConfigExt.aidl b/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/CacV2ConfigExt.aidl
+diff --git c/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/CacV2ConfigExt.aidl i/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/CacV2ConfigExt.aidl
 new file mode 100644
 index 0000000..1eecc6e
 --- /dev/null
-+++ b/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/CacV2ConfigExt.aidl
++++ i/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/CacV2ConfigExt.aidl
 @@ -0,0 +1,39 @@
 +/*
 + * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
@@ -181,11 +181,11 @@ index 0000000..1eecc6e
 +  int verticalCenter;
 +  int horizontalCenter;
 +}
-diff --git a/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/CameraSmoothOp.aidl b/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/CameraSmoothOp.aidl
+diff --git c/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/CameraSmoothOp.aidl i/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/CameraSmoothOp.aidl
 new file mode 100644
 index 0000000..5a4b6d1
 --- /dev/null
-+++ b/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/CameraSmoothOp.aidl
++++ i/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/CameraSmoothOp.aidl
 @@ -0,0 +1,61 @@
 +/*
 + * Copyright (c) 2021 The Linux Foundation. All rights reserved.
@@ -248,11 +248,11 @@ index 0000000..5a4b6d1
 +  OFF = 0,
 +  ON = 1,
 +}
-diff --git a/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/Concurrency.aidl b/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/Concurrency.aidl
+diff --git c/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/Concurrency.aidl i/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/Concurrency.aidl
 new file mode 100644
 index 0000000..59da3fe
 --- /dev/null
-+++ b/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/Concurrency.aidl
++++ i/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/Concurrency.aidl
 @@ -0,0 +1,65 @@
 +/*
 + * Copyright (c) 2021 The Linux Foundation. All rights reserved.
@@ -319,11 +319,11 @@ index 0000000..59da3fe
 +  CWB = 4,
 +  CAMERA = 5,
 +}
-diff --git a/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/DisplayPortType.aidl b/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/DisplayPortType.aidl
+diff --git c/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/DisplayPortType.aidl i/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/DisplayPortType.aidl
 new file mode 100644
 index 0000000..ee8c089
 --- /dev/null
-+++ b/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/DisplayPortType.aidl
++++ i/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/DisplayPortType.aidl
 @@ -0,0 +1,67 @@
 +/*
 + * Copyright (c) 2021 The Linux Foundation. All rights reserved.
@@ -392,11 +392,11 @@ index 0000000..ee8c089
 +  EDP = 6,
 +  DP = 7,
 +}
-diff --git a/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/DisplayType.aidl b/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/DisplayType.aidl
+diff --git c/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/DisplayType.aidl i/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/DisplayType.aidl
 new file mode 100644
 index 0000000..2ede610
 --- /dev/null
-+++ b/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/DisplayType.aidl
++++ i/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/DisplayType.aidl
 @@ -0,0 +1,64 @@
 +/*
 + * Copyright (c) 2021 The Linux Foundation. All rights reserved.
@@ -462,11 +462,11 @@ index 0000000..2ede610
 +  VIRTUAL = 3,
 +  BUILTIN2 = 4,
 +}
-diff --git a/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/DynRefreshRateOp.aidl b/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/DynRefreshRateOp.aidl
+diff --git c/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/DynRefreshRateOp.aidl i/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/DynRefreshRateOp.aidl
 new file mode 100644
 index 0000000..1f97897
 --- /dev/null
-+++ b/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/DynRefreshRateOp.aidl
++++ i/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/DynRefreshRateOp.aidl
 @@ -0,0 +1,64 @@
 +/*
 + * Copyright (c) 2021 The Linux Foundation. All rights reserved.
@@ -532,11 +532,11 @@ index 0000000..1f97897
 +  ENABLE_METADATA = 2,
 +  SET_BINDER = 3,
 +}
-diff --git a/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/ExternalStatus.aidl b/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/ExternalStatus.aidl
+diff --git c/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/ExternalStatus.aidl i/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/ExternalStatus.aidl
 new file mode 100644
 index 0000000..2490063
 --- /dev/null
-+++ b/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/ExternalStatus.aidl
++++ i/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/ExternalStatus.aidl
 @@ -0,0 +1,64 @@
 +/*
 + * Copyright (c) 2021 The Linux Foundation. All rights reserved.
@@ -602,11 +602,11 @@ index 0000000..2490063
 +  PAUSE = 3,
 +  RESUME = 4,
 +}
-diff --git a/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/HDRCapsParams.aidl b/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/HDRCapsParams.aidl
+diff --git c/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/HDRCapsParams.aidl i/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/HDRCapsParams.aidl
 new file mode 100644
 index 0000000..94b52ce
 --- /dev/null
-+++ b/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/HDRCapsParams.aidl
++++ i/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/HDRCapsParams.aidl
 @@ -0,0 +1,63 @@
 +/*
 + * Copyright (c) 2021 The Linux Foundation. All rights reserved.
@@ -671,11 +671,11 @@ index 0000000..94b52ce
 +  float maxAvgLuminance;
 +  float minLuminance;
 +}
-diff --git a/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/ICwbControlConst.aidl b/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/ICwbControlConst.aidl
+diff --git c/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/ICwbControlConst.aidl i/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/ICwbControlConst.aidl
 new file mode 100644
 index 0000000..2c7127b
 --- /dev/null
-+++ b/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/ICwbControlConst.aidl
++++ i/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/ICwbControlConst.aidl
 @@ -0,0 +1,49 @@
 +/*
 + * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
@@ -726,146 +726,24 @@ index 0000000..2c7127b
 +  const int WIDTH_DOWNSCALER = (1 << 16) /* 65536 */;
 +  const int HEIGHT_DOWNSCALER = (1 << 24) /* 16777216 */;
 +}
-diff --git a/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/IDisplayConfig.aidl b/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/IDisplayConfig.aidl
-new file mode 100644
-index 0000000..78c9762
---- /dev/null
-+++ b/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/IDisplayConfig.aidl
-@@ -0,0 +1,129 @@
-+/*
-+ * Copyright (c) 2021 The Linux Foundation. All rights reserved.
-+ *
-+ * Redistribution and use in source and binary forms, with or without
-+ * modification, are permitted provided that the following conditions are
-+ * met:
-+ *  * Redistributions of source code must retain the above copyright
-+ *      notice, this list of conditions and the following disclaimer.
-+ *  * Redistributions in binary form must reproduce the above
-+ *    copyright notice, this list of conditions and the following
-+ *    disclaimer in the documentation and/or other materials provided
-+ *    with the distribution.
-+ *  * Neither the name of The Linux Foundation nor the names of its
-+ *    contributors may be used to endorse or promote products derived
-+ *    from this software without specific prior written permission.
-+ *
-+ * THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
-+ * WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
-+ * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
-+ * ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
-+ * BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
-+ * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
-+ * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
-+ * BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
-+ * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
-+ * OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
-+ * IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-+ *//*
-+ * Changes from Qualcomm Technologies, Inc. are provided under the following license:
-+ * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
-+ * SPDX-License-Identifier: BSD-3-Clause-Clear
-+ *//**
-+ * @file IDisplayConfig.aidl
-+ * @brief Interface for display configuration operations
-+ *
-+ * This file contains the interface definitions for various display configuration
-+ * operations such as querying display attributes, setting display status, and
-+ * configuring dynamic refresh rates.
-+ */
-+///////////////////////////////////////////////////////////////////////////////
-+// THIS FILE IS IMMUTABLE. DO NOT EDIT IN ANY CASE.                          //
-+///////////////////////////////////////////////////////////////////////////////
-+
-+// This file is a snapshot of an AIDL file. Do not edit it manually. There are
-+// two cases:
-+// 1). this is a frozen version file - do not edit this in any case.
-+// 2). this is a 'current' file. If you make a backwards compatible change to
-+//     the interface (from the latest frozen version), the build system will
-+//     prompt you to update this file with `m <name>-update-api`.
-+//
-+// You must not make a backward incompatible change to any AIDL file built
-+// with the aidl_interface module type with versions property set. The module
-+// type is used to build AIDL files in a way that they can be used across
-+// independently updatable components of the system. If a device is shipped
-+// with such a backward incompatible change, it has a high risk of breaking
-+// later when a module using the interface is updated, e.g., Mainline modules.
-+
-+package vendor.qti.hardware.display.config;
-+@VintfStability
-+interface IDisplayConfig {
-+  boolean isDisplayConnected(in vendor.qti.hardware.display.config.DisplayType dpy);
-+  void setDisplayStatus(in vendor.qti.hardware.display.config.DisplayType dpy, in vendor.qti.hardware.display.config.ExternalStatus status);
-+  void configureDynRefreshRate(in vendor.qti.hardware.display.config.DynRefreshRateOp op, in int refrestRate);
-+  int getConfigCount(in vendor.qti.hardware.display.config.DisplayType dpy);
-+  int getActiveConfig(in vendor.qti.hardware.display.config.DisplayType dpy);
-+  void setActiveConfig(in vendor.qti.hardware.display.config.DisplayType dpy, in int config);
-+  vendor.qti.hardware.display.config.Attributes getDisplayAttributes(in int configIndex, in vendor.qti.hardware.display.config.DisplayType dpy);
-+  void setPanelBrightness(in int level);
-+  int getPanelBrightness();
-+  void minHdcpEncryptionLevelChanged(in vendor.qti.hardware.display.config.DisplayType dpy, in int minEncLevel);
-+  void refreshScreen();
-+  void controlPartialUpdate(in vendor.qti.hardware.display.config.DisplayType dpy, in boolean enable);
-+  void toggleScreenUpdate(in boolean on);
-+  void setIdleTimeout(in int value);
-+  vendor.qti.hardware.display.config.HDRCapsParams getHDRCapabilities(in vendor.qti.hardware.display.config.DisplayType dpy);
-+  void setCameraLaunchStatus(in int on);
-+  boolean displayBWTransactionPending();
-+  void setDisplayAnimating(in long displayId, in boolean animating);
-+  void controlIdlePowerCollapse(in boolean enable, in boolean synchronous);
-+  boolean getWriteBackCapabilities();
-+  void setDisplayDppsAdROI(in int displayId, in int hStart, in int hEnd, in int vStart, in int vEnd, in int factorIn, in int factorOut);
-+  void updateVSyncSourceOnPowerModeOff();
-+  void updateVSyncSourceOnPowerModeDoze();
-+  void setPowerMode(in int dispId, in vendor.qti.hardware.display.config.PowerMode powerMode);
-+  boolean isPowerModeOverrideSupported(in int dispId);
-+  boolean isHDRSupported(in int dispId);
-+  boolean isWCGSupported(in int dispId);
-+  void setLayerAsMask(in int dispId, in long layerId);
-+  String getDebugProperty(in String propName);
-+  vendor.qti.hardware.display.config.Attributes getActiveBuiltinDisplayAttributes();
-+  void setPanelLuminanceAttributes(in int dispId, in float minLum, in float maxLum);
-+  boolean isBuiltInDisplay(in int dispId);
-+  boolean isAsyncVDSCreationSupported();
-+  void createVirtualDisplay(in int width, in int height, in int format);
-+  long[] getSupportedDSIBitClks(in int dispId);
-+  long getDSIClk(in int dispId);
-+  void setDSIClk(in int dispId, in long bitClk);
-+  void setCWBOutputBuffer(in vendor.qti.hardware.display.config.IDisplayConfigCallback callback, in int dispId, in vendor.qti.hardware.display.config.Rect rect, in boolean postProcessed, in android.hardware.common.NativeHandle buffer);
-+  void setQsyncMode(in int dispId, in vendor.qti.hardware.display.config.QsyncMode mode);
-+  boolean isSmartPanelConfig(in int dispId, in int configId);
-+  boolean isRotatorSupportedFormat(in int halFormat, in boolean ubwc);
-+  void controlQsyncCallback(in boolean enable);
-+  void sendTUIEvent(in vendor.qti.hardware.display.config.DisplayType dpy, in vendor.qti.hardware.display.config.TUIEventType eventType);
-+  int getDisplayHwId(in int dispId);
-+  int[] getSupportedDisplayRefreshRates(in vendor.qti.hardware.display.config.DisplayType dpy);
-+  boolean isRCSupported(in int dispId);
-+  void controlIdleStatusCallback(in boolean enable);
-+  boolean isSupportedConfigSwitch(in int dispId, in int config);
-+  vendor.qti.hardware.display.config.DisplayType getDisplayType(in long physicalDispId);
-+  void setCameraSmoothInfo(in vendor.qti.hardware.display.config.CameraSmoothOp op, in int fps);
-+  long registerCallback(in vendor.qti.hardware.display.config.IDisplayConfigCallback callback);
-+  void unRegisterCallback(in long handle);
-+  void notifyDisplayIdleState(in int[] dispId);
-+  void setClientUp();
-+  int getDisplayPortId(in int dispId);
-+  boolean isCacV2Supported(in int dispId);
-+  void configureCacV2(in int dispId, in vendor.qti.hardware.display.config.CacV2Config config, in boolean enable);
-+  void configureCacV2PerEye(in int dispId, in vendor.qti.hardware.display.config.CacV2Config leftConfig, in vendor.qti.hardware.display.config.CacV2Config rightConfig, in boolean enable);
-+  void configureCacV2ExtPerEye(in int dispId, in vendor.qti.hardware.display.config.CacV2ConfigExt leftConfig, in vendor.qti.hardware.display.config.CacV2ConfigExt rightConfig, in boolean enable);
-+  void allowIdleFallback();
-+  void setContentFps(in String name, in int fps);
-+  void setCWBOutputBufferV2(in vendor.qti.hardware.display.config.IDisplayConfigCallback callback, in int dispId, in vendor.qti.hardware.display.config.Rect roiRect, in vendor.qti.hardware.display.config.Rect downscaleRect, in int cwbControlFlag, in android.hardware.common.NativeHandle buffer);
-+  int tunnellingInit();
-+  int tunnellingDeinit();
-+  int dequeueTunnelledBuffer(in android.hardware.common.NativeHandle buffer_handle, out android.hardware.common.NativeHandle release_fence_handle);
-+  int queueTunnelledBuffer(in android.hardware.common.NativeHandle buffer_handle, in android.hardware.common.NativeHandle acquire_fence_handle);
-+  void setPoseConfig(in int dispId, in android.hardware.common.NativeHandle bufferHandle, in vendor.qti.hardware.display.config.PoseConfigType configType);
+diff --git c/aidl/config/aidl_api/vendor.qti.hardware.display.config/current/vendor/qti/hardware/display/config/IDisplayConfig.aidl i/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/IDisplayConfig.aidl
+similarity index 98%
+copy from aidl/config/aidl_api/vendor.qti.hardware.display.config/current/vendor/qti/hardware/display/config/IDisplayConfig.aidl
+copy to aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/IDisplayConfig.aidl
+index 79882f7..78c9762 100644
+--- c/aidl/config/aidl_api/vendor.qti.hardware.display.config/current/vendor/qti/hardware/display/config/IDisplayConfig.aidl
++++ i/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/IDisplayConfig.aidl
+@@ -125,4 +125,5 @@ interface IDisplayConfig {
+   int dequeueTunnelledBuffer(in android.hardware.common.NativeHandle buffer_handle, out android.hardware.common.NativeHandle release_fence_handle);
+   int queueTunnelledBuffer(in android.hardware.common.NativeHandle buffer_handle, in android.hardware.common.NativeHandle acquire_fence_handle);
+   void setPoseConfig(in int dispId, in android.hardware.common.NativeHandle bufferHandle, in vendor.qti.hardware.display.config.PoseConfigType configType);
 +  void setHDRCapabilities(in vendor.qti.hardware.display.config.DisplayType dpy, in vendor.qti.hardware.display.config.HDRCapsParams caps);
-+}
-diff --git a/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/IDisplayConfigCallback.aidl b/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/IDisplayConfigCallback.aidl
+ }
+diff --git c/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/IDisplayConfigCallback.aidl i/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/IDisplayConfigCallback.aidl
 new file mode 100644
 index 0000000..104139f
 --- /dev/null
-+++ b/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/IDisplayConfigCallback.aidl
++++ i/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/IDisplayConfigCallback.aidl
 @@ -0,0 +1,69 @@
 +/*
 + * Copyright (c) 2021 The Linux Foundation. All rights reserved.
@@ -936,21 +814,15 @@ index 0000000..104139f
 +  oneway void notifyTUIEventDone(in int error, in vendor.qti.hardware.display.config.DisplayType disp_type, in vendor.qti.hardware.display.config.TUIEventType eventType);
 +  oneway void notifyContentFps(in String name, in int fps);
 +}
-diff --git a/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/PoseConfigType.aidl b/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/PoseConfigType.aidl
+diff --git c/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/PoseConfigType.aidl i/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/PoseConfigType.aidl
 new file mode 100644
-index 0000000..09ef1e1
+index 0000000..3131c45
 --- /dev/null
-+++ b/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/PoseConfigType.aidl
-@@ -0,0 +1,34 @@
++++ i/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/PoseConfigType.aidl
+@@ -0,0 +1,28 @@
 +/*
-+ * Changes from Qualcomm Technologies, Inc. are provided under the following license:
 + * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
 + * SPDX-License-Identifier: BSD-3-Clause-Clear
-+ *//**
-+ * @file PoseConfigType.aidl
-+ * @brief Defines the different types of pose config test or real config
-+ *
-+ * This enumeration states the different types of display ports supported.
 + */
 +///////////////////////////////////////////////////////////////////////////////
 +// THIS FILE IS IMMUTABLE. DO NOT EDIT IN ANY CASE.                          //
@@ -976,11 +848,11 @@ index 0000000..09ef1e1
 +  TEST = 0,
 +  REAL = 1,
 +}
-diff --git a/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/PowerMode.aidl b/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/PowerMode.aidl
+diff --git c/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/PowerMode.aidl i/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/PowerMode.aidl
 new file mode 100644
 index 0000000..fe91a3d
 --- /dev/null
-+++ b/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/PowerMode.aidl
++++ i/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/PowerMode.aidl
 @@ -0,0 +1,63 @@
 +/*
 + * Copyright (c) 2021 The Linux Foundation. All rights reserved.
@@ -1045,11 +917,11 @@ index 0000000..fe91a3d
 +  ON = 2,
 +  DOZE_SUSPEND = 3,
 +}
-diff --git a/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/QsyncMode.aidl b/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/QsyncMode.aidl
+diff --git c/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/QsyncMode.aidl i/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/QsyncMode.aidl
 new file mode 100644
 index 0000000..0fdf2ca
 --- /dev/null
-+++ b/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/QsyncMode.aidl
++++ i/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/QsyncMode.aidl
 @@ -0,0 +1,63 @@
 +/*
 + * Copyright (c) 2021 The Linux Foundation. All rights reserved.
@@ -1114,11 +986,11 @@ index 0000000..0fdf2ca
 +  WAIT_FOR_FENCES_EACH_FRAME = 2,
 +  WAIT_FOR_COMMIT_EACH_FRAME = 3,
 +}
-diff --git a/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/Rect.aidl b/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/Rect.aidl
+diff --git c/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/Rect.aidl i/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/Rect.aidl
 new file mode 100644
 index 0000000..3978f2d
 --- /dev/null
-+++ b/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/Rect.aidl
++++ i/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/Rect.aidl
 @@ -0,0 +1,63 @@
 +/*
 + * Copyright (c) 2021 The Linux Foundation. All rights reserved.
@@ -1183,11 +1055,11 @@ index 0000000..3978f2d
 +  int right;
 +  int bottom;
 +}
-diff --git a/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/TUIEventType.aidl b/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/TUIEventType.aidl
+diff --git c/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/TUIEventType.aidl i/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/TUIEventType.aidl
 new file mode 100644
 index 0000000..8b1aa5d
 --- /dev/null
-+++ b/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/TUIEventType.aidl
++++ i/aidl/config/aidl_api/vendor.qti.hardware.display.config/16/vendor/qti/hardware/display/config/TUIEventType.aidl
 @@ -0,0 +1,63 @@
 +/*
 + * Copyright (c) 2021 The Linux Foundation. All rights reserved.
@@ -1252,3 +1124,31 @@ index 0000000..8b1aa5d
 +  START_TUI_TRANSITION = 2,
 +  END_TUI_TRANSITION = 3,
 +}
+diff --git c/aidl/config/aidl_api/vendor.qti.hardware.display.config/current/vendor/qti/hardware/display/config/IDisplayConfig.aidl i/aidl/config/aidl_api/vendor.qti.hardware.display.config/current/vendor/qti/hardware/display/config/IDisplayConfig.aidl
+index 79882f7..78c9762 100644
+--- c/aidl/config/aidl_api/vendor.qti.hardware.display.config/current/vendor/qti/hardware/display/config/IDisplayConfig.aidl
++++ i/aidl/config/aidl_api/vendor.qti.hardware.display.config/current/vendor/qti/hardware/display/config/IDisplayConfig.aidl
+@@ -125,4 +125,5 @@ interface IDisplayConfig {
+   int dequeueTunnelledBuffer(in android.hardware.common.NativeHandle buffer_handle, out android.hardware.common.NativeHandle release_fence_handle);
+   int queueTunnelledBuffer(in android.hardware.common.NativeHandle buffer_handle, in android.hardware.common.NativeHandle acquire_fence_handle);
+   void setPoseConfig(in int dispId, in android.hardware.common.NativeHandle bufferHandle, in vendor.qti.hardware.display.config.PoseConfigType configType);
++  void setHDRCapabilities(in vendor.qti.hardware.display.config.DisplayType dpy, in vendor.qti.hardware.display.config.HDRCapsParams caps);
+ }
+diff --git c/aidl/config/vendor/qti/hardware/display/config/IDisplayConfig.aidl i/aidl/config/vendor/qti/hardware/display/config/IDisplayConfig.aidl
+index cd02d7d..0d67319 100644
+--- c/aidl/config/vendor/qti/hardware/display/config/IDisplayConfig.aidl
++++ i/aidl/config/vendor/qti/hardware/display/config/IDisplayConfig.aidl
+@@ -723,4 +723,13 @@ interface IDisplayConfig {
+     * @return error is NONE upon success
+     */
+     void setPoseConfig(in int dispId, in NativeHandle bufferHandle, in PoseConfigType configType);
++    /**
++     * @brief Set the HDR capabilities of the specified display.
++     *
++     * @param dpy display type
++     * @param caps HDR capabilities
++     *
++     * @return error is NONE upon success
++     */
++    void setHDRCapabilities(in DisplayType dpy, in HDRCapsParams caps);
+ }
