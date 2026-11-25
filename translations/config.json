@@ -7,7 +7,13 @@
       "source": "packages/apps/Settings",
       "resource_dirs": ["res", "Singularity/res"],
       "phase": 2,
-      "note": "Settings incl. Singularity customisation"
+      "note": "Settings incl. Singularity customisation",
+      "exclude_strings": [
+        "lunaris_device_message",
+        "lunaris_processor_code_message",
+        "lunaris_battery_type_message",
+        "lunaris_screen_message"
+      ]
     },
     {
       "id": "SystemUI",

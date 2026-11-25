@@ -155,12 +155,15 @@ def ru_dirs(resdir: Path) -> list[Path]:
 def package_entries(package: dict, include_translated: bool = True) -> list[dict]:
     """Return all source entries of a package with path metadata."""
     result = []
+    excluded = set(package.get("exclude_strings", []))
     source = REPO_ROOT / package["source"]
     for resdir_name in package["resource_dirs"]:
         resdir = source / resdir_name
         for path in values_files(resdir):
             for entry in parse_entries(path):
                 if not is_translatable(entry):
+                    continue
+                if entry["name"] in excluded:
                     continue
                 result.append(
                     {

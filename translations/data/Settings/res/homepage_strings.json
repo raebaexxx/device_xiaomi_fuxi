@@ -1,0 +1,22 @@
+{
+  "strings": {
+    "homepage_google_summary": "Сервисы и настройки Google",
+    "homepage_connectivity_title": "Подключения",
+    "homepage_network_title": "Сеть",
+    "homepage_network_summary": "Сеть и подключения",
+    "homepage_priority_modes_summary": "Не беспокоить, пользовательские режимы",
+    "homepage_battery_summary": "Расход батареи, экономия заряда",
+    "homepage_storage_summary": "Использовано и свободно",
+    "homepage_location_summary": "Доступ приложений к геолокации",
+    "homepage_accounts_summary": "Аккаунты, ключи доступа, синхронизация",
+    "homepage_wellbeing_summary": "Экранное время, таймеры приложений",
+    "homepage_about_summary": "Модель, версия Android, правовая информация",
+    "homepage_search_hint_1": "Ищете что-то конкретное?",
+    "homepage_search_hint_2": "Нажмите, чтобы открыть поиск",
+    "homepage_search_hint_3": "Потерялись? Нажмите для поиска",
+    "homepage_search_hint_4": "Что ищем сегодня?",
+    "homepage_search_hint_5": "Тсс… поиск внизу"
+  },
+  "plurals": {},
+  "arrays": {}
+}

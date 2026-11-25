@@ -3,9 +3,9 @@
     {
       "id": "Settings",
       "phase": 2,
-      "total": 10095,
-      "missing": 4106,
-      "files": 19
+      "total": 10107,
+      "missing": 4118,
+      "files": 20
     },
     {
       "id": "SystemUI",
@@ -232,9 +232,9 @@
       "files": 0
     }
   ],
-  "total_missing": 7225,
+  "total_missing": 7237,
   "kinds": {
-    "string": 7129,
+    "string": 7141,
     "string-array": 71,
     "plurals": 25
   },
@@ -274,6 +274,7 @@
     "res/font_strings.xml": 54,
     "res/gallery_strings.xml": 136,
     "res/home_clock_strings.xml": 9,
+    "res/homepage_strings.xml": 16,
     "res/info_widget_background_strings.xml": 5,
     "res/kg_widgets_strings.xml": 13,
     "res/lineage_config.xml": 2,
@@ -282,7 +283,7 @@
     "res/lunaris_config.xml": 2,
     "res/lunaris_plurals.xml": 1,
     "res/lunaris_qs_widget_strings.xml": 17,
-    "res/lunaris_strings.xml": 638,
+    "res/lunaris_strings.xml": 634,
     "res/overlay_previews.xml": 1,
     "res/quick_launch_strings.xml": 84,
     "res/quickswitch_arrays.xml": 2,
@@ -805,6 +806,182 @@
       "name": "wellbeing_title",
       "attrs": {},
       "text": "Digital wellbeing",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "res",
+      "file": "homepage_strings.xml",
+      "kind": "string",
+      "name": "homepage_google_summary",
+      "attrs": {},
+      "text": "Google services and preferences",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "res",
+      "file": "homepage_strings.xml",
+      "kind": "string",
+      "name": "homepage_connectivity_title",
+      "attrs": {},
+      "text": "Connectivity",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "res",
+      "file": "homepage_strings.xml",
+      "kind": "string",
+      "name": "homepage_network_title",
+      "attrs": {},
+      "text": "Network",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "res",
+      "file": "homepage_strings.xml",
+      "kind": "string",
+      "name": "homepage_network_summary",
+      "attrs": {},
+      "text": "Network &amp; connectivity",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "res",
+      "file": "homepage_strings.xml",
+      "kind": "string",
+      "name": "homepage_priority_modes_summary",
+      "attrs": {},
+      "text": "Do Not Disturb, custom modes",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "res",
+      "file": "homepage_strings.xml",
+      "kind": "string",
+      "name": "homepage_battery_summary",
+      "attrs": {},
+      "text": "Battery usage, Battery Saver",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "res",
+      "file": "homepage_strings.xml",
+      "kind": "string",
+      "name": "homepage_storage_summary",
+      "attrs": {},
+      "text": "Used and free space",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "res",
+      "file": "homepage_strings.xml",
+      "kind": "string",
+      "name": "homepage_location_summary",
+      "attrs": {},
+      "text": "App access to location",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "res",
+      "file": "homepage_strings.xml",
+      "kind": "string",
+      "name": "homepage_accounts_summary",
+      "attrs": {},
+      "text": "Accounts, passkeys, sync",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "res",
+      "file": "homepage_strings.xml",
+      "kind": "string",
+      "name": "homepage_wellbeing_summary",
+      "attrs": {},
+      "text": "Screen time, app timers",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "res",
+      "file": "homepage_strings.xml",
+      "kind": "string",
+      "name": "homepage_about_summary",
+      "attrs": {},
+      "text": "Model, Android version, legal info",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "res",
+      "file": "homepage_strings.xml",
+      "kind": "string",
+      "name": "homepage_search_hint_1",
+      "attrs": {},
+      "text": "Are you searching something?",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "res",
+      "file": "homepage_strings.xml",
+      "kind": "string",
+      "name": "homepage_search_hint_2",
+      "attrs": {},
+      "text": "Click here to search",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "res",
+      "file": "homepage_strings.xml",
+      "kind": "string",
+      "name": "homepage_search_hint_3",
+      "attrs": {},
+      "text": "Lost? Tap to search",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "res",
+      "file": "homepage_strings.xml",
+      "kind": "string",
+      "name": "homepage_search_hint_4",
+      "attrs": {},
+      "text": "What are we looking for today?",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "res",
+      "file": "homepage_strings.xml",
+      "kind": "string",
+      "name": "homepage_search_hint_5",
+      "attrs": {},
+      "text": "Psst… search lives down here",
       "items": null
     },
     {
@@ -2033,50 +2210,6 @@
       "name": "lunaris_screen_title",
       "attrs": {},
       "text": "Screen",
-      "items": null
-    },
-    {
-      "package": "Settings",
-      "source": "packages/apps/Settings",
-      "resdir": "res",
-      "file": "lunaris_strings.xml",
-      "kind": "string",
-      "name": "lunaris_device_message",
-      "attrs": {},
-      "text": "ICorn 10 Pro Max",
-      "items": null
-    },
-    {
-      "package": "Settings",
-      "source": "packages/apps/Settings",
-      "resdir": "res",
-      "file": "lunaris_strings.xml",
-      "kind": "string",
-      "name": "lunaris_processor_code_message",
-      "attrs": {},
-      "text": "Chicken Nuggets® 52",
-      "items": null
-    },
-    {
-      "package": "Settings",
-      "source": "packages/apps/Settings",
-      "resdir": "res",
-      "file": "lunaris_strings.xml",
-      "kind": "string",
-      "name": "lunaris_battery_type_message",
-      "attrs": {},
-      "text": "15000 mAh",
-      "items": null
-    },
-    {
-      "package": "Settings",
-      "source": "packages/apps/Settings",
-      "resdir": "res",
-      "file": "lunaris_strings.xml",
-      "kind": "string",
-      "name": "lunaris_screen_message",
-      "attrs": {},
-      "text": "Cathode Ray Tube 24hz",
       "items": null
     },
     {

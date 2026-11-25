@@ -1,0 +1,208 @@
+diff --git a/res/values/homepage_strings.xml b/res/values/homepage_strings.xml
+new file mode 100644
+index 0000000..26b94dd
+--- /dev/null
++++ b/res/values/homepage_strings.xml
+@@ -0,0 +1,34 @@
++<?xml version="1.0" encoding="utf-8"?>
++<!--
++     Copyright (C) 2026 The LineageOS Project
++
++     Licensed under the Apache License, Version 2.0 (the "License");
++     you may not use this file except in compliance with the License.
++     You may obtain a copy of the License at
++
++          http://www.apache.org/licenses/LICENSE-2.0
++
++     Unless required by applicable law or agreed to in writing, software
++     distributed under the License is distributed on an "AS IS" BASIS,
++     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++     See the License for the specific language governing permissions and
++     limitations under the License.
++-->
++<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
++    <string name="homepage_google_summary">Google services and preferences</string>
++    <string name="homepage_connectivity_title">Connectivity</string>
++    <string name="homepage_network_title">Network</string>
++    <string name="homepage_network_summary">Network &amp; connectivity</string>
++    <string name="homepage_priority_modes_summary">Do Not Disturb, custom modes</string>
++    <string name="homepage_battery_summary">Battery usage, Battery Saver</string>
++    <string name="homepage_storage_summary">Used and free space</string>
++    <string name="homepage_location_summary">App access to location</string>
++    <string name="homepage_accounts_summary">Accounts, passkeys, sync</string>
++    <string name="homepage_wellbeing_summary">Screen time, app timers</string>
++    <string name="homepage_about_summary">Model, Android version, legal info</string>
++    <string name="homepage_search_hint_1">Are you searching something?</string>
++    <string name="homepage_search_hint_2">Click here to search</string>
++    <string name="homepage_search_hint_3">Lost? Tap to search</string>
++    <string name="homepage_search_hint_4">What are we looking for today?</string>
++    <string name="homepage_search_hint_5">Psst… search lives down here</string>
++</resources>
+diff --git a/src/com/android/settings/homepage/HomepageItems.kt b/src/com/android/settings/homepage/HomepageItems.kt
+index 6ded11b..6d863cd 100644
+--- a/src/com/android/settings/homepage/HomepageItems.kt
++++ b/src/com/android/settings/homepage/HomepageItems.kt
+@@ -142,7 +142,7 @@ fun rememberHomepageCatalog(
+         HomepageItem(
+             key = "top_level_google",
+             title = "Google",
+-            summary = "Google services and preferences",
++            summary = stringResource(R.string.homepage_google_summary),
+             iconRes = R.drawable.ic_google,
+             monoIcon = Icons.Outlined.AccountCircle,
+             tintIcon = false,
+@@ -153,8 +153,8 @@ fun rememberHomepageCatalog(
+     builder.add(
+         HomepageItem(
+             key = "top_level_connected_devices",
+-            title = "Connectivity",
+-            summary = "Bluetooth, pairing",
++            title = stringResource(R.string.homepage_connectivity_title),
++            summary = stringResource(R.string.connected_devices_dashboard_default_summary),
+             icon = Icons.Outlined.Devices,
+             defaultSize = TileSize.SMALL,
+         )
+@@ -162,8 +162,8 @@ fun rememberHomepageCatalog(
+     builder.add(
+         HomepageItem(
+             key = "top_level_network",
+-            title = "Network",
+-            summary = "Network & connectivity",
++            title = stringResource(R.string.homepage_network_title),
++            summary = stringResource(R.string.homepage_network_summary),
+             icon = Icons.Outlined.Wifi,
+             defaultSize = TileSize.SMALL,
+         )
+@@ -181,7 +181,7 @@ fun rememberHomepageCatalog(
+     builder.add(
+         HomepageItem(
+             key = KEY_AIRPLANE_TOGGLE,
+-            title = "Airplane mode",
++            title = stringResource(R.string.airplane_mode),
+             summary = airplaneSummary,
+             icon = Icons.Outlined.AirplanemodeActive,
+             kind = ItemKind.TOGGLE,
+@@ -202,7 +202,7 @@ fun rememberHomepageCatalog(
+     builder.add(
+         HomepageItem(
+             key = "top_level_wallpaper",
+-            title = "Wallpaper & styles",
++            title = stringResource(R.string.style_and_wallpaper_settings_title),
+             summary = stringResource(R.string.wallpaper_dashboard_summary),
+             icon = Icons.Outlined.Wallpaper,
+         )
+@@ -246,7 +246,7 @@ fun rememberHomepageCatalog(
+         HomepageItem(
+             key = "top_level_priority_modes",
+             title = stringResource(R.string.zen_modes_list_title),
+-            summary = "Do Not Disturb, custom modes",
++            summary = stringResource(R.string.homepage_priority_modes_summary),
+             icon = Icons.Outlined.DoNotDisturb,
+         )
+     )
+@@ -264,7 +264,7 @@ fun rememberHomepageCatalog(
+         HomepageItem(
+             key = "top_level_battery",
+             title = stringResource(R.string.power_usage_summary_title),
+-            summary = "Battery usage, Battery Saver",
++            summary = stringResource(R.string.homepage_battery_summary),
+             icon = Icons.Outlined.BatteryStd,
+         )
+     )
+@@ -272,7 +272,7 @@ fun rememberHomepageCatalog(
+         HomepageItem(
+             key = "top_level_storage",
+             title = stringResource(R.string.storage_settings),
+-            summary = "Used and free space",
++            summary = stringResource(R.string.homepage_storage_summary),
+             icon = Icons.Outlined.Storage,
+         )
+     )
+@@ -317,7 +317,7 @@ fun rememberHomepageCatalog(
+         HomepageItem(
+             key = "top_level_location",
+             title = stringResource(R.string.location_settings_title),
+-            summary = "App access to location",
++            summary = stringResource(R.string.homepage_location_summary),
+             icon = Icons.Outlined.LocationOn,
+         )
+     )
+@@ -334,7 +334,7 @@ fun rememberHomepageCatalog(
+         HomepageItem(
+             key = "top_level_accounts",
+             title = stringResource(R.string.account_dashboard_title_with_passkeys),
+-            summary = "Accounts, passkeys, sync",
++            summary = stringResource(R.string.homepage_accounts_summary),
+             icon = Icons.Outlined.AccountCircle,
+         )
+     )
+@@ -343,7 +343,7 @@ fun rememberHomepageCatalog(
+         HomepageItem(
+             key = "top_level_wellbeing",
+             title = stringResource(R.string.wellbeing_title),
+-            summary = "Screen time, app timers",
++            summary = stringResource(R.string.homepage_wellbeing_summary),
+             icon = Icons.Outlined.SelfImprovement,
+         ),
+     )
+@@ -370,7 +370,7 @@ fun rememberHomepageCatalog(
+         HomepageItem(
+             key = "top_level_about_device",
+             title = stringResource(R.string.about_settings),
+-            summary = "Model, Android version, legal info",
++            summary = stringResource(R.string.homepage_about_summary),
+             icon = Icons.Outlined.Info,
+         )
+     )
+@@ -378,7 +378,7 @@ fun rememberHomepageCatalog(
+     builder.add(
+         HomepageItem(
+             key = SEARCH_BAR_KEY,
+-            title = "Search",
++            title = stringResource(R.string.search_settings),
+             icon = Icons.Outlined.Search,
+             kind = ItemKind.SEARCH_BAR,
+         )
+diff --git a/src/com/android/settings/homepage/HomepageTiles.kt b/src/com/android/settings/homepage/HomepageTiles.kt
+index 8c54a75..12f48fd 100644
+--- a/src/com/android/settings/homepage/HomepageTiles.kt
++++ b/src/com/android/settings/homepage/HomepageTiles.kt
+@@ -74,6 +74,7 @@ import androidx.compose.ui.res.painterResource
+ import androidx.compose.ui.text.style.TextOverflow
+ import androidx.compose.ui.unit.Dp
+ import androidx.compose.ui.unit.dp
++import com.android.settings.R
+ 
+ internal val GRID_TILE_SPACING = 12.dp
+ internal val SEARCH_BAR_HEIGHT = 56.dp
+@@ -93,11 +94,11 @@ private val ROW_GAP_THICKNESS = 2.dp
+ private val SPLIT_CARD_GAP = 3.dp
+ 
+ internal val SEARCH_HINTS = listOf(
+-    "Are you searching something?",
+-    "Click here to search",
+-    "Lost? Tap to search",
+-    "What are we looking for today?",
+-    "Psst… search lives down here",
++    R.string.homepage_search_hint_1,
++    R.string.homepage_search_hint_2,
++    R.string.homepage_search_hint_3,
++    R.string.homepage_search_hint_4,
++    R.string.homepage_search_hint_5,
+ )
+ 
+ data class TileStyle(
+diff --git a/src/com/android/settings/homepage/SettingsHomepageCompose.kt b/src/com/android/settings/homepage/SettingsHomepageCompose.kt
+index c43d531..e6ca29c 100644
+--- a/src/com/android/settings/homepage/SettingsHomepageCompose.kt
++++ b/src/com/android/settings/homepage/SettingsHomepageCompose.kt
+@@ -230,7 +230,8 @@ fun SettingsHomepageScreen(
+ 
+     val editing = snapshot != null
+     val style = layout.tileStyle()
+-    val searchHint = remember { SEARCH_HINTS.random() }
++    val searchHintRes = remember { SEARCH_HINTS.random() }
++    val searchHint = stringResource(searchHintRes)
+     val wallpaperBackdrop = rememberWallpaperBackdrop(layout.wallpaperCards.isNotEmpty())
+ 
+     val checkedOf: (HomepageItem) -> Boolean = { item ->

@@ -40,6 +40,11 @@ _fuxi_apply_patch() {
 _fuxi_apply_patch "frameworks/base" \
     "$_fuxi_patches/frameworks_base/0001-telephony-report-real-hardware-CA.patch"
 
+# Settings' new Compose homepage hardcodes its tile labels and search hints.
+# Patch them to resource lookups so the Russian overlay can translate them.
+_fuxi_apply_patch "packages/apps/Settings" \
+    "$_fuxi_patches/packages_apps_Settings/0001-settings-homepage-translations.patch"
+
 # The stock WFD blobs are built against display config AIDL V16. Lunaris'
 # display commonsys-intf repo only ships V1-V15, so add the frozen V16 API.
 _fuxi_apply_patch "vendor/qcom/opensource/commonsys-intf/display" \

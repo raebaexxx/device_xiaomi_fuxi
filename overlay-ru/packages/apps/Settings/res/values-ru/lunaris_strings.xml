@@ -115,10 +115,6 @@
     <string name="lunaris_processor_code_title">Процессор</string>
     <string name="lunaris_battery_type_title">Аккумулятор</string>
     <string name="lunaris_screen_title">Экран</string>
-    <string name="lunaris_device_message">ICorn 10 Pro Max</string>
-    <string name="lunaris_processor_code_message">Chicken Nuggets® 52</string>
-    <string name="lunaris_battery_type_message">15000 mAh</string>
-    <string name="lunaris_screen_message">Электронно-лучевая трубка, 24 Гц</string>
     <string name="lunaris_build_type">Тип пакета сборки</string>
     <string name="billing_cycle_type_title">Тип цикла использования мобильных данных</string>
     <string name="billing_cycle_type_monthly">Ежемесячно</string>
