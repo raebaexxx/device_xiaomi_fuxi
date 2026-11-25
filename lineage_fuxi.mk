@@ -39,4 +39,8 @@ PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Xiaomi 13
 PRODUCT_MANUFACTURER := Xiaomi
 
+# SoC identity used by Build.SOC_MANUFACTURER (e.g. Device RKP / TrickyStore)
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.soc.manufacturer=Qualcomm
+
 BUILD_FINGERPRINT := Xiaomi/fuxi/fuxi:16/BP2A.250605.031.A3/OS3.0.307.0.WMCCNXM:user/release-keys
