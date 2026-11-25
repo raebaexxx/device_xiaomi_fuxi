@@ -1,0 +1,154 @@
+# Глоссарий перевода Lunaris AOSP (RU)
+# Формат: source<TAB>translation<TAB>комментарий
+# Регистр первой буквы подстраивается под контекст.
+Lunaris	Lunaris	бренд, не переводить
+Singularity	Singularity	бренд раздела настроек
+Monet	Monet	бренд темы
+EdgeGo	EdgeGo	бренд
+UDFPS	UDFPS	бренд
+AxThemeStore	AxThemeStore	бренд
+ThemeStore	ThemeStore	бренд (приложение)
+Quick Settings	Быстрые настройки	
+Quick Settings tile	Плитка быстрых настроек	
+QS	БС	сокращение только в тесных местах
+Status bar	Строка состояния	
+Status bar icons	Значки строки состояния	
+Lock screen	Экран блокировки	
+Always-on display	Постоянно включённый экран	
+Ambient display	Экран уведомлений	
+Power menu	Меню питания	
+Buttons	Кнопки	
+Navigation bar	Панель навигации	
+Gesture navigation	Навигация жестами	
+Notification	Уведомление	
+Notifications	Уведомления	
+Do Not Disturb	Не беспокоить	
+Battery Saver	Режим энергосбережения	
+Battery	Аккумулятор	
+Battery percentage	Процент заряда	
+Battery light	Индикатор заряда	
+Notification light	Индикатор уведомлений	
+Charging	Зарядка	
+Fast charging	Быстрая зарядка	
+Wireless charging	Беспроводная зарядка	
+Charging control	Управление зарядкой	
+Refresh rate	Частота обновления	
+Resolution	Разрешение	
+Dark theme	Тёмная тема	
+Light theme	Светлая тема	
+Accent color	Акцентный цвет	
+Font	Шрифт	
+Fonts	Шрифты	
+Icon shape	Форма значков	
+Icon pack	Набор значков	
+Wallpaper	Обои	
+Theme	Тема	
+Themes	Темы	
+Network traffic	Сетевой трафик	
+Brightness	Яркость	
+Volume	Громкость	
+Flashlight	Фонарик	
+Ringtone	Мелодия вызова	
+Vibration	Вибрация	
+Haptic feedback	Тактильная отдача	
+Double tap	Двойное касание	
+Long press	Долгое нажатие	
+Single tap	Одно касание	
+Quick tap	Быстрое касание	
+Swipe	Смахните	
+Screen off	Выключение экрана	
+Screen on	Включение экрана	
+Weather	Погода	
+Media player	Медиаплеер	
+Now playing	Сейчас играет	
+Tile	Плитка	
+Slider	Ползунок	
+Toggle	Переключить	
+Enabled	Включено	
+Disabled	Отключено	
+Default	По умолчанию	
+Automatic	Автоматически	
+Always	Всегда	
+Never	Никогда	
+Custom	Настраиваемый	
+Apply	Применить	
+Reset	Сбросить	
+Cancel	Отмена	
+OK	ОК	
+Save	Сохранить	
+Delete	Удалить	
+Search	Поиск	
+Add	Добавить	
+Edit	Изменить	
+Done	Готово	
+Next	Далее	
+Back	Назад	
+Close	Закрыть	
+More	Ещё	
+All	Все	
+Enable	Включить	
+Disable	Отключить	
+Show	Показывать	
+Hide	Скрывать	
+Style	Стиль	
+Color	Цвет	
+Size	Размер	
+Width	Ширина	
+Height	Высота	
+Corner radius	Радиус скругления	
+Animation	Анимация	
+Duration	Длительность	
+Speed	Скорость	
+Blur	Размытие	
+Transparency	Прозрачность	
+Gradient	Градиент	
+Image	Изображение	
+Clock	Часы	
+Date	Дата	
+Percentage	Процент	
+Carrier	Оператор	
+Signal	Сигнал	
+Network	Сеть	
+Internet	Интернет	
+Hotspot	Точка доступа	
+Tethering	Режим модема	
+Roaming	Роуминг	
+Airplane mode	Режим полёта	
+Data saver	Экономия трафика	
+SIM	SIM	
+Alarm	Будильник	
+Media	Медиа	
+Calls	Вызовы	
+System sounds	Системные звуки	
+Security	Безопасность	
+Privacy	Конфиденциальность	
+Location	Геолокация	
+Camera	Камера	
+Microphone	Микрофон	
+Sensors	Датчики	
+Display	Экран	
+Sound	Звук	
+Storage	Хранилище	
+Apps	Приложения	
+About phone	О телефоне	
+Device	Устройство	
+Model	Модель	
+Build number	Номер сборки	
+Kernel	Ядро	
+Processor	Процессор	
+Battery health	Состояние аккумулятора	
+Power	Питание	
+Reboot	Перезагрузка	
+Restart	Перезапуск	
+Shutdown	Выключение	
+Screenshot	Снимок экрана	
+Screen record	Запись экрана	
+Cast	Трансляция	
+Face unlock	Разблокировка по лицу	
+Fingerprint	Отпечаток пальца	
+Theft protection	Защита от кражи	
+Screen lock	Блокировка экрана	
+Status bar clock	Часы в строке состояния	
+Battery icon	Значок аккумулятора	
+Notification counter	Счётчик уведомлений	
+Call strength	Уровень сигнала вызова	

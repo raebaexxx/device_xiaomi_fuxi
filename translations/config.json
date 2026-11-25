@@ -1,0 +1,237 @@
+{
+  "overlay_dir": "device/xiaomi/fuxi/overlay-ru",
+  "data_dir": "device/xiaomi/fuxi/translations/data",
+  "packages": [
+    {
+      "id": "Settings",
+      "source": "packages/apps/Settings",
+      "resource_dirs": ["res", "Singularity/res"],
+      "phase": 2,
+      "note": "Settings incl. Singularity customisation"
+    },
+    {
+      "id": "SystemUI",
+      "source": "frameworks/base/packages/SystemUI",
+      "resource_dirs": ["res", "res-keyguard", "res-product"],
+      "phase": 1,
+      "note": "Status bar, QS, keyguard"
+    },
+    {
+      "id": "Launcher3",
+      "source": "packages/apps/Launcher3",
+      "resource_dirs": ["res", "quickstep/res"],
+      "phase": 2,
+      "note": "Launcher incl. cr_* strings"
+    },
+    {
+      "id": "FrameworkRes",
+      "source": "frameworks/base/core/res",
+      "resource_dirs": ["res"],
+      "phase": 2,
+      "note": "framework-res.apk"
+    },
+    {
+      "id": "LockStyles",
+      "source": "packages/apps/LockStyles",
+      "resource_dirs": ["res"],
+      "phase": 3,
+      "note": "Lock screen clocks and styles"
+    },
+    {
+      "id": "AxThemeStore",
+      "source": "packages/apps/AxThemeStore",
+      "resource_dirs": ["res"],
+      "phase": 3,
+      "note": "Theme store"
+    },
+    {
+      "id": "LunarisMonet",
+      "source": "packages/apps/LunarisMonet",
+      "resource_dirs": ["res"],
+      "phase": 3,
+      "note": "Monet theme engine"
+    },
+    {
+      "id": "OptimizationEngine",
+      "source": "packages/apps/OptimizationEngine",
+      "resource_dirs": ["res"],
+      "phase": 3,
+      "note": "System engine"
+    },
+    {
+      "id": "GameSpace",
+      "source": "packages/apps/GameSpace/app/src/main",
+      "resource_dirs": ["res"],
+      "phase": 3,
+      "note": "Game Space"
+    },
+    {
+      "id": "ColumbusService",
+      "source": "packages/apps/ColumbusService",
+      "resource_dirs": ["res"],
+      "phase": 3,
+      "note": "Quick Tap"
+    },
+    {
+      "id": "OmniStyle",
+      "source": "packages/apps/OmniStyle",
+      "resource_dirs": ["res"],
+      "phase": 3,
+      "note": "Status bar icon styles"
+    },
+    {
+      "id": "AxQuickLook",
+      "source": "packages/services/AxQuickLook",
+      "resource_dirs": ["res"],
+      "phase": 3,
+      "note": "Quick Look"
+    },
+    {
+      "id": "BtHelper",
+      "source": "packages/apps/BtHelper",
+      "resource_dirs": ["res", "res-apple"],
+      "phase": 3,
+      "note": "Bluetooth helper"
+    },
+    {
+      "id": "FaceUnlock",
+      "source": "packages/apps/FaceUnlock",
+      "resource_dirs": ["res"],
+      "phase": 3,
+      "note": "Face unlock"
+    },
+    {
+      "id": "LMOFreeform",
+      "source": "packages/apps/LMOFreeform/app/src/main",
+      "resource_dirs": ["res"],
+      "phase": 3,
+      "note": "Freeform windows"
+    },
+    {
+      "id": "LMOFreeformSidebar",
+      "source": "packages/apps/LMOFreeform/sidebar/app/src/main",
+      "resource_dirs": ["res"],
+      "phase": 3,
+      "note": "Freeform sidebar"
+    },
+    {
+      "id": "Gallery2",
+      "source": "packages/apps/Gallery2",
+      "resource_dirs": ["res"],
+      "phase": 4,
+      "note": "Gallery"
+    },
+    {
+      "id": "DolbyAtmos",
+      "source": "packages/apps/DolbyAtmos",
+      "resource_dirs": ["res"],
+      "phase": 4,
+      "note": "Dolby Atmos"
+    },
+    {
+      "id": "Browser2",
+      "source": "packages/apps/Browser2",
+      "resource_dirs": ["res"],
+      "phase": 4,
+      "note": "Browser"
+    },
+    {
+      "id": "LineageParts",
+      "source": "packages/apps/LineageParts",
+      "resource_dirs": ["res"],
+      "phase": 4,
+      "note": "Lineage parts"
+    },
+    {
+      "id": "CellBroadcastReceiver",
+      "source": "packages/apps/CellBroadcastReceiver",
+      "resource_dirs": ["res"],
+      "phase": 4,
+      "note": "Cell broadcast"
+    },
+    {
+      "id": "Camera2",
+      "source": "packages/apps/Camera2",
+      "resource_dirs": ["res"],
+      "phase": 4,
+      "note": "Camera"
+    },
+    {
+      "id": "Messaging",
+      "source": "packages/apps/Messaging",
+      "resource_dirs": ["res"],
+      "phase": 4,
+      "note": "Messaging"
+    },
+    {
+      "id": "StorageManager",
+      "source": "packages/apps/StorageManager",
+      "resource_dirs": ["res"],
+      "phase": 4,
+      "note": "Storage manager"
+    },
+    {
+      "id": "PermissionController",
+      "source": "packages/modules/Permission/PermissionController",
+      "resource_dirs": ["res"],
+      "phase": 4,
+      "note": "Permission controller"
+    },
+    {
+      "id": "WallpaperPicker2",
+      "source": "packages/apps/WallpaperPicker2",
+      "resource_dirs": ["res"],
+      "phase": 4,
+      "note": "Wallpaper picker"
+    },
+    {
+      "id": "QuickSearchBox",
+      "source": "packages/apps/QuickSearchBox",
+      "resource_dirs": ["res"],
+      "phase": 4,
+      "note": "Quick search"
+    },
+    {
+      "id": "ImsServiceEntitlement",
+      "source": "packages/apps/ImsServiceEntitlement",
+      "resource_dirs": ["res"],
+      "phase": 4,
+      "note": "IMS entitlement"
+    },
+    {
+      "id": "DocumentsUI",
+      "source": "packages/apps/DocumentsUI",
+      "resource_dirs": ["res"],
+      "phase": 4,
+      "note": "Documents UI"
+    },
+    {
+      "id": "Contacts",
+      "source": "packages/apps/Contacts",
+      "resource_dirs": ["res"],
+      "phase": 4,
+      "note": "Contacts"
+    },
+    {
+      "id": "SetupWizard",
+      "source": "packages/apps/SetupWizard",
+      "resource_dirs": ["res"],
+      "phase": 4,
+      "note": "Setup wizard"
+    },
+    {
+      "id": "PhoneCommon",
+      "source": "packages/apps/PhoneCommon",
+      "resource_dirs": ["res"],
+      "phase": 4,
+      "note": "Phone common"
+    },
+    {
+      "id": "ExactCalculator",
+      "source": "packages/apps/ExactCalculator",
+      "resource_dirs": ["res"],
+      "phase": 4,
+      "note": "Calculator"
+    }
+  ]
+}

@@ -26,6 +26,10 @@ TARGET_FACE_UNLOCK_SUPPORTED := true
 # Inherit Lunaris configurations
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# Russian translation overlay
+PRODUCT_PACKAGE_OVERLAYS += device/xiaomi/fuxi/overlay-ru
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += device/xiaomi/fuxi/overlay-ru
+
 -include vendor/lineage-priv/keys/keys.mk
 
 PRODUCT_DEVICE := fuxi
