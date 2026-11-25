@@ -1,0 +1,65 @@
+{
+  "strings": {
+    "make_it": "Сделайте это",
+    "yours": "своим.",
+    "store_intro": "Маленькие детали. Совершенно новые ощущения.",
+    "browse_categories": "Смотреть по категориям",
+    "your_setup": "Ваша настройка",
+    "your_setup_description": "Все детали, которые делают её вашей.",
+    "your_collection": "Ваша коллекция",
+    "view_all": "Смотреть все",
+    "view_collection": "Смотреть все %s",
+    "featured_page": "Избранная тема %1$d из %2$d: %3$s",
+    "collection_hint": "Найдите новую любимую тему. Сделайте её своей.",
+    "find_your_style": "Найдите свой стиль",
+    "search_description": "Ищите тему, автора или новый образ.",
+    "remove_search": "Удалить %s из недавних запросов",
+    "available": "Обзор",
+    "built_in": "Встроено",
+    "update_available": "Доступно обновление",
+    "download_progress": "Загрузка %d%%",
+    "ready_to_install": "Готово к установке",
+    "theme_by_author": "от %s",
+    "about_theme": "Об этой теме",
+    "theme_version": "Версия",
+    "theme_size": "Размер загрузки",
+    "customize_components": "Сделайте своим",
+    "customize_components_description": "Выберите, какие части темы использовать.",
+    "setup_title": "Сделано для вас.",
+    "setup_description": "Ваши активные стили в одном месте.",
+    "current_component_source": "Сейчас используется %s",
+    "explore_themes": "Смотреть темы",
+    "navbar_styles_title": "Стиль панели навигации",
+    "navbar_styles_description": "Выберите вид кнопок «Назад», «Домой» и «Недавние». Нажмите на стиль, чтобы применить.",
+    "navbar_navigation_hint": "Видно при трёхкнопочной навигации.",
+    "navbar_default": "По умолчанию",
+    "navbar_choose_style": "Выберите стиль",
+    "navbar_tap_to_apply": "Нажмите, чтобы применить",
+    "navbar_applying": "Применение…",
+    "navbar_loading": "Загрузка стилей панели навигации…",
+    "navbar_preview_unavailable": "Предпросмотр недоступен",
+    "navbar_load_failed": "Не удалось загрузить стили панели навигации. Повторите попытку.",
+    "navbar_apply_failed": "Не удалось применить этот стиль панели навигации. Повторите попытку."
+  },
+  "plurals": {
+    "theme_count": {
+      "one": "%d тема",
+      "few": "%d темы",
+      "many": "%d тем",
+      "other": "%d тем"
+    },
+    "search_result_count": {
+      "one": "%d результат",
+      "few": "%d результата",
+      "many": "%d результатов",
+      "other": "%d результатов"
+    },
+    "active_component_count": {
+      "one": "%d активный компонент",
+      "few": "%d активных компонента",
+      "many": "%d активных компонентов",
+      "other": "%d активных компонентов"
+    }
+  },
+  "arrays": {}
+}

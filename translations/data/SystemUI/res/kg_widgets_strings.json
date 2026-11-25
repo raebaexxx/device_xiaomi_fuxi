@@ -1,0 +1,19 @@
+{
+  "strings": {
+    "camera": "Камера",
+    "clock_timer": "Часы/Таймер",
+    "calculator": "Калькулятор",
+    "gallery": "Галерея",
+    "no_default_app_found": "Приложение %1$s по умолчанию не найдено",
+    "weather_data_unavailable": "Данные недоступны",
+    "omnijaws_weather": "OmniJaws",
+    "quick_settings_data_label": "Мобильные данные",
+    "quick_settings_ringer_label": "Режим звонка",
+    "torch_active": "Фонарик включён",
+    "google_wallet": "Google Wallet",
+    "lockscreen_notification_stack_expand": "Развернуть уведомления",
+    "lockscreen_notification_stack_collapse": "Свернуть уведомления"
+  },
+  "plurals": {},
+  "arrays": {}
+}

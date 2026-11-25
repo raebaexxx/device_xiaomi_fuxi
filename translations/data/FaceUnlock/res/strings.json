@@ -1,0 +1,20 @@
+{
+  "strings": {
+    "app_name": "Служба разблокировки по лицу",
+    "face_enroll_title": "Поместите лицо в центр камеры",
+    "face_enroll_description": "Не двигайтесь и убедитесь, что вокруг хорошее освещение",
+    "face_try_again_title": "Не удалось распознать лицо",
+    "face_try_again_description": "Нажмите ниже, чтобы повторить. В следующий раз убедитесь, что вокруг хорошее освещение и лицо ничем не закрыто",
+    "btn_try_again": "Повторить",
+    "attr_light_dark": "Лицу нужно больше света",
+    "attr_light_high": "Слишком много света на лице",
+    "attr_light_shadow": "Слишком много теней на лице",
+    "unlock_failed_face_blur": "Лицо слишком размыто",
+    "unlock_failed_face_large": "Лицо слишком близко",
+    "unlock_failed_face_multi": "Обнаружено слишком много лиц",
+    "unlock_failed_face_not_complete": "Обнаружена только часть лица",
+    "unlock_failed_face_small": "Лицо слишком далеко"
+  },
+  "plurals": {},
+  "arrays": {}
+}

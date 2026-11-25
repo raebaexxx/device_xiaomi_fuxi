@@ -1,0 +1,11 @@
+{
+  "strings": {
+    "info_background_title": "Фон информационного виджета",
+    "info_background_design": "Исходный дизайн",
+    "info_background_ax_blur": "Размытие AX",
+    "info_background_liquid_glass": "Жидкое стекло",
+    "info_background_glass_help": "Настройте стекло на карточках виджетов. Оттенок соответствует цвету виджета. Эти настройки применяются к обеим строкам и независимым виджетам."
+  },
+  "plurals": {},
+  "arrays": {}
+}

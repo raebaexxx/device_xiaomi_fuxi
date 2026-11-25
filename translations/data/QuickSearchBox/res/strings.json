@@ -1,0 +1,17 @@
+{
+  "strings": {
+    "app_name": "Поиск",
+    "remove_from_history_failed": "Не удалось удалить элемент из истории.",
+    "corpus_selection_heading": "Поиск",
+    "menu_settings": "Настройки поиска",
+    "system_search_category_title": "Телефон",
+    "clear_shortcuts_summary": "Очистить ярлыки недавно выбранных поисковых подсказок",
+    "menu_help": "Справка",
+    "google_search_label": "Google",
+    "google_search_hint": "Поиск Google",
+    "google_search_description": "Подсказки поиска Google",
+    "voice_search_hint_title": "Попробуйте сказать:"
+  },
+  "plurals": {},
+  "arrays": {}
+}

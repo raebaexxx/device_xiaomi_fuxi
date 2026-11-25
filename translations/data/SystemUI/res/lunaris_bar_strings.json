@@ -1,0 +1,40 @@
+{
+  "strings": {
+    "lunaris_bar_auto_brightness": "Адаптивная яркость",
+    "lunaris_bar_barcode_error": "Это содержимое нельзя закодировать в выбранном формате.",
+    "lunaris_bar_charging": "Зарядка",
+    "lunaris_bar_minutes_value": "%1$d мин",
+    "lunaris_bar_no_shortcuts": "Добавьте приложения, контакты или действия в настройках LunarisBar.",
+    "lunaris_bar_off": "Выкл.",
+    "lunaris_bar_on": "Вкл.",
+    "lunaris_bar_on_battery": "От аккумулятора",
+    "lunaris_bar_open": "Открыть",
+    "lunaris_bar_start_timer": "Запустить таймер",
+    "lunaris_bar_title": "LunarisBar",
+    "lunaris_bar_widget_unavailable": "Этот виджет недоступен. Добавьте его снова в настройках LunarisBar.",
+    "lunaris_bar_screen_sharing": "Демонстрация экрана",
+    "lunaris_bar_privacy": "Камера и микрофон",
+    "lunaris_bar_privacy_settings": "Настройки конфиденциальности",
+    "lunaris_bar_battery_settings": "Настройки аккумулятора",
+    "lunaris_bar_settings": "Настройки",
+    "lunaris_bar_answer": "Ответить",
+    "lunaris_bar_end_call": "Завершить вызов",
+    "lunaris_bar_reply": "Ответить",
+    "lunaris_bar_send_reply": "Отправить ответ",
+    "lunaris_bar_swipe_dismiss": "Смахните, чтобы скрыть",
+    "lunaris_bar_night_colors": "Изменить цвета тёмной темы",
+    "lunaris_bar_palette_day": "Палитра светлой темы",
+    "lunaris_bar_palette_night": "Палитра тёмной темы",
+    "lunaris_bar_media_favorite": "В избранное",
+    "lunaris_bar_media_output": "Аудиовыход"
+  },
+  "plurals": {
+    "lunaris_bar_notification_count_a11y": {
+      "one": "%1$d уведомление",
+      "few": "%1$d уведомления",
+      "many": "%1$d уведомлений",
+      "other": "%1$d уведомлений"
+    }
+  },
+  "arrays": {}
+}

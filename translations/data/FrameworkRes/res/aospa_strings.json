@@ -1,0 +1,9 @@
+{
+  "strings": {
+    "aerr_copy": "Скопировать URL журнала сбоя",
+    "url_copy_success": "URL успешно скопирован",
+    "url_copy_failed": "При загрузке журнала в Memochō произошла ошибка"
+  },
+  "plurals": {},
+  "arrays": {}
+}

@@ -1,0 +1,16 @@
+{
+  "strings": {
+    "app_widget_browse": "Просматривайте, добавляйте и упорядочивайте виджеты приложений",
+    "app_widget_show": "Показывать виджеты приложений",
+    "app_widget_picker_summary": "Выберите виджет, чтобы добавить его на экран блокировки.",
+    "app_widget_search": "Поиск приложений и виджетов",
+    "app_widget_count": "Виджеты: %1$d",
+    "app_widget_dimensions": "%1$d × %2$d",
+    "app_widget_no_results": "Нет подходящих приложений или виджетов",
+    "app_widget_no_preview": "Предпросмотр недоступен",
+    "app_widget_back": "Назад к виджетам приложений",
+    "app_widget_close": "Закрыть виджеты приложений"
+  },
+  "plurals": {},
+  "arrays": {}
+}

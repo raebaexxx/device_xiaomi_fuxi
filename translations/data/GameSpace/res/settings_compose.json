@@ -1,0 +1,50 @@
+{
+  "strings": {
+    "settings_tab_games": "Игры",
+    "settings_tab_settings": "Настройки",
+    "settings_library_subtitle": "Ваша библиотека готова к игре.",
+    "settings_options_subtitle": "Сделайте каждую сессию удобной.",
+    "settings_crosshair_subtitle": "Выберите прицел. Настройте точность.",
+    "settings_notifications": "Вызовы и уведомления",
+    "settings_display": "Экран и жесты",
+    "settings_sidebar": "Боковая панель",
+    "library_empty_title": "Освободите место для игры",
+    "library_empty_summary": "Добавьте игру, чтобы управлять её производительностью и внутриигровыми элементами управления.",
+    "library_hero_title": "Готовы, когда вы готовы",
+    "library_hero_summary": "Ваши игры и их настройки в одном месте.",
+    "game_options_title": "Параметры игры",
+    "game_remove_title": "Удалить игру",
+    "game_remove_message": "Удалить %1$s из библиотеки?",
+    "game_remove_action": "Удалить",
+    "game_launch_unavailable": "Эту игру сейчас нельзя запустить.",
+    "game_driver_default": "По умолчанию",
+    "game_driver_native": "Системный",
+    "app_picker_search": "Поиск приложений",
+    "app_picker_empty": "Нет приложений для отображения",
+    "app_picker_no_results": "Нет подходящих приложений",
+    "app_picker_load_error": "Не удалось загрузить приложения",
+    "action_retry": "Повторить",
+    "action_back": "Назад",
+    "search_clear": "Очистить поиск",
+    "crosshair_preview": "Предпросмотр прицела",
+    "crosshair_appearance": "Внешний вид",
+    "crosshair_position": "Положение",
+    "settings_value_dp": "%1$d dp",
+    "settings_value_percent": "%1$d%%"
+  },
+  "plurals": {
+    "library_game_count": {
+      "one": "%d игра",
+      "few": "%d игры",
+      "many": "%d игр",
+      "other": "%d игр"
+    },
+    "quick_start_app_count": {
+      "one": "%d приложение выбрано",
+      "few": "%d приложения выбрано",
+      "many": "%d приложений выбрано",
+      "other": "%d приложений выбрано"
+    }
+  },
+  "arrays": {}
+}

@@ -1,0 +1,22 @@
+{
+  "strings": {
+    "dynamic_clock_title": "Динамические часы",
+    "dynamic_clock_summary": "Показывать малые часы с уведомлениями и большие часы, когда уведомления убраны",
+    "dynamic_clock_small_title": "Малые часы",
+    "dynamic_clock_large_title": "Большие часы",
+    "dynamic_clock_small_summary": "Макет, отображаемый при видимых уведомлениях на экране блокировки",
+    "dynamic_clock_use_big": "Использовать большие часы",
+    "dynamic_clock_use_big_summary": "Скопировать большие часы в той же позиции, затем настроить их размер или растяжение. Совпадающие цифры плавно растягиваются или сжимаются при изменении уведомлений.",
+    "dynamic_clock_large_summary": "Макет, отображаемый при отсутствии уведомлений на экране блокировки",
+    "dynamic_clock_edit": "Изменить макет",
+    "dynamic_clock_aod_summary": "Ваши существующие часы AOD сохраняют собственный макет, стиль и анимации.",
+    "dynamic_clock_small_maker": "Создатель малых часов",
+    "dynamic_clock_large_maker": "Создатель больших часов",
+    "dynamic_clock_import_font": "Импортировать шрифт",
+    "dynamic_clock_font_failed": "Не удалось импортировать этот шрифт",
+    "dynamic_clock_save_failed": "Не удалось сохранить макеты часов",
+    "dynamic_clock_base_title": "Базовые часы и часы AOD"
+  },
+  "plurals": {},
+  "arrays": {}
+}

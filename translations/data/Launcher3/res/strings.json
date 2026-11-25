@@ -1,0 +1,18 @@
+{
+  "strings": {
+    "qsb_search_hint": "Поиск на этом телефоне и не только",
+    "create_widget_stack": "Создать стопку",
+    "add_widget_to_stack": "Добавить виджет",
+    "select_widget_to_stack": "Выберите виджет для стопки",
+    "widget_stack_full": "Стопка виджетов заполнена",
+    "folder_resized": "Размер папки изменён: ширина %1$d, высота %2$d",
+    "folder_frame_name": "Изменить размер папки %1$s",
+    "icon_frame_name": "Изменить размер значка %1$s",
+    "icon_resized": "Размер значка изменён",
+    "increase_icon_size": "Увеличить размер значка",
+    "decrease_icon_size": "Уменьшить размер значка",
+    "reset_icon_size": "Сбросить размер значка"
+  },
+  "plurals": {},
+  "arrays": {}
+}

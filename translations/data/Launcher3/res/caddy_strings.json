@@ -1,0 +1,36 @@
+{
+  "strings": {
+    "caddy_shopping": "Покупки",
+    "caddy_health": "Здоровье и фитнес",
+    "caddy_education": "Образование",
+    "caddy_business": "Бизнес",
+    "caddy_utilities": "Утилиты",
+    "caddy_games": "Игры",
+    "caddy_lifestyle": "Образ жизни",
+    "caddy_finance": "Финансы",
+    "caddy_entertainment": "Развлечения",
+    "caddy_multimedia": "Мультимедиа",
+    "caddy_travel": "Путешествия",
+    "caddy_favorites": "Избранные приложения",
+    "caddy_edit_favorites": "Изменить избранные приложения",
+    "caddy_hold_to_edit": "Удерживайте, чтобы изменить избранные приложения",
+    "caddy_choose_favorites": "Выберите до четырёх приложений. На пустых местах будут предлагаться приложения с учётом недавнего использования.",
+    "caddy_favorites_count": "Выбрано %1$d из 4",
+    "caddy_favorites_limit": "Выберите до четырёх приложений",
+    "caddy_use_suggestions": "Использовать предложенные приложения",
+    "caddy_search_apps": "Поиск приложений",
+    "caddy_no_apps": "Нет подходящих приложений",
+    "caddy_close": "Закрыть",
+    "caddy_save": "Сохранить",
+    "caddy_open_category": "Открыть «%1$s», приложений: %2$d"
+  },
+  "plurals": {
+    "caddy_app_count": {
+      "one": "%1$d приложение",
+      "few": "%1$d приложения",
+      "many": "%1$d приложений",
+      "other": "%1$d приложения"
+    }
+  },
+  "arrays": {}
+}

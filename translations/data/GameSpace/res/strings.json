@@ -1,0 +1,33 @@
+{
+  "strings": {
+    "double_tap_to_sleep_title": "Отключить двойное нажатие для сна",
+    "double_tap_to_sleep_summary": "Отключить двойное нажатие по строке состояния для сна во время игры",
+    "incoming_call": "Входящий вызов…",
+    "cd_start_recording": "Начать запись экрана",
+    "cd_stop_recording": "Остановить запись экрана",
+    "cd_cancel_recording": "Отменить отсчёт записи экрана",
+    "crosshair_settings_title": "Пользовательский прицел",
+    "crosshair_settings_summary": "Показывать настраиваемый прицел по центру экрана",
+    "tile_crosshair": "Прицел",
+    "crosshair_style_title": "Стиль прицела",
+    "crosshair_style_entry": "Стиль %1$d",
+    "crosshair_color_title": "Цвет прицела",
+    "crosshair_color_green": "Зелёный",
+    "crosshair_color_red": "Красный",
+    "crosshair_color_cyan": "Голубой",
+    "crosshair_color_yellow": "Жёлтый",
+    "crosshair_color_white": "Белый",
+    "crosshair_color_blue": "Синий",
+    "crosshair_size_title": "Размер",
+    "crosshair_opacity_title": "Непрозрачность",
+    "crosshair_offset_x_title": "Смещение X",
+    "crosshair_offset_y_title": "Смещение Y",
+    "crosshair_reset_position_title": "Сбросить положение",
+    "music_player_enabled_title": "Внутриигровое управление музыкой",
+    "music_player_enabled_summary": "Показывать глобальные элементы управления медиа в плавающей боковой панели",
+    "no_music_playing": "Музыка не играет",
+    "tap_to_play": "Нажмите, чтобы начать воспроизведение"
+  },
+  "plurals": {},
+  "arrays": {}
+}

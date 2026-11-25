@@ -20,15 +20,17 @@ from common import (
     load_data_file,
     missing_entries,
     parse_entries,
+    source_name_for_data,
 )
 
-PLACEHOLDER_RE = re.compile(r"%(?:\d+\$)?[-#+ 0,(]*\d*(?:\.\d+)?[a-zA-Z%]")
+PLACEHOLDER_RE = re.compile(r"(?<!\d)%(?:\d+\$)?[-#+ 0,(]*\d*(?:\.\d+)?[douxXeEfFgGaAcsbBShH%]")
 XLIFF_RE = re.compile(r"<xliff:g\b([^>]*)>")
 TAG_RE = re.compile(r"</?([a-zA-Z][\w:.-]*)")
 
 
 def placeholders(text: str) -> Counter:
-    return Counter(PLACEHOLDER_RE.findall(text))
+    # Protect literal percent pairs before scanning for format specifiers.
+    return Counter(PLACEHOLDER_RE.findall(text.replace("%%", "\x00")))
 
 
 def xliff_ids(text: str) -> list[str]:
@@ -43,14 +45,15 @@ def tags(text: str) -> Counter:
     return Counter(t for t in TAG_RE.findall(text) if t != "xliff:g")
 
 
-def check_string(source: str, translation: str, where: str, errors: list[str], warnings: list[str]):
+def check_string(source: str, translation: str, where: str, errors: list[str], warnings: list[str], formatted: bool = True):
     if not translation.strip():
         errors.append(f"{where}: empty translation")
         return
-    src_ph = placeholders(source)
-    dst_ph = placeholders(translation)
-    if src_ph != dst_ph:
-        errors.append(f"{where}: placeholder mismatch {dict(src_ph)} -> {dict(dst_ph)}")
+    if formatted:
+        src_ph = placeholders(source)
+        dst_ph = placeholders(translation)
+        if src_ph != dst_ph:
+            errors.append(f"{where}: placeholder mismatch {dict(src_ph)} -> {dict(dst_ph)}")
     src_ids = xliff_ids(source)
     dst_ids = xliff_ids(translation)
     if src_ids != dst_ids:
@@ -76,6 +79,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--strict", action="store_true", help="treat warnings as errors")
     parser.add_argument("--package", help="only check this package id")
+    parser.add_argument("--only", help="only check data files whose path contains this substring")
     args = parser.parse_args()
 
     config = load_config()
@@ -93,6 +97,8 @@ def main() -> int:
         return 0
 
     for data_path in data_files:
+        if args.only and args.only not in str(data_path):
+            continue
         rel = data_path.relative_to(data_dir)
         if len(rel.parts) != 3:
             errors.append(f"{data_path}: unexpected data path")
@@ -105,7 +111,7 @@ def main() -> int:
             errors.append(f"{data_path}: unknown package id")
             continue
         resdir = resdir_slug.replace("__", "/")
-        source_file = REPO_ROOT / package["source"] / resdir / "values" / (Path(filename).stem + ".xml")
+        source_file = REPO_ROOT / package["source"] / resdir / "values" / source_name_for_data(filename)
         if not source_file.exists():
             errors.append(f"{data_path}: source file not found: {source_file}")
             continue
@@ -126,6 +132,7 @@ def main() -> int:
                     f"{pkg_id}/{resdir}/{filename}:{name}",
                     errors,
                     warnings,
+                    formatted=entry["attrs"].get("formatted") != "false",
                 )
                 stats[pkg_id]["strings"] += 1
                 translated_names[pkg_id].add((KIND_STRING, name))
@@ -152,6 +159,7 @@ def main() -> int:
                     f"{pkg_id}/{resdir}/{filename}:{name}[{quantity}]",
                     errors,
                     warnings,
+                    formatted=entry["attrs"].get("formatted") != "false",
                 )
             stats[pkg_id]["plurals"] += 1
             translated_names[pkg_id].add((KIND_PLURALS, name))
@@ -207,11 +215,16 @@ def main() -> int:
         missing = missing_entries(package)
         if not missing:
             continue
+        remaining = [
+            m
+            for m in missing
+            if (m["entry"]["kind"], m["entry"]["name"]) not in translated_names[pkg_id]
+        ]
         done = len(translated_names[pkg_id])
-        left = len(missing) - done
-        total_missing += len(missing)
+        left = len(remaining)
+        total_missing += len(remaining)
         total_done += done
-        print(f"{pkg_id:24} {len(missing):>8} {done:>7} {max(left, 0):>7}")
+        print(f"{pkg_id:24} {len(remaining):>8} {done:>7} {left:>7}")
     print("-" * 50)
     print(f"{'TOTAL':24} {total_missing:>8} {total_done:>7} {max(total_missing - total_done, 0):>7}")
     print()

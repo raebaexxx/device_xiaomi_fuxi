@@ -1,0 +1,14 @@
+{
+  "strings": {
+    "screenrecord_toolbar_settings": "Настройки записи экрана",
+    "screenrecord_advanced_options": "Дополнительные параметры",
+    "screenrecord_settings_while_recording": "Остановите запись, чтобы изменить эти настройки.",
+    "screenrecord_resolution_dimensions": "%1$d × %2$d",
+    "screenrecord_default_limit": "По умолчанию (%1$s)",
+    "screenrecord_size_5gb": "5 ГБ",
+    "screenrecord_camera_unavailable": "Фронтальная камера недоступна. Запись экрана продолжится.",
+    "screenrecord_camera_preview": "Предпросмотр фронтальной камеры. Перетащите, чтобы переместить."
+  },
+  "plurals": {},
+  "arrays": {}
+}

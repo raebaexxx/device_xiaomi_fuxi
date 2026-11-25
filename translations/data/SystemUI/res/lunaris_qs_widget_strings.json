@@ -1,0 +1,23 @@
+{
+  "strings": {
+    "lunaris_qs_widget_title": "Виджет приложения",
+    "lunaris_qs_widget_choose": "Выбрать виджет",
+    "lunaris_qs_widget_back": "Назад",
+    "lunaris_qs_widget_search": "Поиск приложений и виджетов",
+    "lunaris_qs_widget_performance_warning": "Виджеты утяжеляют быстрые настройки и могут вызывать задержки. Анимации приостанавливаются, пока вы двигаете шторку.",
+    "lunaris_qs_widget_frame_size": "Место виджета: %1$d × %2$d dp. Измените размер в редакторе панели. Крупные виджеты уменьшаются, чтобы поместиться.",
+    "lunaris_qs_widget_current": "Текущий виджет",
+    "lunaris_qs_widget_show_background": "Показывать фон плитки",
+    "lunaris_qs_widget_show_background_summary": "Выключите, чтобы показывать только виджет без фона и рамки плитки.",
+    "lunaris_qs_widget_remove": "Удалить виджет",
+    "lunaris_qs_widget_select_again": "Выбрать новую копию",
+    "lunaris_qs_widget_unavailable": "Виджет недоступен. Выберите другой.",
+    "lunaris_qs_widget_error": "Не удалось загрузить или настроить виджет. Попробуйте другой виджет.",
+    "lunaris_qs_widget_empty": "Подходящих виджетов нет",
+    "lunaris_qs_widget_preview": "Предпросмотр %1$s",
+    "lunaris_qs_widget_no_preview": "Предпросмотр недоступен",
+    "lunaris_qs_content_size": "Размер: %1$d × %2$d"
+  },
+  "plurals": {},
+  "arrays": {}
+}

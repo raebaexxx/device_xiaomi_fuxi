@@ -1,0 +1,10 @@
+{
+  "strings": {
+    "camera_toggle_enable_config": "camera_toggle_enabled",
+    "mic_toggle_enable_config": "mic_toggle_enabled",
+    "clipboard_show_access_notifications_config": "clipboard_show_access_notifications",
+    "show_access_notifications_default_config": "show_access_notifications"
+  },
+  "plurals": {},
+  "arrays": {}
+}

@@ -1,0 +1,27 @@
+{
+  "strings": {
+    "app_name": "WebView Shell",
+    "title_activity_telemetry": "Телеметрия WebView",
+    "title_activity_jank": "Тест задержек WebView",
+    "title_activity_startup_time": "Тест времени запуска WebView",
+    "title_activity_browser": "Тест браузера WebView",
+    "title_activity_layout_test": "Тест компоновки WebView",
+    "title_activity_thread_test": "Тест потоков WebView",
+    "title_activity_page_cycler": "Тест циклического переключения страниц WebView",
+    "title_activity_create_destroy": "Создание и уничтожение WebView",
+    "menu_reset_webview": "Уничтожить и создать новый WebView",
+    "menu_clear_cache": "Очистить кеш",
+    "menu_enable_tracing": "Включить трассировку",
+    "menu_start_animation_activity": "Тест анимации",
+    "menu_print": "Печать",
+    "menu_about": "О WebView",
+    "load_url": "Загрузить URL",
+    "alpha_button": "Просмотр альфа-канала",
+    "layer_button": "Слой",
+    "rotate_button": "Повернуть",
+    "scale_button": "Масштабировать",
+    "translate_button": "Переместить"
+  },
+  "plurals": {},
+  "arrays": {}
+}

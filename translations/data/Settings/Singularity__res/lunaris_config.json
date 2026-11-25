@@ -1,0 +1,9 @@
+{
+  "strings": {
+    "config_batteryCalculatedCapacity": "/sys/class/power_supply/bms/charge_full",
+    "config_batteryDesignCapacity": "/sys/class/power_supply/bms/charge_full_design",
+    "config_batteryChargeCycles": "/sys/class/power_supply/bms/cycle_count"
+  },
+  "plurals": {},
+  "arrays": {}
+}

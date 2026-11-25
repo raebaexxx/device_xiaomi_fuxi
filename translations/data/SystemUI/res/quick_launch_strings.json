@@ -1,0 +1,12 @@
+{
+  "strings": {
+    "fingerprint_ql_guide_glide_message": "Проведите к значку и отпустите, чтобы запустить",
+    "fingerprint_ql_guide_down_to_edit_message": "Проведите вниз, чтобы открыть меню редактирования",
+    "fingerprint_ql_edit_message": "Отпустите, чтобы открыть меню редактирования",
+    "fingerprint_ql_recommend_message": "Быстрый запуск функций или приложений",
+    "fingerprint_ql_recommend_sub_message": "Проведите к пустому значку и отпустите, чтобы добавить функцию или приложение для быстрого запуска.",
+    "fingerprint_ql_setting_edit_title": "Изменить меню быстрого запуска"
+  },
+  "plurals": {},
+  "arrays": {}
+}

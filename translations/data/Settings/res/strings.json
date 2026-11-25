@@ -1,0 +1,18 @@
+{
+  "strings": {
+    "wifi_calling_roaming_mode_summary": "<xliff:g id=\"wfc_roaming_preference\" example=\"Wi-Fi\">%1$s</xliff:g>",
+    "dark_ui_auto_mode_ambient": "По освещённости",
+    "dark_ui_summary_auto_mode_ambient": "Подстраивается под освещение при включённом экране",
+    "status_iccid": "ICCID",
+    "service_client_name": "<xliff:g id=\"client_name\">%1$s</xliff:g>",
+    "service_process_name": "<xliff:g id=\"process\">%1$s</xliff:g>",
+    "testing_sim_toolkit": "Инструменты SIM-карты",
+    "battery_saver_seekbar_title": "<xliff:g id=\"percent\">%1$s</xliff:g>",
+    "ringtone1_title": "Мелодия вызова — SIM 1",
+    "ringtone2_title": "Мелодия вызова — SIM 2",
+    "zen_mode_calls_summary_one": "<xliff:g id=\"caller type\" example=\"contacts\">%1$s</xliff:g>",
+    "platform_compat_target_sdk_title": "Включено для targetSdkVersion &gt;= <xliff:g id=\"number\" example=\"29\">%d</xliff:g>"
+  },
+  "plurals": {},
+  "arrays": {}
+}

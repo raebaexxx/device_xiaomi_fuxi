@@ -1,0 +1,33 @@
+{
+  "strings": {
+    "pocket_mode_title": "Режим «В кармане» включён",
+    "pocket_mode_illustration_description": "Иллюстрация: телефон в кармане",
+    "pocket_mode_instructions_header": "Чтобы пользоваться телефоном:",
+    "pocket_mode_instruction_step1": "1. Убедитесь, что синяя область (датчик приближения) на изображении выше ничем не закрыта и не загрязнена.",
+    "pocket_mode_instruction_step2": "2. Нажмите и удерживайте кнопку питания, чтобы выйти из режима «В кармане».",
+    "volume_dialog_ringer_guidance_normal": "Вызовы и уведомления будут звучать",
+    "settings_restart_title": "Требуется перезапуск приложения «Настройки»",
+    "settings_restart_message": "Чтобы все изменения вступили в силу, необходимо перезапустить приложение «Настройки». Перезапустить его сейчас?",
+    "system_restart_title": "Требуется перезапуск системы",
+    "system_restart_message": "Чтобы все изменения вступили в силу, необходимо перезапустить систему. Перезапустить систему сейчас?",
+    "systemui_restart_title": "Требуется перезапуск SystemUI",
+    "systemui_restart_message": "Чтобы все изменения вступили в силу, необходимо перезапустить SystemUI. Перезапустить SystemUI сейчас?",
+    "launcher_restart_title": "Требуется перезапуск лаунчера",
+    "launcher_restart_message": "Чтобы все изменения вступили в силу, необходимо перезапустить лаунчер. Перезапустить его сейчас?",
+    "notification_channel_sleep": "Режим сна",
+    "sleep_mode_notification_title": "Режим сна включён",
+    "sleep_mode_notification_content": "Нажмите, чтобы выключить режим сна",
+    "sleep_mode_enabled_toast": "Режим сна включён",
+    "sleep_mode_disabled_toast": "Режим сна выключен",
+    "power_insight_notif_active": "Активно: %1$s%%/ч",
+    "power_insight_notif_idle": "Ожидание: %1$s%%/ч",
+    "power_insight_notif_screen_on": "Экран включён: %1$s • %2$s%%",
+    "power_insight_notif_screen_off": "Экран выключен: %1$s • %2$s%%",
+    "power_insight_notif_awake": "Бодрствование: %1$s (%2$s%%)",
+    "power_insight_notif_deep_sleep": "Глубокий сон: %1$s (%2$s%%)",
+    "power_insight_notif_charging": "Зарядка",
+    "power_insight_notif_discharging": "Разрядка"
+  },
+  "plurals": {},
+  "arrays": {}
+}

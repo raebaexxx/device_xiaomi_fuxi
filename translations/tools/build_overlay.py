@@ -9,6 +9,8 @@ import sys
 from pathlib import Path
 from xml.sax.saxutils import escape
 
+from collections import defaultdict
+
 from common import (
     KIND_ARRAY,
     KIND_PLURALS,
@@ -19,6 +21,7 @@ from common import (
     load_data_file,
     overlay_file_path,
     parse_entries,
+    source_name_for_data,
 )
 
 HEADER = """<?xml version="1.0" encoding="utf-8"?>
@@ -31,12 +34,28 @@ FOOTER = "</resources>\n"
 
 KEEP_ATTRS = ("formatted", "product")
 
+# Literal percent signs: Android needs formatted="false" when a string has no
+# format placeholders but contains raw percent characters.
+LITERAL_PH_RE = __import__("re").compile(
+    r"%(?:\d+\$)?[-#+ 0,(]*\d*(?:\.\d+)?[douxXeEfFgGaAcsbBShH%]"
+)
+
+
+def normalized_attrs(attrs: dict, text: str) -> dict:
+    attrs = dict(attrs)
+    if "formatted" not in attrs and "%" in text:
+        stripped = LITERAL_PH_RE.sub("", text.replace("%%", ""))
+        if "%" in stripped and not LITERAL_PH_RE.search(text):
+            attrs["formatted"] = "false"
+    return attrs
+
 
 def xml_attr(value: str) -> str:
     return escape(value, {'"': "&quot;"})
 
 
 def emit_string(name: str, attrs: dict, text: str) -> str:
+    attrs = normalized_attrs(attrs, text)
     extra = "".join(
         f' {key}="{xml_attr(attrs[key])}"' for key in KEEP_ATTRS if key in attrs
     )
@@ -75,62 +94,75 @@ def build() -> tuple[int, list[str]]:
     written = 0
     errors: list[str] = []
 
+    # Group chunk files by their source XML so several parts merge into one overlay file.
+    groups: dict[tuple[str, str, str], list[Path]] = defaultdict(list)
     for data_path in iter_data_files(data_dir):
         rel = data_path.relative_to(data_dir)
         if len(rel.parts) != 3:
             errors.append(f"Unexpected data path: {data_path}")
             continue
         pkg_id, resdir_slug, filename = rel.parts
-        package = packages.get(pkg_id)
-        if not package:
+        if pkg_id not in packages:
             errors.append(f"Unknown package in data path: {pkg_id}")
             continue
         resdir = resdir_slug.replace("__", "/")
+        groups[(pkg_id, resdir, source_name_for_data(filename))].append(data_path)
+
+    for (pkg_id, resdir, source_name), paths in sorted(groups.items()):
+        package = packages[pkg_id]
         if resdir not in package["resource_dirs"]:
             errors.append(f"Unknown resource dir {resdir} for {pkg_id}")
             continue
-
-        source_name = Path(filename).stem + ".xml"
         source_file = REPO_ROOT / package["source"] / resdir / "values" / source_name
         if not source_file.exists():
             errors.append(f"Source file missing: {source_file}")
             continue
 
-        data = load_data_file(data_path)
-        source_entries = {e["name"]: e for e in parse_entries(source_file)}
+        merged = {"strings": {}, "plurals": {}, "arrays": {}}
+        for data_path in paths:
+            data = load_data_file(data_path)
+            for section in ("strings", "plurals", "arrays"):
+                for name, value in data[section].items():
+                    if name in merged[section]:
+                        errors.append(
+                            f"Duplicate '{name}' in {section} for {pkg_id}/{resdir}/{source_name}"
+                        )
+                        continue
+                    merged[section][name] = value
 
+        source_entries = {e["name"]: e for e in parse_entries(source_file)}
         chunks = [HEADER]
         for entry in parse_entries(source_file):
             name = entry["name"]
             kind = entry["kind"]
             if kind == KIND_STRING:
-                if name in data["strings"]:
+                if name in merged["strings"]:
                     chunks.append(
-                        emit_string(name, entry["attrs"], data["strings"][name])
+                        emit_string(name, entry["attrs"], merged["strings"][name])
                     )
             elif kind == KIND_PLURALS:
-                if name in data["plurals"]:
+                if name in merged["plurals"]:
                     chunks.append(
-                        emit_plurals(name, entry["attrs"], data["plurals"][name])
+                        emit_plurals(name, entry["attrs"], merged["plurals"][name])
                     )
             elif kind == KIND_ARRAY:
-                if name in data["arrays"]:
+                if name in merged["arrays"]:
                     chunks.append(
                         emit_array(
-                            entry["tag"], name, entry["attrs"], data["arrays"][name]
+                            entry["tag"], name, entry["attrs"], merged["arrays"][name]
                         )
                     )
         chunks.append(FOOTER)
 
         for section, values in (
-            ("strings", data["strings"]),
-            ("plurals", data["plurals"]),
-            ("arrays", data["arrays"]),
+            ("strings", merged["strings"]),
+            ("plurals", merged["plurals"]),
+            ("arrays", merged["arrays"]),
         ):
             for name in values:
                 if name not in source_entries:
                     errors.append(
-                        f"{data_path}: '{name}' from {section} not found in {source_file.name}"
+                        f"'{name}' from {section} not found in {source_file.name}"
                     )
 
         out_path = overlay_file_path(overlay_dir, package, resdir, source_name)

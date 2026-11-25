@@ -1,0 +1,17 @@
+{
+  "strings": {
+    "button_translate": "Перевести",
+    "translation_failed_toast": "Перевод недоступен",
+    "translation_consent_title": "Включить перевод?",
+    "translation_consent_message": "Переводы выполняются автоматически и могут содержать ошибки",
+    "translation_consent_positive_button": "Включить",
+    "translation_consent_negative_button": "Нет, спасибо",
+    "download_language_title": "Требуется загрузка",
+    "download_language_message": "Чтобы переводить сообщения без подключения к интернету, загрузите дополнительный языковой пакет в настройках",
+    "download_language_positive_button": "Настройки",
+    "download_language_negative_button": "Не сейчас",
+    "button_map": "Карта"
+  },
+  "plurals": {},
+  "arrays": {}
+}

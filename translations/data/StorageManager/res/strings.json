@@ -1,0 +1,11 @@
+{
+  "strings": {
+    "deletion_helper_app_summary_item_size": "<xliff:g id=\"used\" example=\"1.2GB\">%1$s</xliff:g>",
+    "deletion_helper_photos_summary": "<xliff:g id=\"used\" example=\"1.2GB\">%1$s</xliff:g>",
+    "deletion_helper_downloads_category_summary": "<xliff:g id=\"used\" example=\"1.2GB\">%1$s</xliff:g>",
+    "deletion_helper_downloads_summary_empty": "<xliff:g id=\"used\" example=\"1.2GB\">%1$s</xliff:g>",
+    "deletion_helper_apps_group_summary": "<xliff:g id=\"used\" example=\"1.2GB\">%1$s</xliff:g>"
+  },
+  "plurals": {},
+  "arrays": {}
+}

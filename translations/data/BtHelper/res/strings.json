@@ -1,0 +1,27 @@
+{
+  "strings": {
+    "settings_title": "Дополнительные настройки",
+    "more_settings_subtitle": "Относительная громкость, обнаружение уха и другое",
+    "automatic_ear_detection_title": "Автоматическое обнаружение уха",
+    "personalized_volume_title": "Персонализированная громкость",
+    "personalized_volume_summary": "Регулирует громкость медиа в зависимости от окружающей обстановки.",
+    "conversational_awareness_title": "Понимание речи",
+    "conversational_awareness_summary": "Снижает громкость медиа и уменьшает фоновый шум, когда вы говорите.",
+    "relative_conversational_awareness_volume_title": "Относительная громкость",
+    "relative_conversational_awareness_volume_summary": "Снижает до процента от текущей громкости, а не от максимальной.",
+    "conversational_awareness_pause_music_title": "Пауза медиа",
+    "conversational_awareness_pause_music_summary": "Останавливать воспроизведение медиа, когда вы говорите.",
+    "head_gestures_title": "Жесты головой",
+    "head_gestures_summary": "Кивните, чтобы ответить на звонок, или покачайте головой, чтобы отклонить.",
+    "use_alternate_head_tracking_packets_title": "Альтернативные пакеты отслеживания головы",
+    "use_alternate_head_tracking_packets_summary": "Отправка других данных в AirPods для запуска/остановки отслеживания головы. Включите, если отслеживание головы не работает.",
+    "disconnect_when_not_wearing_title": "Отключать, когда наушники не надеты",
+    "low_latency_audio_title": "Аудио с низкой задержкой",
+    "low_latency_audio_summary": "Уменьшить задержки звука.\\nПосле включения требуется повторное подключение AirPods. Может увеличить расход аккумулятора.",
+    "low_latency_audio_slice_subtitle": "Требуется повторное подключение AirPods.",
+    "head_gesture_call_answered_toast": "Вызов принят жестом головы",
+    "head_gesture_call_rejected_toast": "Вызов отклонён жестом головы"
+  },
+  "plurals": {},
+  "arrays": {}
+}

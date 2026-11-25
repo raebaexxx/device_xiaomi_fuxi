@@ -1,0 +1,16 @@
+{
+  "strings": {},
+  "plurals": {},
+  "arrays": {
+    "quickspace_weather_provider_values": [
+      "auto",
+      "seraphix",
+      "omnijaws"
+    ],
+    "themed_icon_color_preset_values": [
+      "axicons",
+      "aosp",
+      "custom"
+    ]
+  }
+}

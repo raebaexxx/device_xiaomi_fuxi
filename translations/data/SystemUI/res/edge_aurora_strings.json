@@ -1,0 +1,20 @@
+{
+  "strings": {
+    "edge_aurora_title": "Edge Aurora",
+    "edge_aurora_peek_hint": "Нажмите, чтобы открыть · Смахните, чтобы очистить",
+    "edge_aurora_peek_app": "Показать уведомления %1$s",
+    "edge_aurora_expand": "Развернуть",
+    "edge_aurora_reply": "Ответить",
+    "edge_aurora_reply_hint": "Ответить…",
+    "edge_aurora_reply_failed": "Не удалось отправить. Ваш ответ сохранён; повторите попытку или откройте приложение.",
+    "edge_aurora_send": "Отправить",
+    "edge_aurora_collapse": "Свернуть",
+    "edge_aurora_clear": "Очистить",
+    "edge_aurora_open_app": "Открыть приложение",
+    "edge_aurora_float": "Плавающее окно",
+    "edge_aurora_unlock": "Разблокируйте, чтобы прочитать",
+    "edge_aurora_attachment": "Вложение"
+  },
+  "plurals": {},
+  "arrays": {}
+}

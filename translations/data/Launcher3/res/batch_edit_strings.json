@@ -1,0 +1,44 @@
+{
+  "strings": {
+    "batch_edit_done": "Готово",
+    "batch_edit_hint": "Нажмите на приложения, чтобы выбрать их. Перетащите их на другую страницу или выберите «Переместить сюда» или «Папки».",
+    "batch_edit_move_here": "Переместить сюда",
+    "batch_edit_new_page": "Новая страница",
+    "batch_edit_select_apps": "Выбрать приложения",
+    "batch_edit_selected": "Выбрано",
+    "batch_edit_not_selected": "Не выбрано",
+    "batch_edit_no_space": "На выбранной странице недостаточно места для всех приложений. Выберите другую страницу.",
+    "batch_edit_folders": "Папки",
+    "batch_edit_create_folder": "Создать папку",
+    "batch_edit_move_to_folder": "Переместить в папку",
+    "batch_edit_ungroup_folder": "Разгруппировать папку",
+    "batch_edit_folder_name": "Название папки",
+    "batch_edit_default_folder_name": "Папка",
+    "batch_edit_folder_on_page": "%1$s · Страница %2$d",
+    "batch_edit_folder_in_dock": "%1$s · Нижняя панель",
+    "batch_edit_folder_minimum": "Выберите хотя бы два приложения, чтобы создать папку.",
+    "batch_edit_folder_select_apps": "Выберите приложения для перемещения в папку.",
+    "batch_edit_folder_standard_icons": "В папки можно помещать стандартные значки приложений 1 × 1 и ярлыки. Уменьшите размер больших значков перед группировкой.",
+    "batch_edit_no_folders": "Нет доступных папок.",
+    "batch_edit_folder_unavailable": "Папка или выбранные приложения изменились. Повторите попытку.",
+    "batch_edit_folder_created": "Папка создана",
+    "batch_edit_apps_grouped": "Выбранные приложения перемещены в %1$s",
+    "batch_edit_folder_ungrouped": "Приложения перемещены из %1$s на главный экран",
+    "batch_edit_ungroup_message": "Переместить все приложения из %1$s на главный экран? При необходимости будут добавлены новые страницы."
+  },
+  "plurals": {
+    "batch_edit_count": {
+      "one": "Выбрано %d приложение",
+      "few": "Выбрано %d приложения",
+      "many": "Выбрано %d приложений",
+      "other": "Выбрано %d приложения"
+    },
+    "batch_edit_moved": {
+      "one": "Перемещено %d приложение",
+      "few": "Перемещено %d приложения",
+      "many": "Перемещено %d приложений",
+      "other": "Перемещено %d приложения"
+    }
+  },
+  "arrays": {}
+}

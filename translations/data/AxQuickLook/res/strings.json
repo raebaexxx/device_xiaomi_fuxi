@@ -1,0 +1,29 @@
+{
+  "strings": {
+    "app_name": "AxQuickLook",
+    "calendar_in_time": "через %d мин",
+    "calendar_now": "сейчас",
+    "calendar_tomorrow": "Завтра",
+    "calendar_yesterday": "Вчера",
+    "quicklook_settings_title": "QuickLook",
+    "quicklook_settings_subtitle": "Настроить источники данных Smartspace",
+    "quicklook_category_sources": "Источники данных",
+    "quicklook_category_smartspace": "Smartspace",
+    "quicklook_weather_title": "Погода",
+    "quicklook_weather_summary": "Текущая погода от OmniJaws",
+    "quicklook_calendar_title": "Календарь",
+    "quicklook_calendar_summary": "Предстоящие события календаря",
+    "quicklook_alarm_title": "Следующий будильник",
+    "quicklook_alarm_summary": "Время следующего запланированного будильника",
+    "quicklook_media_title": "Медиа",
+    "quicklook_media_summary": "Информация о текущем воспроизведении",
+    "quicklook_now_playing_title": "Сейчас играет",
+    "quicklook_now_playing_summary": "Распознавание музыки от Google",
+    "quicklook_google_smartspace_title": "Google Smartspace",
+    "quicklook_google_smartspace_summary": "Погода, таймеры, спорт и другое от Google",
+    "quicklook_smartspacer_title": "Smartspacer",
+    "quicklook_smartspacer_summary": "Цели из приложения Smartspacer"
+  },
+  "plurals": {},
+  "arrays": {}
+}

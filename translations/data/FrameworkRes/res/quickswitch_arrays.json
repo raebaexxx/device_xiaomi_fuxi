@@ -1,0 +1,14 @@
+{
+  "strings": {},
+  "plurals": {},
+  "arrays": {
+    "config_launcherComponents": [
+      "com.android.launcher3/com.android.quickstep.RecentsActivity",
+      "com.google.android.apps.nexuslauncher/com.android.quickstep.RecentsActivity"
+    ],
+    "config_launcherPackages": [
+      "com.android.launcher3",
+      "com.google.android.apps.nexuslauncher"
+    ]
+  }
+}

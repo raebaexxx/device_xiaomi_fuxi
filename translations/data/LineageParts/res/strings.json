@@ -1,0 +1,18 @@
+{
+  "strings": {
+    "charging_control_limit_summary": "Текущий лимит: %d%%",
+    "live_display_color_profile_preview": "Предпросмотр цвета",
+    "volume_panel_position_title": "Положение панели громкости",
+    "volume_panel_position_left": "Слева",
+    "volume_panel_position_right": "Справа",
+    "status_bar_battery_style_icon_landscape": "Значок в ландшафте",
+    "status_bar_battery_style_dotted_circle": "Пунктирный круг",
+    "status_bar_brightness_slider_position_title": "Положение ползунка яркости",
+    "status_bar_brightness_slider_position_top": "Сверху",
+    "status_bar_brightness_slider_position_bottom": "Снизу",
+    "network_traffic_hide_arrows": "Скрыть стрелки",
+    "network_traffic_hide_arrows_summary": "Скрывать стрелки направления отправки и загрузки"
+  },
+  "plurals": {},
+  "arrays": {}
+}

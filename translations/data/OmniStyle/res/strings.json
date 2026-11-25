@@ -1,0 +1,53 @@
+{
+  "strings": {
+    "app_name": "OmniStyle",
+    "headers_description": "Немного индивидуальности для быстрых настроек.",
+    "wallpapers_description": "Сделайте каждый экран своим.",
+    "collection_label": "Коллекция",
+    "all_collections": "Все коллекции",
+    "loading_images": "Ищем новый образ…",
+    "empty_collection_title": "Вас ждёт больше стиля",
+    "empty_collection_message": "В этой коллекции пока нет изображений. Попробуйте другую коллекцию или посмотрите онлайн.",
+    "load_collection_failed": "Не удалось загрузить коллекцию",
+    "load_collection_failed_message": "Проверьте подключение и повторите попытку.",
+    "retry": "Повторить",
+    "preview_image": "Предпросмотр %1$s",
+    "close_preview": "Закрыть предпросмотр",
+    "apply_header": "Установить заголовок",
+    "apply_wallpaper": "Установить обои",
+    "save_image": "Скачать изображение",
+    "image_saved": "Сохранено в Pictures/OmniStyle",
+    "image_action_failed": "Не удалось сохранить или применить изображение",
+    "image_preview_failed": "Предпросмотр недоступен",
+    "image_preview_retry": "Обновить предпросмотр",
+    "header_preview_label": "Предпросмотр быстрых настроек",
+    "wallpaper_preview_label": "Предпросмотр обоев",
+    "preview_wifi": "Wi-Fi",
+    "preview_bluetooth": "Bluetooth",
+    "applied_header": "Текущий заголовок",
+    "sort_images": "Сортировать изображения",
+    "crop_to_screen": "По размеру экрана",
+    "keep_scrolling": "Продолжить прокрутку",
+    "cancel": "Отмена",
+    "theme_collection": "Тема",
+    "browse_theme_walls": "Обои темы",
+    "browse_theme_header": "Заголовки темы",
+    "pick_header": "Выбрать заголовки",
+    "sort_by_creator_menu": "Сортировать по автору",
+    "sort_by_tag_menu": "Сортировать по тегу",
+    "sort_by_default_menu": "Сортировать по названию",
+    "download_header_notice": "Загрузка заголовка",
+    "download_header_failed_notice": "Не удалось скачать заголовок",
+    "header_location_local": "Локальные",
+    "header_location_online": "Онлайн"
+  },
+  "plurals": {
+    "collection_size": {
+      "one": "%1$d изображение",
+      "few": "%1$d изображения",
+      "many": "%1$d изображений",
+      "other": "%1$d изображений"
+    }
+  },
+  "arrays": {}
+}

@@ -1,0 +1,12 @@
+{
+  "strings": {
+    "mediapicker_contactChooserDescription": "Выберите контакт на этом устройстве",
+    "mediapicker_contact_title": "Выберите контакт",
+    "contact_picker_hint_text": "Нажмите, чтобы открыть список контактов на этом устройстве",
+    "default_sms_app": "<xliff:g id=\"app_name\">%s</xliff:g>",
+    "work_directory_display_name": "Контакты рабочего профиля",
+    "disallow_emergency_call": "Здесь нельзя совершить голосовой вызов экстренных служб."
+  },
+  "plurals": {},
+  "arrays": {}
+}

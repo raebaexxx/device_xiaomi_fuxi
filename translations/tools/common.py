@@ -18,7 +18,7 @@ SKIP_FILE_RE = re.compile(
 )
 
 ENTRY_RE = re.compile(
-    r"<(?P<tag>string|plurals|string-array|array|item)\b(?P<attrs>[^>]*)>"
+    r"<(?P<tag>string-array|array|plurals|string|item)\b(?P<attrs>[^>]*)>"
     r"(?P<body>.*?)</(?P=tag)>",
     re.DOTALL,
 )
@@ -52,6 +52,8 @@ def parse_entries(path: Path) -> list[dict]:
     entries: list[dict] = []
     for match in ENTRY_RE.finditer(text):
         tag = match.group("tag")
+        if match.group("attrs").rstrip().endswith("/"):
+            continue
         attrs = parse_attrs(match.group("attrs"))
         body = match.group("body")
         name = attrs.get("name")
@@ -192,6 +194,13 @@ def missing_entries(package: dict) -> list[dict]:
         for item in package_entries(package)
         if (item["entry"]["kind"], item["entry"]["name"]) not in existing
     ]
+
+
+def source_name_for_data(filename: str) -> str:
+    """Map a data chunk filename to its source XML filename."""
+    stem = Path(filename).stem
+    stem = re.sub(r"__part\d+$", "", stem)
+    return stem + ".xml"
 
 
 def data_file_path(data_dir: Path, package: dict, resdir: str, source_file: str) -> Path:

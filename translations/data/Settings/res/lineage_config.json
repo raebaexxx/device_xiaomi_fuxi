@@ -1,0 +1,8 @@
+{
+  "strings": {
+    "config_face_enroll": "com.android.settings/com.google.android.settings.biometrics.face.FaceEnrollActivityDirector",
+    "security_settings_face_enroll_finish_description_with_bp": "Теперь вы можете использовать лицо для разблокировки телефона или подтверждения личности, например при входе в приложения или подтверждении покупки"
+  },
+  "plurals": {},
+  "arrays": {}
+}

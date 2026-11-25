@@ -1,0 +1,30 @@
+{
+  "strings": {
+    "dynamic_island_screen_record_short": "ЗАП",
+    "dynamic_island_screen_record_active": "Идёт запись",
+    "dynamic_island_screen_record_countdown": "Начнётся через %1$s с",
+    "dynamic_island_alarm_title": "Следующий будильник",
+    "dynamic_island_flashlight_enabled": "Включено",
+    "dynamic_island_flashlight_short": "ВКЛ",
+    "dynamic_island_open_action": "Открыть",
+    "dynamic_island_open_clock_action": "Открыть часы",
+    "dynamic_island_stopwatch_title": "Секундомер",
+    "dynamic_island_alarm_active_title": "Будильник",
+    "dynamic_island_action_snooze": "Отложить",
+    "dynamic_island_action_lap": "Круг",
+    "dynamic_island_action_stop": "Остановить",
+    "dynamic_island_action_resume": "Продолжить",
+    "volume_panel_expand_sliders": "Развернуть управление громкостью",
+    "status_bar_classic_icons_title": "Переключиться на классические значки строки состояния",
+    "status_bar_classic_icons_summary": "Показывать заполненные значки Wi-Fi, сигнала и аккумулятора",
+    "tuner_restart_systemui_dialog_title": "Перезапустить SystemUI?",
+    "tuner_restart_systemui_dialog_message": "Чтобы применить это изменение, SystemUI нужно перезапустить. Продолжить?",
+    "zen_alarm_warning_indef": "Вы не услышите следующий будильник <xliff:g id=\"when\" example=\"at 7:00 AM\">%1$s</xliff:g>, если не выключите его до этого времени",
+    "accessibility_status_bar_volte": "VoLTE",
+    "accessibility_status_bar_vowifi": "Wi-Fi-звонки",
+    "accessibility_status_bar_vonr": "VoNR",
+    "accessibility_pager_dots_navigate_to_next_page_action": "перейти на следующую страницу"
+  },
+  "plurals": {},
+  "arrays": {}
+}

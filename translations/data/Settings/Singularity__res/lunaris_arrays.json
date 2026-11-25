@@ -1,0 +1,236 @@
+{
+  "strings": {},
+  "plurals": {},
+  "arrays": {
+    "quickswitch_launcher_entries": [
+      "Lunaris Launcher",
+      "Pixel Launcher"
+    ],
+    "wallpaper_effect_entries": [
+      "Нет",
+      "Зернистое размытие",
+      "Хроматическая аберрация",
+      "Виньетка",
+      "Пикселизация",
+      "Насыщенность",
+      "Сепия",
+      "Резкость",
+      "Оттенки серого",
+      "Негатив",
+      "Радиальное размытие",
+      "Постеризация"
+    ],
+    "font_mode_entries": [
+      "Готовые шрифты",
+      "Свой шрифт из хранилища",
+      "Скачать с GitHub"
+    ],
+    "font_mode_values": [
+      "prebuilt",
+      "custom",
+      "github"
+    ],
+    "lockscreen_media_art_filter_entries": [
+      "Нет",
+      "Размытие",
+      "Оттенки серого",
+      "Сепия",
+      "Свой оттенок",
+      "Инверсия",
+      "Оттенки серого + размытие",
+      "Пикселизация/мозаика",
+      "@string/lockscreen_media_art_framed_album"
+    ],
+    "udfps_icon_type_entries": [
+      "Готовые значки",
+      "Свой значок"
+    ],
+    "nowplaying_icon_style_entries": [
+      "Отключено",
+      "Значок приложения",
+      "Значок ноты"
+    ],
+    "charging_animation_style_entries": [
+      "Поток пузырьков",
+      "Неоновый брызг",
+      "Лучевые эффекты",
+      "Плазменный эффект",
+      "Квантовые искры",
+      "Диффузия туманности",
+      "Цифровая матрица",
+      "Geoflow",
+      "Поток изображений",
+      "Линейное изображение"
+    ],
+    "charging_image_flow_style_entries": [
+      "Лист",
+      "Круглое свечение",
+      "Снег",
+      "Свет",
+      "Ракушка",
+      "Фигура",
+      "Пузырь",
+      "Красный лист",
+      "Сакура"
+    ],
+    "charging_color_mode_entries": [
+      "Зелёный по умолчанию",
+      "Акцентный цвет",
+      "Радуга"
+    ],
+    "ripple_shape_entries": [
+      "Круг",
+      "Скруглённый прямоугольник",
+      "Водная рябь"
+    ],
+    "playback_speed_entries": [
+      "0,25x (очень медленно)",
+      "0,5x (медленно)",
+      "0,75x (чуть медленнее)",
+      "1,0x (обычно)",
+      "1,25x (чуть быстрее)",
+      "1,5x (быстро)",
+      "2,0x (очень быстро)"
+    ],
+    "lock_glymps_source_entries": [
+      "Случайные обои (Picsum)",
+      "Свой список URL",
+      "Локальная папка"
+    ],
+    "lock_glymps_cache_size_entries": [
+      "3 обоев (~30 МБ)",
+      "5 обоев (~50 МБ)",
+      "10 обоев (~100 МБ)"
+    ],
+    "lock_glymps_change_on_entries": [
+      "Экран включается",
+      "Экран выключается (рекомендуется)",
+      "По таймеру"
+    ],
+    "lock_glymps_timer_entries": [
+      "5 минут",
+      "10 минут",
+      "15 минут",
+      "30 минут",
+      "1 час",
+      "2 часа",
+      "3 часа",
+      "6 часов",
+      "12 часов",
+      "24 часа"
+    ],
+    "volume_dialog_type_entries": [
+      "Compose",
+      "Обновлённый",
+      "Стандартный"
+    ],
+    "compose_volume_style_entries": [
+      "Axion",
+      "Lunaris",
+      "Moto"
+    ],
+    "cutout_progress_finish_style_entries": [
+      "Всплеск",
+      "Сегментный каскад",
+      "Мгновенно"
+    ],
+    "cutout_progress_easing_entries": [
+      "Линейно",
+      "Ускорение",
+      "Замедление",
+      "Плавно"
+    ],
+    "cutout_progress_position_entries": [
+      "Справа",
+      "Слева",
+      "Сверху",
+      "Снизу",
+      "Справа сверху",
+      "Слева сверху",
+      "Справа снизу",
+      "Слева снизу"
+    ],
+    "cutout_progress_truncate_entries": [
+      "Середина",
+      "Начало",
+      "Конец"
+    ],
+    "widget_values": [
+      "none",
+      "calculator",
+      "media",
+      "timer",
+      "torch",
+      "weather",
+      "wifi",
+      "data",
+      "ringer",
+      "bt",
+      "hotspot",
+      "wallet",
+      "qrscanner"
+    ],
+    "perapp_spoof_profile_labels": [
+      "Black Shark 4 (Китай)",
+      "Poco F5",
+      "Samsung Galaxy Z Fold 5",
+      "Honor Magic V2 RSR",
+      "Lenovo Legion Y700",
+      "Lenovo Legion Y700 (2023)",
+      "Xiaomi 11T Pro",
+      "Xiaomi 13",
+      "Xiaomi 13 Pro",
+      "Xiaomi 14 Pro",
+      "OnePlus 12",
+      "OnePlus 13",
+      "OnePlus 8 Pro 5G",
+      "Pixel XL",
+      "Pixel 10 Pro XL",
+      "REDMAGIC 9 Pro",
+      "RedMagic 10 Pro",
+      "Realme 15 Pro 5G",
+      "Realme 14",
+      "Realme P3 5G",
+      "ROG Phone 6D Ultimate",
+      "Asus ROG Phone 8 Pro",
+      "Asus ROG Phone 9 Pro",
+      "Samsung Galaxy S25 Ultra",
+      "Нет"
+    ],
+    "emoji_style_entries": [
+      "Стандартные",
+      "iOS",
+      "Samsung",
+      "SwiftUI",
+      "Facebook"
+    ],
+    "emoji_style_values": [
+      "android",
+      "ios",
+      "samsung",
+      "swiftui",
+      "facebook"
+    ],
+    "doze_peek_duration_entries": [
+      "5 секунд",
+      "7 секунд",
+      "10 секунд"
+    ],
+    "dynamic_bar_chip_style_entries": [
+      "Капсула",
+      "Круг"
+    ],
+    "lockscreen_unlock_animation_entries": [
+      "По умолчанию",
+      "Вода",
+      "Акварель",
+      "@string/lockscreen_unlock_animation_glow",
+      "@string/lockscreen_unlock_animation_rainbow_glow"
+    ],
+    "system_blur_tint_modes": [
+      "Акцентный цвет",
+      "Вторичный цвет",
+      "Свой цвет"
+    ]
+  }
+}

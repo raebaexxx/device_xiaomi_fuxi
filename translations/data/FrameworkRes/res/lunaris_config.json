@@ -1,0 +1,42 @@
+{
+  "strings": {
+    "config_cpu_temp_path": "/sys/class/thermal/thermal_zone0/temp"
+  },
+  "plurals": {},
+  "arrays": {
+    "config_blockPackagesSensorDrain": [
+      "com.whatsapp",
+      "com.gbwhatsapp",
+      "com.yowhatsapp",
+      "com.whatsapp.plus",
+      "org.telegram.messenger",
+      "org.telegram.messenger.plus",
+      "com.netease.cloudmusic",
+      "fm.xiami.main",
+      "com.netease.snailread",
+      "com.baidu.browser.apps",
+      "org.thunderdog.challegram",
+      "com.snapchat.android",
+      "com.facebook.orca",
+      "com.Slack",
+      "tugapower.codeaurora.browser",
+      "org.mozilla.firefox",
+      "com.android.chrome",
+      "com.amazon.mShop.android.shopping",
+      "com.google.android.inputmethod.latin",
+      "com.google.android.apps.plus",
+      "com.google.android.apps.maps",
+      "ru.ok.android",
+      "com.instagram.android.MainTabActivity",
+      "com.facebook.orca",
+      "com.facebook.orca.StartScreenActivity",
+      "com.spotify.music",
+      "com.spotify.music.MainActivity",
+      "com.android.vending",
+      "com.trtf.blue",
+      "com.truecaller",
+      "com.gaana",
+      "com.facebook.katana.LoginActivity"
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "strings": {
+    "settings_scroll_bounce_title": "Отскок прокрутки",
+    "settings_scroll_bounce_summary": "Упругая прокрутка и настройка пружины",
+    "settings_scroll_bounce_enabled": "Использовать пружинную прокрутку",
+    "settings_scroll_bounce_enabled_summary": "Позволять содержимому мягко отскакивать на краях страницы",
+    "settings_scroll_stiffness_title": "Жёсткость пружины",
+    "settings_scroll_stiffness_summary": "Большие значения быстрее возвращают в покой",
+    "settings_scroll_damping_title": "Демпфирование отскока",
+    "settings_scroll_damping_summary": "Меньшие значения делают возврат более упругим",
+    "settings_scroll_stretch_title": "Максимальный перескролл",
+    "settings_scroll_stretch_summary": "Насколько далеко содержимое может выходить за край прокрутки",
+    "settings_scroll_velocity_title": "Реакция на бросок",
+    "settings_scroll_velocity_summary": "Насколько сильно содержимое отскакивает в конце списка при броске",
+    "settings_scroll_bounce_footer": "Применяется во всех настройках, включая главный экран Compose. Изменения вступят в силу при следующей прокрутке."
+  },
+  "plurals": {},
+  "arrays": {}
+}

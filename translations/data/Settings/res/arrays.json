@@ -1,0 +1,76 @@
+{
+  "strings": {},
+  "plurals": {},
+  "arrays": {
+    "global_locales": [
+      "en",
+      "de",
+      "es",
+      "fr",
+      "it",
+      "pt",
+      "hi",
+      "ja",
+      "zh-Hans",
+      "zh-Hant"
+    ],
+    "japan_locales": [
+      "ja"
+    ],
+    "tts_locales": [
+      "en",
+      "de",
+      "es",
+      "fr",
+      "it",
+      "ja"
+    ],
+    "united_states_locales": [
+      "en-US",
+      "es-US"
+    ],
+    "ingress_rate_limit_entries": [
+      "@string/ingress_rate_limit_no_limit_entry",
+      "128kbps",
+      "256kbps",
+      "1Mbps",
+      "5Mbps",
+      "15Mbps"
+    ],
+    "temperature_units": [
+      "default",
+      "celsius",
+      "fahrenhe"
+    ],
+    "first_day_of_week": [
+      "default",
+      "sun",
+      "mon",
+      "tue",
+      "wed",
+      "thu",
+      "fri",
+      "sat"
+    ],
+    "measurement_system": [
+      "default",
+      "metric",
+      "ussystem",
+      "uksystem"
+    ],
+    "terms_of_address_supported_languages": [
+      "fr",
+      "es",
+      "it",
+      "de"
+    ],
+    "colored_pref_image_theme_colors": [
+      "#007aff",
+      "#2fb151",
+      "#fb7c47",
+      "#fa7d4d",
+      "#fbb404",
+      "#e13e39"
+    ]
+  }
+}
