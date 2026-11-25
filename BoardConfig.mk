@@ -37,6 +37,15 @@ TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
+# Build identity for GMS/banking apps.
+# Evaluated after the product makefiles, so it stays in effect even though
+# Lunaris globally appends its own BuildFingerprint override.
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    BuildDesc="fuxi-user 16 BP2A.250605.031.A3 OS3.0.307.0.WMCCNXM release-keys" \
+    BuildFingerprint=Xiaomi/fuxi/fuxi:16/BP2A.250605.031.A3/OS3.0.307.0.WMCCNXM:user/release-keys \
+    DeviceName=$(PRODUCT_SYSTEM_DEVICE) \
+    DeviceProduct=$(PRODUCT_SYSTEM_NAME)
+
 # Sepolicy
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
