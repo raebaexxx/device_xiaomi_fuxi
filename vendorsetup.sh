@@ -52,6 +52,11 @@ _fuxi_apply_patch "frameworks/base" \
 _fuxi_apply_patch "packages/apps/Settings" \
     "$_fuxi_patches/packages_apps_Settings/0001-settings-homepage-translations.patch"
 
+# DolbyAtmos still has user-facing Compose/Kotlin literals that a resource
+# overlay cannot reach. Move them to string resources so the RU overlay applies.
+_fuxi_apply_patch "packages/apps/DolbyAtmos" \
+    "$_fuxi_patches/packages_apps_DolbyAtmos/0001-dolby-atmos-localizable-strings.patch"
+
 # The stock WFD blobs are built against display config AIDL V16. Lunaris'
 # display commonsys-intf repo only ships V1-V15, so add the frozen V16 API.
 _fuxi_apply_patch "vendor/qcom/opensource/commonsys-intf/display" \

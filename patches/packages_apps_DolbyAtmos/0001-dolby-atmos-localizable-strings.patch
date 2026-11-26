@@ -1,0 +1,978 @@
+diff --git i/res/values/strings.xml w/res/values/strings.xml
+index 24dae58..b361ad0 100644
+--- i/res/values/strings.xml
++++ w/res/values/strings.xml
+@@ -233,4 +233,94 @@
+     <string name="dolby_reset_profile">Reset to default</string>
+     <string name="dolby_reset_profile_toast">Settings for profile %1$s were reset</string>
+     <string name="dolby_stereo_widening">Stereo widening</string>
++    <!-- Localized UI text (fuxi Russian overlay) -->
++    <string name="dolby_surround_virtualizer">Surround virtualizer</string>
++    <string name="dolby_equalizer_view">Equalizer view</string>
++    <string name="dolby_view_curve">Curve</string>
++    <string name="dolby_view_sliders">Sliders</string>
++    <string name="dolby_frequency_response_interactive">Interactive Frequency Response</string>
++    <string name="dolby_frequency_response_readonly">Frequency Response (Read-only)</string>
++    <string name="dolby_frequency_response_drag_hint">Drag the control points to adjust gain (±15 dB) • %1$s</string>
++    <string name="dolby_read_only_mismatch">Read-only view • Band mode mismatch</string>
++    <string name="dolby_band_mode_mismatch_message">This %1$s preset cannot be edited in %2$s mode. Switch to %1$s or select a compatible preset.</string>
++    <string name="dolby_band_mode_10">10 bands</string>
++    <string name="dolby_band_mode_15">15 bands</string>
++    <string name="dolby_band_mode_20">20 bands</string>
++    <plurals name="dolby_band_count">
++        <item quantity="one">%1$d band</item>
++        <item quantity="other">%1$d bands</item>
++    </plurals>
++    <plurals name="preset_export_count">
++        <item quantity="one">Exported %1$d preset</item>
++        <item quantity="other">Exported %1$d presets</item>
++    </plurals>
++    <string name="dolby_back">Back</string>
++    <string name="dolby_clear_all">Clear all</string>
++    <string name="dolby_refresh">Refresh</string>
++    <string name="dolby_clear_search">Clear search</string>
++    <string name="dolby_batch_export">Batch export</string>
++    <string name="dolby_export_to_file">Export to file</string>
++    <string name="dolby_copy_to_clipboard">Copy to clipboard</string>
++    <string name="dolby_share">Share</string>
++    <string name="dolby_delete">Delete</string>
++    <string name="dolby_close">Close</string>
++    <string name="dolby_gain_read_only">%1$s (Read-only)</string>
++    <string name="dolby_default">Default</string>
++    <string name="dolby_notification_title">Dolby: %1$s (%2$s)</string>
++    <string name="dolby_share_preset">Share preset</string>
++    <string name="dolby_preset_share_title">Dolby Preset: %1$s (%2$s)</string>
++    <string name="dolby_preset_share_text">Check out this custom Dolby %1$s audio preset!</string>
++    <string name="dolby_profile_reset_default">Profile reset to default</string>
++    <string name="dolby_profile_set_to">Profile set to: %1$s</string>
++    <string name="dolby_profile_removed">Profile removed</string>
++    <string name="dolby_all_profiles_cleared">All app profiles cleared</string>
++    <string name="dolby_autoeq_load_failed">Failed to load AutoEQ profiles</string>
++    <string name="dolby_autoeq_download_failed">Failed to download profile for %1$s</string>
++    <string name="dolby_error_unknown">Unknown error</string>
++    <string name="dolby_error_invalid_state">Invalid state</string>
++    <string name="preset_export_failed_detail">Export failed: %1$s</string>
++    <string name="preset_import_failed_detail">Import failed: %1$s</string>
++    <string name="preset_batch_export_failed">Batch export failed: %1$s</string>
++    <string name="preset_batch_import_failed">Batch import failed: %1$s</string>
++    <string name="preset_copy_failed">Copy failed: %1$s</string>
++    <string name="preset_share_failed">Share failed: %1$s</string>
++    <string name="preset_clipboard_import_failed">Clipboard import failed: %1$s</string>
++    <string name="preset_imported_named">Preset \'%1$s\' imported! (%2$s)</string>
++    <string name="preset_imported_clipboard">Preset imported from clipboard! (%1$s)</string>
++    <string name="preset_copied_clipboard">Preset copied to clipboard!</string>
++    <string name="preset_import_count">Imported %1$d of %2$d presets</string>
++    <string name="preset_delete_title">Delete preset</string>
++    <string name="preset_delete_message">Are you sure you want to delete \'%1$s\'? This will remove it from your preset list and cannot be undone.</string>
++    <string name="preset_deleted">Preset \'%1$s\' deleted</string>
++    <string name="preset_error_version_not_supported">Preset version not supported</string>
++    <string name="preset_error_cannot_open_file">Cannot open file</string>
++    <string name="preset_error_no_clipboard_data">No data in clipboard</string>
++    <string name="preset_error_band_count">Band count mismatch: expected %1$d, got %2$d</string>
++
++    <!-- Credits dialog -->
++    <string name="dolby_credits_title">Credits &amp; Contributors</string>
++    <string name="dolby_credits_thanks">Thank you to all contributors who made this project possible!</string>
++    <string name="dolby_credits_view_github">View on GitHub</string>
++    <string name="dolby_credits_main">Main Contributors</string>
++    <string name="dolby_credits_translations">Translation Contributors</string>
++    <string name="dolby_credits_missing_language">Missing your language?</string>
++    <string name="dolby_credits_help_translate">Help us make Lunaris Dolby better in your language! Submit or update translations on GitHub.</string>
++    <string name="dolby_credits_submit_pr">Submit a Pull Request</string>
++    <string name="dolby_credits_other">And all other contributors</string>
++    <string name="dolby_credits_check_github">Check the GitHub repository for the complete list</string>
++    <string name="dolby_credits_contrib_rewrite">Rewrite Dolby in Compose (Lunaris Dolby)</string>
++    <string name="dolby_credits_contrib_aospa">AOSPA Dolby Manager (Initial Code)</string>
++    <string name="dolby_credits_contrib_eq">Base &amp; Treble Changes, EQ Tuning</string>
++    <string name="dolby_credits_contrib_memory">Adding per-device dolby state memory</string>
++    <string name="dolby_credits_contrib_autoeq">AutoEQ headphone correction profiles</string>
++    <string name="dolby_credits_lang_spanish">Spanish (Spain)</string>
++    <string name="dolby_credits_lang_portuguese">Portuguese (Brazil)</string>
++    <string name="dolby_credits_lang_indonesian">Indonesian</string>
++    <string name="dolby_credits_lang_polish">Polish</string>
++    <string name="dolby_credits_lang_chinese_tw">Traditional Chinese</string>
++    <string name="dolby_credits_lang_turkish">Turkish</string>
++    <string name="dolby_credits_lang_russian">Russian</string>
++    <string name="dolby_credits_lang_persian">Persian</string>
++    <string name="dolby_credits_lang_vietnamese">Vietnamese</string>
++
+ </resources>
+diff --git i/src/org/lunaris/dolby/data/DeviceStateManager.kt w/src/org/lunaris/dolby/data/DeviceStateManager.kt
+index c5a8795..5371468 100644
+--- i/src/org/lunaris/dolby/data/DeviceStateManager.kt
++++ w/src/org/lunaris/dolby/data/DeviceStateManager.kt
+@@ -10,6 +10,7 @@ import android.content.SharedPreferences
+ import android.media.AudioDeviceInfo
+ 
+ import org.lunaris.dolby.DolbyConstants
++import org.lunaris.dolby.R
+ import org.lunaris.dolby.domain.models.BandGain
+ import org.lunaris.dolby.domain.models.BandMode
+ 
+@@ -37,17 +38,17 @@ class DeviceStateManager(private val context: Context) {
+     fun deviceDisplayName(device: AudioDeviceInfo): String {
+         val productName = device.productName?.toString()?.takeIf { it.isNotBlank() }
+         return when (device.type) {
+-            AudioDeviceInfo.TYPE_BUILTIN_SPEAKER -> "Phone Speaker"
++            AudioDeviceInfo.TYPE_BUILTIN_SPEAKER -> context.getString(R.string.audio_output_speaker)
+             AudioDeviceInfo.TYPE_WIRED_HEADPHONES,
+-            AudioDeviceInfo.TYPE_WIRED_HEADSET -> productName ?: "Wired Headphones"
++            AudioDeviceInfo.TYPE_WIRED_HEADSET -> productName ?: context.getString(R.string.audio_output_wired)
+             AudioDeviceInfo.TYPE_USB_HEADSET,
+-            AudioDeviceInfo.TYPE_USB_DEVICE -> productName ?: "USB Audio"
++            AudioDeviceInfo.TYPE_USB_DEVICE -> productName ?: context.getString(R.string.audio_output_usb)
+             AudioDeviceInfo.TYPE_BLUETOOTH_A2DP,
+             AudioDeviceInfo.TYPE_BLUETOOTH_SCO,
+             AudioDeviceInfo.TYPE_BLE_HEADSET,
+             AudioDeviceInfo.TYPE_BLE_SPEAKER,
+-            AudioDeviceInfo.TYPE_BLE_BROADCAST -> productName ?: "Bluetooth Device"
+-            else -> productName ?: "Audio Device"
++            AudioDeviceInfo.TYPE_BLE_BROADCAST -> productName ?: context.getString(R.string.audio_output_bluetooth)
++            else -> productName ?: context.getString(R.string.audio_output_unknown)
+         }
+     }
+ 
+diff --git i/src/org/lunaris/dolby/data/PresetExportManager.kt w/src/org/lunaris/dolby/data/PresetExportManager.kt
+index bc8cd3c..806e8c3 100644
+--- i/src/org/lunaris/dolby/data/PresetExportManager.kt
++++ w/src/org/lunaris/dolby/data/PresetExportManager.kt
+@@ -11,6 +11,7 @@ import kotlinx.coroutines.Dispatchers
+ import kotlinx.coroutines.withContext
+ import org.json.JSONArray
+ import org.json.JSONObject
++import org.lunaris.dolby.R
+ import org.lunaris.dolby.domain.models.BandGain
+ import org.lunaris.dolby.domain.models.BandMode
+ import org.lunaris.dolby.domain.models.EqualizerPreset
+@@ -49,7 +50,7 @@ class PresetExportManager(private val context: Context) {
+         
+         val version = json.optInt("version", 1)
+         if (version > PRESET_FILE_VERSION) {
+-            throw IllegalArgumentException("Preset version not supported")
++            throw IllegalArgumentException(context.getString(R.string.preset_error_version_not_supported))
+         }
+         val name = json.getString("name")
+         val bandMode = if (json.has("bandMode")) {
+@@ -71,7 +72,7 @@ class PresetExportManager(private val context: Context) {
+         val expectedCount = bandMode.bandCount
+         if (bandGains.size != expectedCount) {
+             throw IllegalArgumentException(
+-                "Band count mismatch: expected $expectedCount, got ${bandGains.size}"
++                context.getString(R.string.preset_error_band_count, expectedCount, bandGains.size)
+             )
+         }
+         
+@@ -105,7 +106,7 @@ class PresetExportManager(private val context: Context) {
+                     BufferedReader(InputStreamReader(inputStream, Charsets.UTF_8)).use { reader ->
+                         reader.readText()
+                     }
+-                } ?: throw IOException("Cannot open file")
++                } ?: throw IOException(context.getString(R.string.preset_error_cannot_open_file))
+                 val preset = importPresetFromJson(json)
+                 Result.success(preset)
+             } catch (e: Exception) {
+@@ -148,7 +149,7 @@ class PresetExportManager(private val context: Context) {
+                     BufferedReader(InputStreamReader(inputStream, Charsets.UTF_8)).use { reader ->
+                         reader.readText()
+                     }
+-                } ?: throw IOException("Cannot open file")
++                } ?: throw IOException(context.getString(R.string.preset_error_cannot_open_file))
+                 val jsonObject = JSONObject(json)
+                 val presetsArray = jsonObject.getJSONArray("presets")
+                 val presets = mutableListOf<EqualizerPreset>()
+@@ -185,12 +186,12 @@ class PresetExportManager(private val context: Context) {
+                     type = MIME_TYPE
+                     putExtra(android.content.Intent.EXTRA_STREAM, uri)
+                     putExtra(android.content.Intent.EXTRA_SUBJECT, 
+-                        "Dolby Preset: ${preset.name} (${preset.bandMode.displayName})")
++                        context.getString(R.string.dolby_preset_share_title, preset.name, context.getString(preset.bandMode.labelRes)))
+                     putExtra(android.content.Intent.EXTRA_TEXT, 
+-                        "Check out this custom Dolby ${preset.bandMode.displayName} audio preset!")
++                        context.getString(R.string.dolby_preset_share_text, context.getString(preset.bandMode.labelRes)))
+                     addFlags(android.content.Intent.FLAG_GRANT_READ_URI_PERMISSION)
+                 }
+-                Result.success(android.content.Intent.createChooser(intent, "Share Preset"))
++                Result.success(android.content.Intent.createChooser(intent, context.getString(R.string.dolby_share_preset)))
+             } catch (e: Exception) {
+                 Result.failure(e)
+             }
+@@ -203,7 +204,7 @@ class PresetExportManager(private val context: Context) {
+                 val clipboard = context.getSystemService(Context.CLIPBOARD_SERVICE) 
+                     as android.content.ClipboardManager
+                 val clip = android.content.ClipData.newPlainText(
+-                    "Dolby Preset: ${preset.name} (${preset.bandMode.displayName})", 
++                    context.getString(R.string.dolby_preset_share_title, preset.name, context.getString(preset.bandMode.labelRes)), 
+                     json
+                 )
+                 clipboard.setPrimaryClip(clip)
+@@ -225,7 +226,7 @@ class PresetExportManager(private val context: Context) {
+                     val preset = importPresetFromJson(text)
+                     Result.success(preset)
+                 } else {
+-                    Result.failure(IllegalStateException("No data in clipboard"))
++                    Result.failure(IllegalStateException(context.getString(R.string.preset_error_no_clipboard_data)))
+                 }
+             } catch (e: Exception) {
+                 Result.failure(e)
+diff --git i/src/org/lunaris/dolby/domain/models/Models.kt w/src/org/lunaris/dolby/domain/models/Models.kt
+index 3f8445c..25eb2d9 100644
+--- i/src/org/lunaris/dolby/domain/models/Models.kt
++++ w/src/org/lunaris/dolby/domain/models/Models.kt
+@@ -5,10 +5,18 @@
+ 
+ package org.lunaris.dolby.domain.models
+ 
+-enum class BandMode(val value: String, val displayName: String, val bandCount: Int) {
+-    TEN_BAND("10", "10 Bands", 10),
+-    FIFTEEN_BAND("15", "15 Bands", 15),
+-    TWENTY_BAND("20", "20 Bands", 20);
++import androidx.annotation.StringRes
++import org.lunaris.dolby.R
++
++enum class BandMode(
++    val value: String,
++    val displayName: String,
++    @StringRes val labelRes: Int,
++    val bandCount: Int,
++) {
++    TEN_BAND("10", "10 Bands", R.string.dolby_band_mode_10, 10),
++    FIFTEEN_BAND("15", "15 Bands", R.string.dolby_band_mode_15, 15),
++    TWENTY_BAND("20", "20 Bands", R.string.dolby_band_mode_20, 20);
+     
+     companion object {
+         fun fromValue(value: String): BandMode {
+diff --git i/src/org/lunaris/dolby/service/AppProfileMonitorService.kt w/src/org/lunaris/dolby/service/AppProfileMonitorService.kt
+index 5ee4986..f94d074 100644
+--- i/src/org/lunaris/dolby/service/AppProfileMonitorService.kt
++++ w/src/org/lunaris/dolby/service/AppProfileMonitorService.kt
+@@ -192,7 +192,7 @@ class AppProfileMonitorService : Service() {
+                                     val appName = getAppName(packageName)
+                                     ToastHelper.showToast(
+                                         this@AppProfileMonitorService,
+-                                        "Dolby: $profileName ($appName)"
++                                        getString(R.string.dolby_notification_title, profileName, appName)
+                                     )
+                                 }
+                             } else {
+@@ -253,9 +253,9 @@ class AppProfileMonitorService : Service() {
+         
+         return try {
+             val index = profileValues.indexOfFirst { it.toInt() == profile }
+-            if (index >= 0) profiles[index] else "Unknown"
++            if (index >= 0) profiles[index] else getString(R.string.dolby_unknown)
+         } catch (e: Exception) {
+-            "Unknown"
++            getString(R.string.dolby_unknown)
+         }
+     }
+     
+diff --git i/src/org/lunaris/dolby/ui/components/CreditsDialog.kt w/src/org/lunaris/dolby/ui/components/CreditsDialog.kt
+index 7280235..658298a 100644
+--- i/src/org/lunaris/dolby/ui/components/CreditsDialog.kt
++++ w/src/org/lunaris/dolby/ui/components/CreditsDialog.kt
+@@ -37,6 +37,7 @@ import androidx.compose.ui.graphics.asImageBitmap
+ import androidx.compose.ui.graphics.graphicsLayer
+ import androidx.compose.ui.layout.ContentScale
+ import androidx.compose.ui.platform.LocalContext
++import androidx.compose.ui.res.stringResource
+ import androidx.compose.ui.text.font.FontWeight
+ import androidx.compose.ui.text.style.TextAlign
+ import androidx.compose.ui.text.style.TextOverflow
+@@ -45,6 +46,7 @@ import androidx.compose.ui.unit.dp
+ import androidx.compose.ui.window.Dialog
+ import androidx.compose.ui.window.DialogProperties
+ import androidx.compose.ui.zIndex
++import org.lunaris.dolby.R
+ import kotlinx.coroutines.Dispatchers
+ import kotlinx.coroutines.delay
+ import kotlinx.coroutines.isActive
+@@ -87,45 +89,45 @@ fun CreditsDialog(
+         Contributor(
+             name = "Ghost",
+             githubUsername = "Ghosuto",
+-            contribution = "Rewrite Dolby in Compose (Lunaris Dolby)",
++            contribution = context.getString(R.string.dolby_credits_contrib_rewrite),
+             isHighlighted = true
+         ),
+         Contributor(
+             name = "Adithya R",
+             githubUsername = "adithya2306",
+-            contribution = "AOSPA Dolby Manager (Initial Code)",
++            contribution = context.getString(R.string.dolby_credits_contrib_aospa),
+             isHighlighted = true
+         ),
+         Contributor(
+             name = "Kenway",
+             githubUsername = "kenway214",
+-            contribution = "Base & Treble Changes, EQ Tuning",
++            contribution = context.getString(R.string.dolby_credits_contrib_eq),
+             isHighlighted = true
+         ),
+         Contributor(
+             name = "tranQuila",
+             githubUsername = "MrTopia",
+-            contribution = "Adding per-device dolby state memory",
++            contribution = context.getString(R.string.dolby_credits_contrib_memory),
+             isHighlighted = true
+         ),
+         Contributor(
+             name = "Pablo Escobar",
+             githubUsername = "pabloescobar-reborn",
+-            contribution = "AutoEQ headphone correction profiles",
++            contribution = context.getString(R.string.dolby_credits_contrib_autoeq),
+             isHighlighted = true
+         )
+     )
+     
+     val translationEntries = listOf(
+-        translation("Spanish (Spain)", t("sm6150-dreams")),
+-        translation("Portuguese (Brazil)", t("SMarcosS", "S-Marcos-S")),
+-        translation("Indonesian", t("Alhaidar Latif", "zylhdrXP")),
+-        translation("Polish", t("Kacper", "ziomek3120"), t("rehork")),
+-        translation("Traditional Chinese", t("DenlNister", "nnn950711")),
+-        translation("Turkish", t("Ümit Taylan", "jinetty")),
+-        translation("Russian", t("Dmitry", "dkpost3")),
+-        translation("Persian", t("Arman Altafi", "Arman-ATI")),
+-        translation("Vietnamese", t("ZetyaWyn"))
++        translation(context.getString(R.string.dolby_credits_lang_spanish), t("sm6150-dreams")),
++        translation(context.getString(R.string.dolby_credits_lang_portuguese), t("SMarcosS", "S-Marcos-S")),
++        translation(context.getString(R.string.dolby_credits_lang_indonesian), t("Alhaidar Latif", "zylhdrXP")),
++        translation(context.getString(R.string.dolby_credits_lang_polish), t("Kacper", "ziomek3120"), t("rehork")),
++        translation(context.getString(R.string.dolby_credits_lang_chinese_tw), t("DenlNister", "nnn950711")),
++        translation(context.getString(R.string.dolby_credits_lang_turkish), t("Ümit Taylan", "jinetty")),
++        translation(context.getString(R.string.dolby_credits_lang_russian), t("Dmitry", "dkpost3")),
++        translation(context.getString(R.string.dolby_credits_lang_persian), t("Arman Altafi", "Arman-ATI")),
++        translation(context.getString(R.string.dolby_credits_lang_vietnamese), t("ZetyaWyn"))
+     )
+     
+     Dialog(
+@@ -170,7 +172,7 @@ fun CreditsDialog(
+                         )
+                         Spacer(modifier = Modifier.height(12.dp))
+                         Text(
+-                            text = "Credits & Contributors",
++                            text = stringResource(R.string.dolby_credits_title),
+                             style = MaterialTheme.typography.headlineMediumEmphasized,
+                             color = MaterialTheme.colorScheme.onPrimaryContainer
+                         )
+@@ -205,7 +207,7 @@ fun CreditsDialog(
+                                 )
+                                 Spacer(modifier = Modifier.width(12.dp))
+                                 Text(
+-                                    text = "Thank you to all contributors who made this project possible!",
++                                    text = stringResource(R.string.dolby_credits_thanks),
+                                     style = MaterialTheme.typography.bodyMedium,
+                                     color = MaterialTheme.colorScheme.onSecondaryContainer
+                                 )
+@@ -251,7 +253,7 @@ fun CreditsDialog(
+                                 Spacer(modifier = Modifier.width(12.dp))
+                                 Column(modifier = Modifier.weight(1f)) {
+                                     Text(
+-                                        text = "View on GitHub",
++                                        text = stringResource(R.string.dolby_credits_view_github),
+                                         style = MaterialTheme.typography.titleMediumEmphasized,
+                                         color = MaterialTheme.colorScheme.onPrimaryContainer
+                                     )
+@@ -272,7 +274,7 @@ fun CreditsDialog(
+                     }
+                     item {
+                         Text(
+-                            text = "Main Contributors",
++                            text = stringResource(R.string.dolby_credits_main),
+                             style = MaterialTheme.typography.titleMediumEmphasized,
+                             color = MaterialTheme.colorScheme.primary,
+                             modifier = Modifier.padding(top = 8.dp, bottom = 4.dp)
+@@ -283,7 +285,7 @@ fun CreditsDialog(
+                     }
+                     item {
+                         Text(
+-                            text = "Translation Contributors",
++                            text = stringResource(R.string.dolby_credits_translations),
+                             style = MaterialTheme.typography.titleMediumEmphasized,
+                             color = MaterialTheme.colorScheme.primary,
+                             modifier = Modifier.padding(top = 8.dp, bottom = 4.dp)
+@@ -339,13 +341,13 @@ fun CreditsDialog(
+                                     Spacer(modifier = Modifier.width(12.dp))
+                                     Column(modifier = Modifier.weight(1f)) {
+                                         Text(
+-                                            text = "Missing your language?",
++                                            text = stringResource(R.string.dolby_credits_missing_language),
+                                             style = MaterialTheme.typography.titleMediumEmphasized,
+                                             color = MaterialTheme.colorScheme.onPrimaryContainer
+                                         )
+                                         Spacer(modifier = Modifier.height(2.dp))
+                                         Text(
+-                                            text = "Help us make Lunaris Dolby better in your language! Submit or update translations on GitHub.",
++                                            text = stringResource(R.string.dolby_credits_help_translate),
+                                             style = MaterialTheme.typography.bodySmall,
+                                             color = MaterialTheme.colorScheme.onPrimaryContainer
+                                         )
+@@ -370,7 +372,7 @@ fun CreditsDialog(
+                                         modifier = Modifier.size(18.dp)
+                                     )
+                                     Spacer(modifier = Modifier.width(8.dp))
+-                                    Text("Submit a Pull Request")
++                                    Text(stringResource(R.string.dolby_credits_submit_pr))
+                                 }
+                             }
+                         }
+@@ -399,7 +401,7 @@ fun CreditsDialog(
+                                 )
+                                 Spacer(modifier = Modifier.height(8.dp))
+                                 Text(
+-                                    text = "And all other contributors",
++                                    text = stringResource(R.string.dolby_credits_other),
+                                     style = MaterialTheme.typography.bodyMedium,
+                                     fontWeight = FontWeight.Medium,
+                                     color = MaterialTheme.colorScheme.onSurfaceVariant,
+@@ -407,7 +409,7 @@ fun CreditsDialog(
+                                 )
+                                 Spacer(modifier = Modifier.height(4.dp))
+                                 Text(
+-                                    text = "Check the GitHub repository for the complete list",
++                                    text = stringResource(R.string.dolby_credits_check_github),
+                                     style = MaterialTheme.typography.bodySmall,
+                                     color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                     textAlign = TextAlign.Center
+@@ -440,7 +442,7 @@ fun CreditsDialog(
+                             modifier = Modifier.size(20.dp)
+                         )
+                         Spacer(modifier = Modifier.width(8.dp))
+-                        Text("Close")
++                        Text(stringResource(R.string.dolby_close))
+                     }
+                 }
+             }
+diff --git i/src/org/lunaris/dolby/ui/screens/AppProfileScreen.kt w/src/org/lunaris/dolby/ui/screens/AppProfileScreen.kt
+index 45fbdb1..2966e14 100644
+--- i/src/org/lunaris/dolby/ui/screens/AppProfileScreen.kt
++++ w/src/org/lunaris/dolby/ui/screens/AppProfileScreen.kt
+@@ -59,7 +59,7 @@ fun AppProfileScreen(
+                     IconButton(onClick = { navController.navigateUp() }) {
+                         Icon(
+                             Icons.AutoMirrored.Filled.ArrowBack,
+-                            contentDescription = "Back",
++                            contentDescription = stringResource(R.string.dolby_back),
+                             tint = MaterialTheme.colorScheme.onSurface
+                         )
+                     }
+@@ -71,7 +71,7 @@ fun AppProfileScreen(
+                             IconButton(onClick = { showClearAllDialog = true }) {
+                                 Icon(
+                                     Icons.Default.ClearAll, 
+-                                    contentDescription = "Clear All",
++                                    contentDescription = stringResource(R.string.dolby_clear_all),
+                                     tint = MaterialTheme.colorScheme.error
+                                 )
+                             }
+@@ -80,7 +80,7 @@ fun AppProfileScreen(
+                     IconButton(onClick = { viewModel.loadApps() }) {
+                         Icon(
+                             Icons.Default.Refresh, 
+-                            contentDescription = "Refresh",
++                            contentDescription = stringResource(R.string.dolby_refresh),
+                             tint = MaterialTheme.colorScheme.onSurface
+                         )
+                     }
+@@ -163,7 +163,7 @@ fun AppProfileScreen(
+                                 IconButton(onClick = { searchQuery = "" }) {
+                                     Icon(
+                                         Icons.Default.Clear,
+-                                        contentDescription = "Clear search",
++                                        contentDescription = stringResource(R.string.dolby_clear_search),
+                                         tint = MaterialTheme.colorScheme.onSurfaceVariant
+                                     )
+                                 }
+@@ -256,8 +256,8 @@ fun AppProfileScreen(
+ 
+     if (showClearAllDialog) {
+         ModernConfirmDialog(
+-            title = "Clear All App Profiles",
+-            message = "This will remove all per-app profile assignments. Apps will use the default profile.",
++            title = stringResource(R.string.app_profiles_clear_all),
++            message = stringResource(R.string.app_profiles_clear_all_message),
+             icon = Icons.Default.ClearAll,
+             onConfirm = {
+                 viewModel.clearAllAppProfiles()
+@@ -328,9 +328,9 @@ private fun AppProfileItem(
+ 
+                 val currentProfileName = if (app.assignedProfile >= 0) {
+                     val index = profileValues.indexOfFirst { it.toInt() == app.assignedProfile }
+-                    if (index >= 0) profiles[index] else "Default"
++                    if (index >= 0) profiles[index] else stringResource(R.string.dolby_default)
+                 } else {
+-                    "Default"
++                    stringResource(R.string.dolby_default)
+                 }
+                 
+                 Text(
+diff --git i/src/org/lunaris/dolby/ui/screens/ModernAdvancedSettingsScreen.kt w/src/org/lunaris/dolby/ui/screens/ModernAdvancedSettingsScreen.kt
+index 64a1bb9..bdd7196 100644
+--- i/src/org/lunaris/dolby/ui/screens/ModernAdvancedSettingsScreen.kt
++++ w/src/org/lunaris/dolby/ui/screens/ModernAdvancedSettingsScreen.kt
+@@ -236,7 +236,7 @@ private fun ModernAdvancedSettingsContent(
+             
+             item {
+                 ModernSettingsCard(
+-                    title = "Volume Leveler",
++                    title = stringResource(R.string.dolby_volume_leveler),
+                     icon = Icons.AutoMirrored.Filled.VolumeDown
+                 ) {
+                     ModernSettingSwitch(
+@@ -252,7 +252,7 @@ private fun ModernAdvancedSettingsContent(
+             if (state.settings.currentProfile != 0) {
+                 item {
+                     ModernSettingsCard(
+-                        title = "Surround Virtualizer",
++                        title = stringResource(R.string.dolby_surround_virtualizer),
+                         icon = Icons.Default.Headphones
+                     ) {
+                         if (state.isOnSpeaker) {
+@@ -290,7 +290,7 @@ private fun ModernAdvancedSettingsContent(
+                 
+                 item {
+                     ModernSettingsCard(
+-                        title = "Dialogue Enhancement",
++                        title = stringResource(R.string.dolby_dialogue_enhancer),
+                         icon = Icons.Default.RecordVoiceOver
+                     ) {
+                         ModernSettingSwitch(
+diff --git i/src/org/lunaris/dolby/ui/screens/ModernEqualizerScreen.kt w/src/org/lunaris/dolby/ui/screens/ModernEqualizerScreen.kt
+index e6934b0..7614b36 100644
+--- i/src/org/lunaris/dolby/ui/screens/ModernEqualizerScreen.kt
++++ w/src/org/lunaris/dolby/ui/screens/ModernEqualizerScreen.kt
+@@ -39,6 +39,7 @@ import androidx.compose.ui.graphics.graphicsLayer
+ import androidx.compose.ui.graphics.vector.ImageVector
+ import androidx.compose.ui.layout.layout
+ import androidx.compose.ui.platform.LocalContext
++import androidx.compose.ui.res.pluralStringResource
+ import androidx.compose.ui.res.stringResource
+ import androidx.compose.ui.text.font.FontWeight
+ import androidx.compose.ui.text.style.TextAlign
+@@ -301,8 +302,11 @@ private fun ModernEqualizerContent(
+                         )
+                         Spacer(modifier = Modifier.height(4.dp))
+                         Text(
+-                            text = "This ${state.currentPreset.bandMode.displayName} preset cannot be edited in ${state.bandMode.displayName} mode. " +
+-                                  "Switch to ${state.currentPreset.bandMode.displayName} or select a compatible preset.",
++                            text = stringResource(
++                            R.string.dolby_band_mode_mismatch_message,
++                            stringResource(state.currentPreset.bandMode.labelRes),
++                            stringResource(state.bandMode.labelRes),
++                        ),
+                             style = MaterialTheme.typography.bodySmall,
+                             color = MaterialTheme.colorScheme.onErrorContainer
+                         )
+@@ -321,7 +325,7 @@ private fun ModernEqualizerContent(
+             Column(modifier = Modifier.padding(20.dp)) {
+                 EqualizerSectionHeader(
+                     icon = Icons.Default.Visibility,
+-                    title = "Equalizer View",
++                    title = stringResource(R.string.dolby_equalizer_view),
+                     modifier = Modifier.padding(bottom = 12.dp)
+                 )
+                 
+@@ -330,7 +334,7 @@ private fun ModernEqualizerContent(
+                     horizontalArrangement = Arrangement.spacedBy(8.dp)
+                 ) {
+                     ViewModeTile(
+-                        title = "Curve",
++                        title = stringResource(R.string.dolby_view_curve),
+                         icon = Icons.AutoMirrored.Filled.ShowChart,
+                         isSelected = viewMode == EqualizerViewMode.CURVE,
+                         onClick = { onViewModeChange(EqualizerViewMode.CURVE) },
+@@ -338,7 +342,7 @@ private fun ModernEqualizerContent(
+                     )
+                     
+                     ViewModeTile(
+-                        title = "Sliders",
++                        title = stringResource(R.string.dolby_view_sliders),
+                         icon = Icons.Default.Tune,
+                         isSelected = viewMode == EqualizerViewMode.SLIDERS,
+                         onClick = { onViewModeChange(EqualizerViewMode.SLIDERS) },
+@@ -417,8 +421,8 @@ private fun CurveViewContent(
+                 verticalAlignment = Alignment.CenterVertically
+             ) {
+                 Text(
+-                    text = if (canEdit) "Interactive Frequency Response" 
+-                          else "Frequency Response (Read-only)",
++                    text = if (canEdit) stringResource(R.string.dolby_frequency_response_interactive)
++                          else stringResource(R.string.dolby_frequency_response_readonly),
+                     style = MaterialTheme.typography.titleMediumEmphasized,
+                     color = if (canEdit) MaterialTheme.colorScheme.onSurface
+                           else MaterialTheme.colorScheme.onSurfaceVariant
+@@ -429,7 +433,7 @@ private fun CurveViewContent(
+                           else MaterialTheme.colorScheme.errorContainer
+                 ) {
+                     Text(
+-                        text = "${state.bandMode.bandCount} bands",
++                        text = pluralStringResource(R.plurals.dolby_band_count, state.bandMode.bandCount, state.bandMode.bandCount),
+                         style = MaterialTheme.typography.labelMediumEmphasized,
+                         color = if (canEdit) MaterialTheme.colorScheme.onSecondaryContainer
+                               else MaterialTheme.colorScheme.onErrorContainer,
+@@ -439,9 +443,9 @@ private fun CurveViewContent(
+             }
+             Text(
+                 text = if (canEdit) 
+-                    "Drag the control points to adjust gain (±15 dB) • ${getFrequencyRange(state.bandGains)}"
++                    stringResource(R.string.dolby_frequency_response_drag_hint, getFrequencyRange(state.bandGains))
+                 else
+-                    "Read-only view • Band mode mismatch",
++                    stringResource(R.string.dolby_read_only_mismatch),
+                 style = MaterialTheme.typography.bodySmall,
+                 color = if (canEdit) MaterialTheme.colorScheme.onSurfaceVariant
+                       else MaterialTheme.colorScheme.error,
+@@ -535,7 +539,7 @@ private fun SlidersViewContent(
+                 ) {
+                     Text(
+                         text = if (canEdit) stringResource(R.string.dolby_geq_slider_label_gain)
+-                              else "${stringResource(R.string.dolby_geq_slider_label_gain)} (Read-only)",
++                              else stringResource(R.string.dolby_gain_read_only, stringResource(R.string.dolby_geq_slider_label_gain)),
+                         style = MaterialTheme.typography.titleMediumEmphasized,
+                         color = if (canEdit) MaterialTheme.colorScheme.onSurface
+                               else MaterialTheme.colorScheme.onSurfaceVariant
+@@ -1087,7 +1091,7 @@ private fun BandModeTile(
+             Spacer(modifier = Modifier.height(6.dp))
+             
+             Text(
+-                text = mode.displayName,
++                text = stringResource(mode.labelRes),
+                 style = if (isSelected) MaterialTheme.typography.labelSmallEmphasized
+                     else MaterialTheme.typography.labelSmall,
+                 color = if (isSelected)
+diff --git i/src/org/lunaris/dolby/ui/screens/PresetImportExportScreen.kt w/src/org/lunaris/dolby/ui/screens/PresetImportExportScreen.kt
+index 2d86b2c..abe34ec 100644
+--- i/src/org/lunaris/dolby/ui/screens/PresetImportExportScreen.kt
++++ w/src/org/lunaris/dolby/ui/screens/PresetImportExportScreen.kt
+@@ -23,6 +23,7 @@ import androidx.compose.ui.Alignment
+ import androidx.compose.ui.Modifier
+ import androidx.compose.ui.graphics.Color
+ import androidx.compose.ui.platform.LocalContext
++import androidx.compose.ui.res.pluralStringResource
+ import androidx.compose.ui.res.stringResource
+ import androidx.compose.ui.unit.dp
+ import androidx.navigation.NavController
+@@ -61,10 +62,10 @@ fun PresetImportExportScreen(
+                     isLoading = true
+                     exportManager.exportPresetToFile(preset, uri).fold(
+                         onSuccess = {
+-                            ToastHelper.showToast(context, "Preset exported successfully!")
++                            ToastHelper.showToast(context, context.getString(R.string.preset_export_success))
+                         },
+                         onFailure = { e ->
+-                            ToastHelper.showToast(context, "Export failed: ${e.message}")
++                            ToastHelper.showToast(context, context.getString(R.string.preset_export_failed_detail, e.message))
+                         }
+                     )
+                     isLoading = false
+@@ -88,13 +89,13 @@ fun PresetImportExportScreen(
+                         } else {
+                             ToastHelper.showToast(
+                                 context, 
+-                                "Preset '${preset.name}' imported! (${preset.bandMode.displayName})"
++                                context.getString(R.string.preset_imported_named, preset.name, context.getString(preset.bandMode.labelRes))
+                             )
+                             viewModel.loadEqualizer()
+                         }
+                     },
+                     onFailure = { e ->
+-                        ToastHelper.showToast(context, "Import failed: ${e.message}")
++                        ToastHelper.showToast(context, context.getString(R.string.preset_import_failed_detail, e.message))
+                     }
+                 )
+                 isLoading = false
+@@ -113,10 +114,10 @@ fun PresetImportExportScreen(
+                 
+                 exportManager.exportMultiplePresets(presets, uri).fold(
+                     onSuccess = {
+-                        ToastHelper.showToast(context, "${presets.size} presets exported!")
++                        ToastHelper.showToast(context, context.resources.getQuantityString(R.plurals.preset_export_count, presets.size, presets.size))
+                     },
+                     onFailure = { e ->
+-                        ToastHelper.showToast(context, "Batch export failed: ${e.message}")
++                        ToastHelper.showToast(context, context.getString(R.string.preset_batch_export_failed, e.message))
+                     }
+                 )
+                 isLoading = false
+@@ -141,12 +142,12 @@ fun PresetImportExportScreen(
+                         }
+                         ToastHelper.showToast(
+                             context, 
+-                            "Imported $successCount of ${presets.size} presets"
++                            context.getString(R.string.preset_import_count, successCount, presets.size)
+                         )
+                         viewModel.loadEqualizer()
+                     },
+                     onFailure = { e ->
+-                        ToastHelper.showToast(context, "Batch import failed: ${e.message}")
++                        ToastHelper.showToast(context, context.getString(R.string.preset_batch_import_failed, e.message))
+                     }
+                 )
+                 isLoading = false
+@@ -168,7 +169,7 @@ fun PresetImportExportScreen(
+                     IconButton(onClick = { navController.navigateUp() }) {
+                         Icon(
+                             Icons.AutoMirrored.Filled.ArrowBack, 
+-                            contentDescription = "Back",
++                            contentDescription = stringResource(R.string.dolby_back),
+                             tint = MaterialTheme.colorScheme.onSurface
+                         )
+                     }
+@@ -177,7 +178,7 @@ fun PresetImportExportScreen(
+                     IconButton(onClick = { showBatchExport = true }) {
+                         Icon(
+                             Icons.Default.FileDownload, 
+-                            contentDescription = "Batch export",
++                            contentDescription = stringResource(R.string.dolby_batch_export),
+                             tint = MaterialTheme.colorScheme.onSurface
+                         )
+                     }
+@@ -280,7 +281,7 @@ fun PresetImportExportScreen(
+                                                         } else {
+                                                             ToastHelper.showToast(
+                                                                 context, 
+-                                                                "Preset imported from clipboard! (${preset.bandMode.displayName})"
++                                                                context.getString(R.string.preset_imported_clipboard, context.getString(preset.bandMode.labelRes))
+                                                             )
+                                                             viewModel.loadEqualizer()
+                                                         }
+@@ -288,7 +289,7 @@ fun PresetImportExportScreen(
+                                                     onFailure = { e ->
+                                                         ToastHelper.showToast(
+                                                             context, 
+-                                                            "Clipboard import failed: ${e.message}"
++                                                            context.getString(R.string.preset_clipboard_import_failed, e.message)
+                                                         )
+                                                     }
+                                                 )
+@@ -334,13 +335,13 @@ fun PresetImportExportScreen(
+                                             onSuccess = {
+                                                 ToastHelper.showToast(
+                                                     context, 
+-                                                    "Preset copied to clipboard!"
++                                                    context.getString(R.string.preset_copied_clipboard)
+                                                 )
+                                             },
+                                             onFailure = { e ->
+                                                 ToastHelper.showToast(
+                                                     context, 
+-                                                    "Copy failed: ${e.message}"
++                                                    context.getString(R.string.preset_copy_failed, e.message)
+                                                 )
+                                             }
+                                         )
+@@ -357,7 +358,7 @@ fun PresetImportExportScreen(
+                                             onFailure = { e ->
+                                                 ToastHelper.showToast(
+                                                     context, 
+-                                                    "Share failed: ${e.message}"
++                                                    context.getString(R.string.preset_share_failed, e.message)
+                                                 )
+                                             }
+                                         )
+@@ -482,13 +483,13 @@ fun PresetImportExportScreen(
+     
+     if (showDeleteDialog && presetToDelete != null) {
+         ModernConfirmDialog(
+-            title = "Delete Preset",
+-            message = "Are you sure you want to delete '${presetToDelete!!.name}'? This will remove it from your preset list and cannot be undone.",
++            title = stringResource(R.string.preset_delete_title),
++            message = stringResource(R.string.preset_delete_message, presetToDelete!!.name),
+             icon = Icons.Default.Delete,
+             onConfirm = {
+                 scope.launch {
+                     viewModel.deletePreset(presetToDelete!!)
+-                    ToastHelper.showToast(context, "Preset '${presetToDelete!!.name}' deleted")
++                    ToastHelper.showToast(context, context.getString(R.string.preset_deleted, presetToDelete!!.name))
+                     viewModel.loadEqualizer()
+                     showDeleteDialog = false
+                     presetToDelete = null
+@@ -530,7 +531,7 @@ private fun PresetExportCard(
+                         color = MaterialTheme.colorScheme.onSurface
+                     )
+                     Text(
+-                        "${preset.bandMode.displayName} • ${preset.bandGains.size} bands",
++                        stringResource(preset.bandMode.labelRes) + " • " + pluralStringResource(R.plurals.dolby_band_count, preset.bandGains.size, preset.bandGains.size),
+                         style = MaterialTheme.typography.bodySmall,
+                         color = MaterialTheme.colorScheme.onSurfaceVariant
+                     )
+@@ -539,28 +540,28 @@ private fun PresetExportCard(
+                     IconButton(onClick = onExportFile) {
+                         Icon(
+                             Icons.Default.FileDownload, 
+-                            contentDescription = "Export to file",
++                            contentDescription = stringResource(R.string.dolby_export_to_file),
+                             tint = MaterialTheme.colorScheme.primary
+                         )
+                     }
+                     IconButton(onClick = onCopyClipboard) {
+                         Icon(
+                             Icons.Default.ContentCopy, 
+-                            contentDescription = "Copy to clipboard",
++                            contentDescription = stringResource(R.string.dolby_copy_to_clipboard),
+                             tint = MaterialTheme.colorScheme.secondary
+                         )
+                     }
+                     IconButton(onClick = onShare) {
+                         Icon(
+                             Icons.Default.Share, 
+-                            contentDescription = "Share",
++                            contentDescription = stringResource(R.string.dolby_share),
+                             tint = MaterialTheme.colorScheme.tertiary
+                         )
+                     }
+                     IconButton(onClick = onDelete) {
+                         Icon(
+                             Icons.Default.Delete, 
+-                            contentDescription = "Delete",
++                            contentDescription = stringResource(R.string.dolby_delete),
+                             tint = MaterialTheme.colorScheme.error
+                         )
+                     }
+diff --git i/src/org/lunaris/dolby/ui/viewmodel/AppProfileViewModel.kt w/src/org/lunaris/dolby/ui/viewmodel/AppProfileViewModel.kt
+index dec6498..7dffd95 100644
+--- i/src/org/lunaris/dolby/ui/viewmodel/AppProfileViewModel.kt
++++ w/src/org/lunaris/dolby/ui/viewmodel/AppProfileViewModel.kt
+@@ -54,7 +54,7 @@ class AppProfileViewModel(application: Application) : AndroidViewModel(applicati
+             } catch (e: Exception) {
+                 if (!isCleared) {
+                     DolbyConstants.dlog(TAG, "Error loading apps: ${e.message}")
+-                    _uiState.value = AppProfileUiState.Error(e.message ?: "Unknown error")
++                    _uiState.value = AppProfileUiState.Error(e.message ?: context.getString(R.string.dolby_error_unknown))
+                 }
+             }
+         }
+@@ -65,11 +65,11 @@ class AppProfileViewModel(application: Application) : AndroidViewModel(applicati
+             try {
+                 if (profile == -1) {
+                     appProfileManager.removeAppProfile(packageName)
+-                    ToastHelper.showToast(context, "Profile reset to default")
++                    ToastHelper.showToast(context, context.getString(R.string.dolby_profile_reset_default))
+                 } else {
+                     appProfileManager.setAppProfile(packageName, profile)
+                     val profileName = getProfileName(profile)
+-                    ToastHelper.showToast(context, "Profile set to: $profileName")
++                    ToastHelper.showToast(context, context.getString(R.string.dolby_profile_set_to, profileName))
+                 }
+                 loadApps()
+             } catch (e: Exception) {
+@@ -82,7 +82,7 @@ class AppProfileViewModel(application: Application) : AndroidViewModel(applicati
+         viewModelScope.launch(Dispatchers.IO) {
+             try {
+                 appProfileManager.removeAppProfile(packageName)
+-                ToastHelper.showToast(context, "Profile removed")
++                ToastHelper.showToast(context, context.getString(R.string.dolby_profile_removed))
+                 loadApps()
+             } catch (e: Exception) {
+                 DolbyConstants.dlog(TAG, "Error removing app profile: ${e.message}")
+@@ -94,7 +94,7 @@ class AppProfileViewModel(application: Application) : AndroidViewModel(applicati
+         viewModelScope.launch(Dispatchers.IO) {
+             try {
+                 appProfileManager.clearAllAppProfiles()
+-                ToastHelper.showToast(context, "All app profiles cleared")
++                ToastHelper.showToast(context, context.getString(R.string.dolby_all_profiles_cleared))
+                 loadApps()
+             } catch (e: Exception) {
+                 DolbyConstants.dlog(TAG, "Error clearing app profiles: ${e.message}")
+@@ -108,10 +108,10 @@ class AppProfileViewModel(application: Application) : AndroidViewModel(applicati
+             val profileValues = context.resources.getStringArray(R.array.dolby_profile_values)
+             
+             val index = profileValues.indexOfFirst { it.toInt() == profile }
+-            if (index >= 0) profiles[index] else "Unknown"
++            if (index >= 0) profiles[index] else context.getString(R.string.dolby_unknown)
+         } catch (e: Exception) {
+             DolbyConstants.dlog(TAG, "Error getting profile name: ${e.message}")
+-            "Unknown"
++            context.getString(R.string.dolby_unknown)
+         }
+     }
+     
+diff --git i/src/org/lunaris/dolby/ui/viewmodel/DolbyViewModel.kt w/src/org/lunaris/dolby/ui/viewmodel/DolbyViewModel.kt
+index f7eb8cd..625f090 100644
+--- i/src/org/lunaris/dolby/ui/viewmodel/DolbyViewModel.kt
++++ w/src/org/lunaris/dolby/ui/viewmodel/DolbyViewModel.kt
+@@ -9,6 +9,7 @@ import android.app.Application
+ import androidx.lifecycle.AndroidViewModel
+ import androidx.lifecycle.viewModelScope
+ import org.lunaris.dolby.DolbyConstants
++import org.lunaris.dolby.R
+ import org.lunaris.dolby.data.DolbyRepository
+ import org.lunaris.dolby.domain.models.*
+ import org.lunaris.dolby.service.DolbyEffectService
+@@ -106,7 +107,7 @@ class DolbyViewModel(application: Application) : AndroidViewModel(application) {
+             } catch (e: Exception) {
+                 if (!isCleared) {
+                     DolbyConstants.dlog(TAG, "Error loading settings: ${e.message}")
+-                    _uiState.value = DolbyUiState.Error(e.message ?: "Unknown error")
++                    _uiState.value = DolbyUiState.Error(e.message ?: getApplication<Application>().getString(R.string.dolby_error_unknown))
+                 }
+             }
+         }
+diff --git i/src/org/lunaris/dolby/ui/viewmodel/EqualizerViewModel.kt w/src/org/lunaris/dolby/ui/viewmodel/EqualizerViewModel.kt
+index 0c20982..34816a3 100644
+--- i/src/org/lunaris/dolby/ui/viewmodel/EqualizerViewModel.kt
++++ w/src/org/lunaris/dolby/ui/viewmodel/EqualizerViewModel.kt
+@@ -138,7 +138,7 @@ class EqualizerViewModel(application: Application) : AndroidViewModel(applicatio
+                     )
+                 }
+             } catch (e: Exception) {
+-                if (!isCleared) _uiState.value = EqualizerUiState.Error(e.message ?: "Unknown error")
++                if (!isCleared) _uiState.value = EqualizerUiState.Error(e.message ?: context.getString(R.string.dolby_error_unknown))
+             }
+         }
+     }
+@@ -154,7 +154,7 @@ class EqualizerViewModel(application: Application) : AndroidViewModel(applicatio
+                 _autoEqReady.value = true
+             } catch (e: Exception) {
+                 DolbyConstants.dlog(TAG, "Error initializing AutoEQ: ${e.message}")
+-                ToastHelper.showToast(ctx, "Failed to load AutoEQ profiles")
++                ToastHelper.showToast(ctx, ctx.getString(R.string.dolby_autoeq_load_failed))
+             } finally {
+                 _isSearchLoading.value = false
+             }
+@@ -177,11 +177,11 @@ class EqualizerViewModel(application: Application) : AndroidViewModel(applicatio
+ 
+                     applyAutoEqProfile(profile.name, profile.graphicEq)
+                 } else {
+-                    ToastHelper.showToast(ctx, "Failed to download profile for ${entry.name}")
++                    ToastHelper.showToast(ctx, ctx.getString(R.string.dolby_autoeq_download_failed, entry.name))
+                 }
+             } catch (e: Exception) {
+                 DolbyConstants.dlog(TAG, "Error downloading AutoEQ profile: ${e.message}")
+-                ToastHelper.showToast(ctx, "Failed to download profile for ${entry.name}")
++                ToastHelper.showToast(ctx, ctx.getString(R.string.dolby_autoeq_download_failed, entry.name))
+             } finally {
+                 _isSearchLoading.value = false
+             }
+@@ -409,8 +409,11 @@ class EqualizerViewModel(application: Application) : AndroidViewModel(applicatio
+         if (!isFlatPreset && state.currentPreset.bandMode != currentBandMode) {
+             ToastHelper.showToast(
+                 context,
+-                "Cannot edit ${state.currentPreset.bandMode.displayName} preset in ${currentBandMode.displayName} mode. " +
+-                "Switch to ${state.currentPreset.bandMode.displayName} or select a different preset."
++                context.getString(
++                    R.string.dolby_band_mode_mismatch_message,
++                    context.getString(state.currentPreset.bandMode.labelRes),
++                    context.getString(currentBandMode.labelRes),
++                )
+             )
+             return
+         }
+@@ -437,7 +440,7 @@ class EqualizerViewModel(application: Application) : AndroidViewModel(applicatio
+ 
+     fun savePreset(name: String): String? {
+         val state = _uiState.value
+-        if (state !is EqualizerUiState.Success) return "Invalid state"
++        if (state !is EqualizerUiState.Success) return context.getString(R.string.dolby_error_invalid_state)
+         
+         if (state.presets.any { it.name.equals(name.trim(), ignoreCase = true) }) {
+             return context.getString(R.string.dolby_geq_preset_name_exists)
+@@ -474,7 +477,7 @@ class EqualizerViewModel(application: Application) : AndroidViewModel(applicatio
+ 
+     fun saveImportedPreset(preset: EqualizerPreset): String? {
+         val state = _uiState.value
+-        if (state !is EqualizerUiState.Success) return "Invalid state"
++        if (state !is EqualizerUiState.Success) return context.getString(R.string.dolby_error_invalid_state)
+         
+         if (state.presets.any { it.name.equals(preset.name.trim(), ignoreCase = true) }) {
+             return context.getString(R.string.dolby_geq_preset_name_exists)
