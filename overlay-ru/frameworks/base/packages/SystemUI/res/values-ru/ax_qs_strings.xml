@@ -146,4 +146,8 @@
     <string name="lunaris_qs_photo_warm">Тёплый</string>
     <string name="lunaris_qs_photo_cool">Холодный</string>
     <string name="lunaris_qs_photo_dim">Затемнённый</string>
+    <string name="ax_qs_settings_step_based_volume">Пошаговая регулировка громкости</string>
+    <string name="ax_qs_settings_step_based_volume_summary">Отключите для плавного изменения громкости</string>
+    <string name="lunaris_qs_two_row_header">Двухрядный заголовок</string>
+    <string name="lunaris_qs_two_row_header_summary">Показывать ярлыки над информацией оператора в быстрых настройках и большие часы над ними в уведомлениях.</string>
 </resources>

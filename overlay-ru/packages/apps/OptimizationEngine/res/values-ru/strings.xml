@@ -48,6 +48,7 @@
     <string name="go_back">Назад</string>
     <string name="hide_options">Скрыть параметры</string>
     <string name="configure">Настроить</string>
+    <string name="full_compile_detail">Выберите speed-profile для компиляции с использованием профилей приложений или speed для компиляции всех подходящих методов.</string>
     <string name="full_compile">Полная компиляция</string>
     <string name="cache_title">Очистка кеша приложений</string>
     <string name="trim_title">Обслуживание хранилища</string>

@@ -4,6 +4,8 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="lunaris_qs_brightness_slider">Яркость</string>
     <string name="lunaris_qs_volume_slider">Громкость</string>
+    <string name="lunaris_qs_brightness_tile">Управление яркостью (2×2)</string>
+    <string name="lunaris_qs_volume_tile">Управление громкостью (2×2)</string>
     <string name="lunaris_qs_flashlight_slider">Ползунок фонарика</string>
     <string name="lunaris_qs_flashlight_slider_hint">Нажмите, чтобы включить или выключить. Удерживайте и перетаскивайте для регулировки яркости.</string>
     <string name="lunaris_qs_slider_rotate_horizontal">Сделать ползунок горизонтальным</string>
@@ -239,6 +241,8 @@
     <string name="ax_dynamic_bar_sports_final">Завершён</string>
     <string name="ax_dynamic_bar_sports_halftime">Перерыв</string>
     <string name="ax_dynamic_bar_sports_upcoming">Скоро</string>
+    <string name="ax_dynamic_bar_notification">Уведомление</string>
+    <string name="ax_dynamic_bar_sensitive_content">Конфиденциальное содержимое</string>
     <string name="quick_settings_screenshot_label">Снимок экрана</string>
     <string name="quick_settings_sleep_mode_label">Режим сна</string>
     <string name="status_bar_wifi_standard">Стандарт Wi-Fi</string>

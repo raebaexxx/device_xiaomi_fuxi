@@ -65,6 +65,8 @@
     <string name="hotseat_bg_summary">Добавлять полупрозрачный фон нижней панели приложений</string>
     <string name="hotseat_blur_title">Размытие нижней панели</string>
     <string name="hotseat_blur_summary">Применять эффект размытия к фону нижней панели</string>
+    <string name="folder_preview_blur_title">Размытие предпросмотра папок</string>
+    <string name="folder_preview_blur_summary">Размывать фон предпросмотра папок</string>
     <string name="hotseat_shape_title">Форма фона нижней панели</string>
     <string name="hotseat_shape_capsule">Капсула</string>
     <string name="hotseat_shape_rounded_square">Скруглённый квадрат</string>
@@ -542,4 +544,6 @@
     <string name="folder_shape_custom_create">Создать свою форму папки</string>
     <string name="folder_shape_custom_edit">Изменить свою форму папки</string>
     <string name="folder_shape_normal_only">Применяется к папкам 1×1. Раскрытые папки автоматически используют стандартную форму.</string>
+    <string name="folder_shape_circular_expanded_title">Круглые раскрытые папки</string>
+    <string name="folder_shape_circular_expanded_summary">Использовать круглый фон для больших папок. Горизонтальные и вертикальные папки сохраняют форму капсулы.</string>
 </resources>

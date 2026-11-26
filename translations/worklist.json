@@ -3,22 +3,22 @@
     {
       "id": "Settings",
       "phase": 2,
-      "total": 10107,
-      "missing": 4118,
-      "files": 20
+      "total": 10159,
+      "missing": 4170,
+      "files": 22
     },
     {
       "id": "SystemUI",
       "phase": 1,
-      "total": 2701,
-      "missing": 765,
+      "total": 2709,
+      "missing": 773,
       "files": 12
     },
     {
       "id": "Launcher3",
       "phase": 2,
-      "total": 1005,
-      "missing": 636,
+      "total": 1010,
+      "missing": 641,
       "files": 10
     },
     {
@@ -31,9 +31,9 @@
     {
       "id": "LockStyles",
       "phase": 3,
-      "total": 673,
-      "missing": 673,
-      "files": 10
+      "total": 680,
+      "missing": 680,
+      "files": 11
     },
     {
       "id": "AxThemeStore",
@@ -52,8 +52,8 @@
     {
       "id": "OptimizationEngine",
       "phase": 3,
-      "total": 140,
-      "missing": 140,
+      "total": 141,
+      "missing": 141,
       "files": 1
     },
     {
@@ -101,8 +101,8 @@
     {
       "id": "LMOFreeform",
       "phase": 3,
-      "total": 1,
-      "missing": 1,
+      "total": 6,
+      "missing": 6,
       "files": 1
     },
     {
@@ -232,13 +232,14 @@
       "files": 0
     }
   ],
-  "total_missing": 7237,
+  "total_missing": 7315,
   "kinds": {
-    "string": 7141,
+    "string": 7218,
     "string-array": 71,
-    "plurals": 25
+    "plurals": 26
   },
   "by_file": {
+    "Singularity/res/depth_models.xml": 2,
     "Singularity/res/duck_rkp_strings.xml": 34,
     "Singularity/res/edge_aurora.xml": 71,
     "Singularity/res/edgego_guide_strings.xml": 169,
@@ -247,12 +248,13 @@
     "Singularity/res/lunaris_bar_strings.xml": 417,
     "Singularity/res/lunaris_config.xml": 3,
     "Singularity/res/lunaris_plurals.xml": 1,
-    "Singularity/res/lunaris_strings.xml": 2405,
+    "Singularity/res/lunaris_strings.xml": 2426,
+    "Singularity/res/system_blur_rim_strings.xml": 29,
     "quickstep/res/strings.xml": 1,
     "res/aospa_strings.xml": 4,
     "res/app_widget_strings.xml": 10,
     "res/arrays.xml": 12,
-    "res/ax_qs_strings.xml": 144,
+    "res/ax_qs_strings.xml": 148,
     "res/axion_strings.xml": 80,
     "res/batch_edit_strings.xml": 27,
     "res/battery_usage_graph.xml": 28,
@@ -264,7 +266,8 @@
     "res/codeaurora_strings.xml": 1,
     "res/cos_strings.xml": 4,
     "res/cr_arrays.xml": 2,
-    "res/cr_strings.xml": 391,
+    "res/cr_strings.xml": 395,
+    "res/depth_models.xml": 7,
     "res/dynamic_clock_strings.xml": 16,
     "res/edge_aurora_strings.xml": 14,
     "res/edgego_strings.xml": 181,
@@ -283,7 +286,7 @@
     "res/lunaris_config.xml": 2,
     "res/lunaris_plurals.xml": 1,
     "res/lunaris_qs_widget_strings.xml": 17,
-    "res/lunaris_strings.xml": 634,
+    "res/lunaris_strings.xml": 638,
     "res/overlay_previews.xml": 1,
     "res/quick_launch_strings.xml": 84,
     "res/quickswitch_arrays.xml": 2,
@@ -292,9 +295,9 @@
     "res/search_strings.xml": 118,
     "res/settings_compose.xml": 33,
     "res/smartspace_extras.xml": 3,
-    "res/smartspace_strings.xml": 52,
+    "res/smartspace_strings.xml": 53,
     "res/store_strings.xml": 43,
-    "res/strings.xml": 773
+    "res/strings.xml": 779
   },
   "entries": [
     {
@@ -5620,6 +5623,28 @@
       "name": "platform_compat_target_sdk_title",
       "attrs": {},
       "text": "Enabled for targetSdkVersion &gt;= <xliff:g id=\"number\" example=\"29\">%d</xliff:g>",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "Singularity/res",
+      "file": "depth_models.xml",
+      "kind": "string",
+      "name": "depth_wallpaper_models_title",
+      "attrs": {},
+      "text": "Depth wallpaper models",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "Singularity/res",
+      "file": "depth_models.xml",
+      "kind": "string",
+      "name": "depth_wallpaper_models_required",
+      "attrs": {},
+      "text": "Download the depth wallpaper models before extracting a subject.",
       "items": null
     },
     {
@@ -39219,6 +39244,28 @@
       "resdir": "Singularity/res",
       "file": "lunaris_strings.xml",
       "kind": "string",
+      "name": "compose_volume_compact_pill_title",
+      "attrs": {},
+      "text": "Compact volume pill",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "Singularity/res",
+      "file": "lunaris_strings.xml",
+      "kind": "string",
+      "name": "compose_volume_compact_pill_summary",
+      "attrs": {},
+      "text": "Show a slim level indicator when adjusting volume. Tap it to open your selected panel.",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "Singularity/res",
+      "file": "lunaris_strings.xml",
+      "kind": "string",
       "name": "compose_volume_style_title",
       "attrs": {},
       "text": "Compose volume panel",
@@ -41113,7 +41160,7 @@
       "kind": "string",
       "name": "dynamic_bar_enable",
       "attrs": {},
-      "text": "Enable Dynamic Bar",
+      "text": "Enable status bar Dynamic Bar",
       "items": null
     },
     {
@@ -41146,7 +41193,7 @@
       "kind": "string",
       "name": "dynamic_bar_keyguard_enable",
       "attrs": {},
-      "text": "Dynamic bar on lock screen",
+      "text": "Enable lock screen Dynamic Bar",
       "items": null
     },
     {
@@ -41157,7 +41204,51 @@
       "kind": "string",
       "name": "dynamic_bar_keyguard_enable_summary",
       "attrs": {},
-      "text": "Replace keyguard indication with dynamic bar chip on the lock screen with controls and quick actions",
+      "text": "Show a dynamic chip on the lock screen with controls and quick actions",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "Singularity/res",
+      "file": "lunaris_strings.xml",
+      "kind": "string",
+      "name": "dynamic_bar_lockscreen_title",
+      "attrs": {},
+      "text": "Lock screen Dynamic Bar",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "Singularity/res",
+      "file": "lunaris_strings.xml",
+      "kind": "string",
+      "name": "dynamic_bar_lockscreen_footer_body",
+      "attrs": {},
+      "text": "Dynamic Bar shows live events at the bottom of the lock screen with controls and quick actions. Its switch and event choices are independent of the status bar Dynamic Bar.",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "Singularity/res",
+      "file": "lunaris_strings.xml",
+      "kind": "string",
+      "name": "dynamic_bar_event_now_playing",
+      "attrs": {},
+      "text": "Now Playing",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "Singularity/res",
+      "file": "lunaris_strings.xml",
+      "kind": "string",
+      "name": "dynamic_bar_event_now_playing_summary",
+      "attrs": {},
+      "text": "Recognized songs on the lock screen",
       "items": null
     },
     {
@@ -41224,6 +41315,28 @@
       "name": "dynamic_bar_keyguard_music_pill_summary",
       "attrs": {},
       "text": "Show music player as a pill on the lock screen",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "Singularity/res",
+      "file": "lunaris_strings.xml",
+      "kind": "string",
+      "name": "dynamic_bar_keyguard_coloros_style",
+      "attrs": {},
+      "text": "ColorOS style reveal",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "Singularity/res",
+      "file": "lunaris_strings.xml",
+      "kind": "string",
+      "name": "dynamic_bar_keyguard_coloros_style_summary",
+      "attrs": {},
+      "text": "Hide lock screen notifications and media behind the pill, tap to reveal full-size notifications",
       "items": null
     },
     {
@@ -41762,7 +41875,7 @@
       "kind": "string",
       "name": "dynamic_bar_guide_chip",
       "attrs": {},
-      "text": "Events appear in the status bar showing active events like recording, media playback, and timers",
+      "text": "Events appear in the enabled Dynamic Bar showing active events like recording, media playback, and timers",
       "items": null
     },
     {
@@ -41806,7 +41919,7 @@
       "kind": "string",
       "name": "dynamic_bar_guide_keyguard",
       "attrs": {},
-      "text": "Dynamic bar chip also appears at the bottom of the lock screen with playback controls and quick actions",
+      "text": "Enable Dynamic Bar in Lock screen settings to show a chip at the bottom of the lock screen with controls and quick actions. Its switch and event choices are independent of the status bar Dynamic Bar.",
       "items": null
     },
     {
@@ -43148,7 +43261,7 @@
       "kind": "string",
       "name": "qs_split_notification_summary",
       "attrs": {},
-      "text": "Allow the notification shade to split into two panes in landscape mode",
+      "text": "Allow the notification shade to split into two panes in landscape mode. Use only when Split Quick settings is enabled.",
       "items": null
     },
     {
@@ -45898,7 +46011,7 @@
       "kind": "string",
       "name": "system_blur_settings_summary",
       "attrs": {},
-      "text": "Customize blur tint and radius across the system",
+      "text": "Customize blur tint, radius and glass rim across the system and launcher",
       "items": null
     },
     {
@@ -46022,6 +46135,473 @@
       "name": "system_blur_radius_title",
       "attrs": {},
       "text": "Radius",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "Singularity/res",
+      "file": "lunaris_strings.xml",
+      "kind": "string",
+      "name": "hybrid_rendering_title",
+      "attrs": {},
+      "text": "Hybrid Rendering (Experimental)",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "Singularity/res",
+      "file": "lunaris_strings.xml",
+      "kind": "string",
+      "name": "hybrid_rendering_summary",
+      "attrs": {},
+      "text": "Choose which apps use Vulkan for their interface",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "Singularity/res",
+      "file": "lunaris_strings.xml",
+      "kind": "string",
+      "name": "hybrid_rendering_enable",
+      "attrs": {},
+      "text": "Use Hybrid Rendering",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "Singularity/res",
+      "file": "lunaris_strings.xml",
+      "kind": "string",
+      "name": "hybrid_rendering_warning_title",
+      "attrs": {},
+      "text": "Experimental feature",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "Singularity/res",
+      "file": "lunaris_strings.xml",
+      "kind": "string",
+      "name": "hybrid_rendering_warning_summary",
+      "attrs": {},
+      "text": "On some devices, Vulkan can cause visual glitches, video playback problems, or crashes. If an app is affected, turn off Vulkan for that app and reopen it. To restore default rendering for all apps, turn off Hybrid Rendering.",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "Singularity/res",
+      "file": "lunaris_strings.xml",
+      "kind": "string",
+      "name": "hybrid_rendering_systemui",
+      "attrs": {},
+      "text": "Use Vulkan for SystemUI",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "Singularity/res",
+      "file": "lunaris_strings.xml",
+      "kind": "string",
+      "name": "hybrid_rendering_systemui_summary",
+      "attrs": {},
+      "text": "Status bar, navigation bar, Quick Settings, and volume panel",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "Singularity/res",
+      "file": "lunaris_strings.xml",
+      "kind": "string",
+      "name": "hybrid_rendering_launcher",
+      "attrs": {},
+      "text": "Use Vulkan for the default launcher",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "Singularity/res",
+      "file": "lunaris_strings.xml",
+      "kind": "string",
+      "name": "hybrid_rendering_apps",
+      "attrs": {},
+      "text": "Apps that use Vulkan",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "Singularity/res",
+      "file": "lunaris_strings.xml",
+      "kind": "plurals",
+      "name": "hybrid_rendering_selection",
+      "attrs": {},
+      "text": null,
+      "items": {
+        "one": "%1$d app selected · %2$s",
+        "other": "%1$d apps selected · %2$s"
+      }
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "Singularity/res",
+      "file": "lunaris_strings.xml",
+      "kind": "string",
+      "name": "hybrid_rendering_apps_summary",
+      "attrs": {},
+      "text": "Other apps use OpenGL",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "Singularity/res",
+      "file": "lunaris_strings.xml",
+      "kind": "string",
+      "name": "hybrid_rendering_footer",
+      "attrs": {},
+      "text": "Changing a selection closes the affected running app. SystemUI restarts automatically. Other apps use the new setting the next time they open. Apps use OpenGL if Vulkan is unavailable. To retry Vulkan after a startup crash, turn Hybrid Rendering off and back on.",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "Singularity/res",
+      "file": "lunaris_strings.xml",
+      "kind": "string",
+      "name": "hybrid_rendering_save_failed",
+      "attrs": {},
+      "text": "Could not save app selection",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "Singularity/res",
+      "file": "system_blur_rim_strings.xml",
+      "kind": "string",
+      "name": "system_blur_rim_category",
+      "attrs": {},
+      "text": "Glass rim",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "Singularity/res",
+      "file": "system_blur_rim_strings.xml",
+      "kind": "string",
+      "name": "system_blur_rim_title",
+      "attrs": {},
+      "text": "Enable glass rim",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "Singularity/res",
+      "file": "system_blur_rim_strings.xml",
+      "kind": "string",
+      "name": "system_blur_rim_summary",
+      "attrs": {},
+      "text": "Add soft edge highlights to system and launcher blur surfaces",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "Singularity/res",
+      "file": "system_blur_rim_strings.xml",
+      "kind": "string",
+      "name": "system_blur_rim_color_title",
+      "attrs": {},
+      "text": "Rim color",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "Singularity/res",
+      "file": "system_blur_rim_strings.xml",
+      "kind": "string",
+      "name": "system_blur_rim_strength_title",
+      "attrs": {},
+      "text": "Overall brightness",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "Singularity/res",
+      "file": "system_blur_rim_strings.xml",
+      "kind": "string",
+      "name": "system_blur_rim_top_title",
+      "attrs": {},
+      "text": "Top edge brightness",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "Singularity/res",
+      "file": "system_blur_rim_strings.xml",
+      "kind": "string",
+      "name": "system_blur_rim_bottom_title",
+      "attrs": {},
+      "text": "Bottom edge brightness",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "Singularity/res",
+      "file": "system_blur_rim_strings.xml",
+      "kind": "string",
+      "name": "system_blur_rim_side_title",
+      "attrs": {},
+      "text": "Side edge brightness",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "Singularity/res",
+      "file": "system_blur_rim_strings.xml",
+      "kind": "string",
+      "name": "system_blur_rim_width_title",
+      "attrs": {},
+      "text": "Edge width",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "Singularity/res",
+      "file": "system_blur_rim_strings.xml",
+      "kind": "string",
+      "name": "system_blur_rim_depth_title",
+      "attrs": {},
+      "text": "Glow depth",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "Singularity/res",
+      "file": "system_blur_rim_strings.xml",
+      "kind": "string",
+      "name": "system_blur_rim_glow_title",
+      "attrs": {},
+      "text": "Glow brightness",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "Singularity/res",
+      "file": "system_blur_rim_strings.xml",
+      "kind": "string",
+      "name": "system_blur_rim_corner_width_title",
+      "attrs": {},
+      "text": "Corner width",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "Singularity/res",
+      "file": "system_blur_rim_strings.xml",
+      "kind": "string",
+      "name": "system_blur_rim_corner_width_summary",
+      "attrs": {
+        "formatted": "false"
+      },
+      "text": "Lower values make corners thinner; 100% keeps the width uniform",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "Singularity/res",
+      "file": "system_blur_rim_strings.xml",
+      "kind": "string",
+      "name": "system_blur_rim_corner_brightness_title",
+      "attrs": {},
+      "text": "Corner brightness",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "Singularity/res",
+      "file": "system_blur_rim_strings.xml",
+      "kind": "string",
+      "name": "system_blur_rim_taper_title",
+      "attrs": {},
+      "text": "Corner taper",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "Singularity/res",
+      "file": "system_blur_rim_strings.xml",
+      "kind": "string",
+      "name": "system_blur_rim_taper_summary",
+      "attrs": {},
+      "text": "Higher values concentrate thinning more narrowly in the corners",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "Singularity/res",
+      "file": "system_blur_rim_strings.xml",
+      "kind": "string",
+      "name": "system_blur_preview_description",
+      "attrs": {},
+      "text": "Live preview of system blur, tint and glass rim",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "Singularity/res",
+      "file": "system_blur_rim_strings.xml",
+      "kind": "string",
+      "name": "system_blur_preview_backdrop_dark",
+      "attrs": {},
+      "text": "Dark",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "Singularity/res",
+      "file": "system_blur_rim_strings.xml",
+      "kind": "string",
+      "name": "system_blur_preview_backdrop_light",
+      "attrs": {},
+      "text": "Light",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "Singularity/res",
+      "file": "system_blur_rim_strings.xml",
+      "kind": "string",
+      "name": "system_blur_preview_values_button",
+      "attrs": {},
+      "text": "Values &amp; test",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "Singularity/res",
+      "file": "system_blur_rim_strings.xml",
+      "kind": "string",
+      "name": "system_blur_preview_dialog_title",
+      "attrs": {},
+      "text": "Current blur values",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "Singularity/res",
+      "file": "system_blur_rim_strings.xml",
+      "kind": "string",
+      "name": "system_blur_preview_copy",
+      "attrs": {},
+      "text": "Copy",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "Singularity/res",
+      "file": "system_blur_rim_strings.xml",
+      "kind": "string",
+      "name": "system_blur_preview_copied",
+      "attrs": {},
+      "text": "Blur values copied to clipboard",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "Singularity/res",
+      "file": "system_blur_rim_strings.xml",
+      "kind": "string",
+      "name": "system_blur_preview_reset_rim",
+      "attrs": {},
+      "text": "Reset rim",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "Singularity/res",
+      "file": "system_blur_rim_strings.xml",
+      "kind": "string",
+      "name": "system_blur_preview_rim_reset_done",
+      "attrs": {},
+      "text": "Glass rim values reset to defaults",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "Singularity/res",
+      "file": "system_blur_rim_strings.xml",
+      "kind": "string",
+      "name": "system_blur_preview_state_on",
+      "attrs": {},
+      "text": "On",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "Singularity/res",
+      "file": "system_blur_rim_strings.xml",
+      "kind": "string",
+      "name": "system_blur_preview_state_off",
+      "attrs": {},
+      "text": "Off",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "Singularity/res",
+      "file": "system_blur_rim_strings.xml",
+      "kind": "string",
+      "name": "system_blur_preview_default_label",
+      "attrs": {},
+      "text": "Default",
+      "items": null
+    },
+    {
+      "package": "Settings",
+      "source": "packages/apps/Settings",
+      "resdir": "Singularity/res",
+      "file": "system_blur_rim_strings.xml",
+      "kind": "string",
+      "name": "system_blur_preview_disabled_label",
+      "attrs": {},
+      "text": "Disabled",
       "items": null
     },
     {
@@ -47606,6 +48186,50 @@
       "name": "lunaris_qs_photo_dim",
       "attrs": {},
       "text": "Dim",
+      "items": null
+    },
+    {
+      "package": "SystemUI",
+      "source": "frameworks/base/packages/SystemUI",
+      "resdir": "res",
+      "file": "ax_qs_strings.xml",
+      "kind": "string",
+      "name": "ax_qs_settings_step_based_volume",
+      "attrs": {},
+      "text": "Step-based volume adjustment",
+      "items": null
+    },
+    {
+      "package": "SystemUI",
+      "source": "frameworks/base/packages/SystemUI",
+      "resdir": "res",
+      "file": "ax_qs_strings.xml",
+      "kind": "string",
+      "name": "ax_qs_settings_step_based_volume_summary",
+      "attrs": {},
+      "text": "Turn off to slide smoothly between volume levels",
+      "items": null
+    },
+    {
+      "package": "SystemUI",
+      "source": "frameworks/base/packages/SystemUI",
+      "resdir": "res",
+      "file": "ax_qs_strings.xml",
+      "kind": "string",
+      "name": "lunaris_qs_two_row_header",
+      "attrs": {},
+      "text": "Two-row header",
+      "items": null
+    },
+    {
+      "package": "SystemUI",
+      "source": "frameworks/base/packages/SystemUI",
+      "resdir": "res",
+      "file": "ax_qs_strings.xml",
+      "kind": "string",
+      "name": "lunaris_qs_two_row_header_summary",
+      "attrs": {},
+      "text": "Show shortcuts above carrier info in Quick Settings and a large clock above it in notifications.",
       "items": null
     },
     {
@@ -50886,6 +51510,28 @@
       "resdir": "res",
       "file": "lunaris_strings.xml",
       "kind": "string",
+      "name": "lunaris_qs_brightness_tile",
+      "attrs": {},
+      "text": "Brightness controls (2×2)",
+      "items": null
+    },
+    {
+      "package": "SystemUI",
+      "source": "frameworks/base/packages/SystemUI",
+      "resdir": "res",
+      "file": "lunaris_strings.xml",
+      "kind": "string",
+      "name": "lunaris_qs_volume_tile",
+      "attrs": {},
+      "text": "Volume controls (2×2)",
+      "items": null
+    },
+    {
+      "package": "SystemUI",
+      "source": "frameworks/base/packages/SystemUI",
+      "resdir": "res",
+      "file": "lunaris_strings.xml",
+      "kind": "string",
       "name": "lunaris_qs_flashlight_slider",
       "attrs": {},
       "text": "Flashlight slider",
@@ -53419,6 +54065,28 @@
       "resdir": "res",
       "file": "lunaris_strings.xml",
       "kind": "string",
+      "name": "ax_dynamic_bar_notification",
+      "attrs": {},
+      "text": "Notification",
+      "items": null
+    },
+    {
+      "package": "SystemUI",
+      "source": "frameworks/base/packages/SystemUI",
+      "resdir": "res",
+      "file": "lunaris_strings.xml",
+      "kind": "string",
+      "name": "ax_dynamic_bar_sensitive_content",
+      "attrs": {},
+      "text": "Sensitive content",
+      "items": null
+    },
+    {
+      "package": "SystemUI",
+      "source": "frameworks/base/packages/SystemUI",
+      "resdir": "res",
+      "file": "lunaris_strings.xml",
+      "kind": "string",
       "name": "quick_settings_screenshot_label",
       "attrs": {},
       "text": "Screenshot",
@@ -55880,6 +56548,28 @@
       "name": "hotseat_blur_summary",
       "attrs": {},
       "text": "Apply blur effect to hotseat background",
+      "items": null
+    },
+    {
+      "package": "Launcher3",
+      "source": "packages/apps/Launcher3",
+      "resdir": "res",
+      "file": "cr_strings.xml",
+      "kind": "string",
+      "name": "folder_preview_blur_title",
+      "attrs": {},
+      "text": "Folder preview blur",
+      "items": null
+    },
+    {
+      "package": "Launcher3",
+      "source": "packages/apps/Launcher3",
+      "resdir": "res",
+      "file": "cr_strings.xml",
+      "kind": "string",
+      "name": "folder_preview_blur_summary",
+      "attrs": {},
+      "text": "Blur the background of folder previews",
       "items": null
     },
     {
@@ -59636,7 +60326,29 @@
       "kind": "string",
       "name": "folder_shape_normal_only",
       "attrs": {},
-      "text": "Applies to 1×1 folders. Expanded folders automatically use their standard shape.",
+      "text": "The shapes below apply to 1×1 folders.",
+      "items": null
+    },
+    {
+      "package": "Launcher3",
+      "source": "packages/apps/Launcher3",
+      "resdir": "res",
+      "file": "cr_strings.xml",
+      "kind": "string",
+      "name": "folder_shape_circular_expanded_title",
+      "attrs": {},
+      "text": "Circular expanded folders",
+      "items": null
+    },
+    {
+      "package": "Launcher3",
+      "source": "packages/apps/Launcher3",
+      "resdir": "res",
+      "file": "cr_strings.xml",
+      "kind": "string",
+      "name": "folder_shape_circular_expanded_summary",
+      "attrs": {},
+      "text": "Use a circular background for large folders. Horizontal and vertical folders keep their capsule shape.",
       "items": null
     },
     {
@@ -61038,6 +61750,17 @@
       "name": "show_at_a_glance_summary",
       "attrs": {},
       "text": "Show Quickspace or Smartspace on the home screen",
+      "items": null
+    },
+    {
+      "package": "Launcher3",
+      "source": "packages/apps/Launcher3",
+      "resdir": "res",
+      "file": "smartspace_strings.xml",
+      "kind": "string",
+      "name": "at_a_glance_black_title",
+      "attrs": {},
+      "text": "Use black text and icons",
       "items": null
     },
     {
@@ -64510,6 +65233,83 @@
       "name": "clock_maker_clock_share_error_summary",
       "attrs": {},
       "text": "Check that the clock’s images and fonts are still available and that an app is available to share files, then try again.",
+      "items": null
+    },
+    {
+      "package": "LockStyles",
+      "source": "packages/apps/LockStyles",
+      "resdir": "res",
+      "file": "depth_models.xml",
+      "kind": "string",
+      "name": "depth_wallpaper_models_title",
+      "attrs": {},
+      "text": "Depth wallpaper models",
+      "items": null
+    },
+    {
+      "package": "LockStyles",
+      "source": "packages/apps/LockStyles",
+      "resdir": "res",
+      "file": "depth_models.xml",
+      "kind": "string",
+      "name": "models_downloading",
+      "attrs": {},
+      "text": "Downloading models",
+      "items": null
+    },
+    {
+      "package": "LockStyles",
+      "source": "packages/apps/LockStyles",
+      "resdir": "res",
+      "file": "depth_models.xml",
+      "kind": "string",
+      "name": "models_ready",
+      "attrs": {},
+      "text": "Available offline",
+      "items": null
+    },
+    {
+      "package": "LockStyles",
+      "source": "packages/apps/LockStyles",
+      "resdir": "res",
+      "file": "depth_models.xml",
+      "kind": "string",
+      "name": "models_offline",
+      "attrs": {},
+      "text": "Offline model storage",
+      "items": null
+    },
+    {
+      "package": "LockStyles",
+      "source": "packages/apps/LockStyles",
+      "resdir": "res",
+      "file": "depth_models.xml",
+      "kind": "string",
+      "name": "models_size",
+      "attrs": {},
+      "text": "%1$s of %2$s · %3$s",
+      "items": null
+    },
+    {
+      "package": "LockStyles",
+      "source": "packages/apps/LockStyles",
+      "resdir": "res",
+      "file": "depth_models.xml",
+      "kind": "string",
+      "name": "models_download",
+      "attrs": {},
+      "text": "Download all models",
+      "items": null
+    },
+    {
+      "package": "LockStyles",
+      "source": "packages/apps/LockStyles",
+      "resdir": "res",
+      "file": "depth_models.xml",
+      "kind": "string",
+      "name": "models_delete",
+      "attrs": {},
+      "text": "Delete downloaded models",
       "items": null
     },
     {
@@ -74591,7 +75391,7 @@
       "attrs": {
         "formatted": "false"
       },
-      "text": "Full app compilation, storage maintenance, and zRAM compaction. Uses more time, power, and disk space. Requires charging or battery above 25%.",
+      "text": "Advanced usage-based dexopt, storage maintenance, and zRAM compaction.",
       "items": null
     },
     {
@@ -74769,7 +75569,7 @@
       "attrs": {
         "formatted": "false"
       },
-      "text": "Full compilation requires charging or battery above 25% and may take a long time. It can use additional storage; compilation stops before the next app if unplugged battery reaches 25% or the device becomes too warm.",
+      "text": "Speed compilation requires charging or battery above 25% and may take a long time. It can use additional storage; compilation stops before the next app if unplugged battery reaches 25% or the device becomes too warm.",
       "items": null
     },
     {
@@ -74825,6 +75625,17 @@
       "name": "configure",
       "attrs": {},
       "text": "Configure",
+      "items": null
+    },
+    {
+      "package": "OptimizationEngine",
+      "source": "packages/apps/OptimizationEngine",
+      "resdir": "res",
+      "file": "strings.xml",
+      "kind": "string",
+      "name": "full_compile_detail",
+      "attrs": {},
+      "text": "Choose speed-profile to compile using app profiles or speed to compile all eligible methods.",
       "items": null
     },
     {
@@ -78280,6 +79091,61 @@
       "name": "app_name",
       "attrs": {},
       "text": "LMOFreeform",
+      "items": null
+    },
+    {
+      "package": "LMOFreeform",
+      "source": "packages/apps/LMOFreeform/app/src/main",
+      "resdir": "res",
+      "file": "strings.xml",
+      "kind": "string",
+      "name": "freeform_window_controls",
+      "attrs": {},
+      "text": "Window controls",
+      "items": null
+    },
+    {
+      "package": "LMOFreeform",
+      "source": "packages/apps/LMOFreeform/app/src/main",
+      "resdir": "res",
+      "file": "strings.xml",
+      "kind": "string",
+      "name": "freeform_back",
+      "attrs": {},
+      "text": "Back",
+      "items": null
+    },
+    {
+      "package": "LMOFreeform",
+      "source": "packages/apps/LMOFreeform/app/src/main",
+      "resdir": "res",
+      "file": "strings.xml",
+      "kind": "string",
+      "name": "freeform_pin",
+      "attrs": {},
+      "text": "Pin app",
+      "items": null
+    },
+    {
+      "package": "LMOFreeform",
+      "source": "packages/apps/LMOFreeform/app/src/main",
+      "resdir": "res",
+      "file": "strings.xml",
+      "kind": "string",
+      "name": "freeform_fullscreen",
+      "attrs": {},
+      "text": "Open full screen",
+      "items": null
+    },
+    {
+      "package": "LMOFreeform",
+      "source": "packages/apps/LMOFreeform/app/src/main",
+      "resdir": "res",
+      "file": "strings.xml",
+      "kind": "string",
+      "name": "freeform_close",
+      "attrs": {},
+      "text": "Close",
       "items": null
     },
     {

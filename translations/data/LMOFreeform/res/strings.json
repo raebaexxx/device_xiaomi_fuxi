@@ -1,6 +1,11 @@
 {
   "strings": {
-    "app_name": "LMOFreeform"
+    "app_name": "LMOFreeform",
+    "freeform_window_controls": "Управление окном",
+    "freeform_back": "Назад",
+    "freeform_pin": "Закрепить приложение",
+    "freeform_fullscreen": "Открыть на весь экран",
+    "freeform_close": "Закрыть"
   },
   "plurals": {},
   "arrays": {}

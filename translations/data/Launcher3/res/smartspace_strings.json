@@ -51,7 +51,8 @@
     "smartspace_next_alarm": "Предстоящий будильник",
     "smartspace_weather_with_conditions": "%1$s · %2$s",
     "smartspace_event_untitled": "Событие календаря",
-    "smartspace_action_unavailable": "Это действие больше недоступно"
+    "smartspace_action_unavailable": "Это действие больше недоступно",
+    "at_a_glance_black_title": "Использовать чёрный текст и значки"
   },
   "plurals": {},
   "arrays": {}

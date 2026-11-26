@@ -1,0 +1,13 @@
+{
+  "strings": {
+    "depth_wallpaper_models_title": "Модели обоев с глубиной",
+    "models_downloading": "Загрузка моделей",
+    "models_ready": "Доступно офлайн",
+    "models_offline": "Офлайн-хранилище моделей",
+    "models_size": "%1$s из %2$s · %3$s",
+    "models_download": "Загрузить все модели",
+    "models_delete": "Удалить загруженные модели"
+  },
+  "plurals": {},
+  "arrays": {}
+}

@@ -1803,6 +1803,8 @@
     <string name="show_volume_percentage_title">Показывать процент громкости</string>
     <string name="show_volume_percentage_summary">Показывать процент громкости в переработанном диалоге громкости</string>
     <string name="volume_category">Громкость</string>
+    <string name="compose_volume_compact_pill_title">Компактная полоса громкости</string>
+    <string name="compose_volume_compact_pill_summary">Показывать узкий индикатор уровня при регулировке громкости. Нажмите, чтобы открыть выбранную панель.</string>
     <string name="compose_volume_style_title">Панель громкости Compose</string>
     <string name="status_bar_icon_order_title">Порядок значков строки состояния</string>
     <string name="status_bar_icon_order_summary">Включить устаревший порядок значков строки состояния</string>
@@ -1980,12 +1982,18 @@
     <string name="dynamic_bar_chip_style_title">Стиль чипа в строке состояния</string>
     <string name="dynamic_bar_keyguard_enable">Динамическая панель на экране блокировки</string>
     <string name="dynamic_bar_keyguard_enable_summary">Заменять индикацию экрана блокировки динамическим чипом с элементами управления и быстрыми действиями</string>
+    <string name="dynamic_bar_lockscreen_title">Dynamic Bar на экране блокировки</string>
+    <string name="dynamic_bar_lockscreen_footer_body">Dynamic Bar показывает события внизу экрана блокировки с элементами управления и быстрыми действиями. Его переключатель и набор событий не зависят от Dynamic Bar в строке состояния.</string>
+    <string name="dynamic_bar_event_now_playing">Сейчас играет</string>
+    <string name="dynamic_bar_event_now_playing_summary">Распознанные песни на экране блокировки</string>
     <string name="dynamic_bar_keyguard_battery_chip">Информация об аккумуляторе на экране блокировки</string>
     <string name="dynamic_bar_keyguard_battery_chip_disabled">Никогда не показывать</string>
     <string name="dynamic_bar_keyguard_battery_chip_charging">Только при зарядке</string>
     <string name="dynamic_bar_keyguard_battery_chip_always">Показывать всегда</string>
     <string name="dynamic_bar_keyguard_music_pill">Музыкальная плашка на экране блокировки</string>
     <string name="dynamic_bar_keyguard_music_pill_summary">Показывать медиаплеер в виде плашки на экране блокировки</string>
+    <string name="dynamic_bar_keyguard_coloros_style">Раскрытие в стиле ColorOS</string>
+    <string name="dynamic_bar_keyguard_coloros_style_summary">Скрывать уведомления и медиа на экране блокировки за пилюлей; нажмите, чтобы раскрыть уведомления полностью</string>
     <string name="dynamic_bar_keyguard_compact_chip">Компактный чип на экране блокировки</string>
     <string name="dynamic_bar_keyguard_compact_chip_summary">Всегда использовать компактный стиль чипа на экране блокировки. Если выключено, компактный режим применяется только при ограниченном пространстве.</string>
     <string name="dynamic_bar_events">События</string>
@@ -2422,4 +2430,22 @@
     <string name="system_blur_radius_override_title">Переопределить радиус размытия</string>
     <string name="system_blur_radius_override_summary">Использовать одинаковый радиус для всех поверхностей с системным размытием</string>
     <string name="system_blur_radius_title">Радиус</string>
+    <string name="hybrid_rendering_title">Гибридный рендеринг (экспериментально)</string>
+    <string name="hybrid_rendering_summary">Выберите приложения, которые используют Vulkan для интерфейса</string>
+    <string name="hybrid_rendering_enable">Использовать гибридный рендеринг</string>
+    <string name="hybrid_rendering_warning_title">Экспериментальная функция</string>
+    <string name="hybrid_rendering_warning_summary">На некоторых устройствах Vulkan может вызывать визуальные артефакты, проблемы с воспроизведением видео или сбои. Если приложение работает неправильно, отключите Vulkan для него и откройте заново. Чтобы вернуть стандартный рендеринг для всех приложений, отключите гибридный рендеринг.</string>
+    <string name="hybrid_rendering_systemui">Использовать Vulkan для SystemUI</string>
+    <string name="hybrid_rendering_systemui_summary">Строка состояния, панель навигации, быстрые настройки и панель громкости</string>
+    <string name="hybrid_rendering_launcher">Использовать Vulkan для стандартного лаунчера</string>
+    <string name="hybrid_rendering_apps">Приложения, использующие Vulkan</string>
+    <plurals name="hybrid_rendering_selection">
+        <item quantity="one">Выбрано приложений: %1$d · %2$s</item>
+        <item quantity="few">Выбрано приложений: %1$d · %2$s</item>
+        <item quantity="many">Выбрано приложений: %1$d · %2$s</item>
+        <item quantity="other">Выбрано приложений: %1$d · %2$s</item>
+    </plurals>
+    <string name="hybrid_rendering_apps_summary">Другие приложения используют OpenGL</string>
+    <string name="hybrid_rendering_footer">Изменение выбора закрывает затронутое запущенное приложение. SystemUI перезапускается автоматически. Остальные приложения применят настройку при следующем открытии. Если Vulkan недоступен, приложения используют OpenGL. Чтобы повторить попытку с Vulkan после сбоя при запуске, отключите и снова включите гибридный рендеринг.</string>
+    <string name="hybrid_rendering_save_failed">Не удалось сохранить выбор приложений</string>
 </resources>

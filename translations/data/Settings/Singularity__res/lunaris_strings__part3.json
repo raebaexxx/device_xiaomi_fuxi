@@ -704,8 +704,35 @@
     "system_blur_radius_category": "Радиус размытия",
     "system_blur_radius_override_title": "Переопределить радиус размытия",
     "system_blur_radius_override_summary": "Использовать одинаковый радиус для всех поверхностей с системным размытием",
-    "system_blur_radius_title": "Радиус"
+    "system_blur_radius_title": "Радиус",
+    "compose_volume_compact_pill_title": "Компактная полоса громкости",
+    "compose_volume_compact_pill_summary": "Показывать узкий индикатор уровня при регулировке громкости. Нажмите, чтобы открыть выбранную панель.",
+    "dynamic_bar_lockscreen_title": "Dynamic Bar на экране блокировки",
+    "dynamic_bar_lockscreen_footer_body": "Dynamic Bar показывает события внизу экрана блокировки с элементами управления и быстрыми действиями. Его переключатель и набор событий не зависят от Dynamic Bar в строке состояния.",
+    "dynamic_bar_event_now_playing": "Сейчас играет",
+    "dynamic_bar_event_now_playing_summary": "Распознанные песни на экране блокировки",
+    "dynamic_bar_keyguard_coloros_style": "Раскрытие в стиле ColorOS",
+    "dynamic_bar_keyguard_coloros_style_summary": "Скрывать уведомления и медиа на экране блокировки за пилюлей; нажмите, чтобы раскрыть уведомления полностью",
+    "hybrid_rendering_title": "Гибридный рендеринг (экспериментально)",
+    "hybrid_rendering_summary": "Выберите приложения, которые используют Vulkan для интерфейса",
+    "hybrid_rendering_enable": "Использовать гибридный рендеринг",
+    "hybrid_rendering_warning_title": "Экспериментальная функция",
+    "hybrid_rendering_warning_summary": "На некоторых устройствах Vulkan может вызывать визуальные артефакты, проблемы с воспроизведением видео или сбои. Если приложение работает неправильно, отключите Vulkan для него и откройте заново. Чтобы вернуть стандартный рендеринг для всех приложений, отключите гибридный рендеринг.",
+    "hybrid_rendering_systemui": "Использовать Vulkan для SystemUI",
+    "hybrid_rendering_systemui_summary": "Строка состояния, панель навигации, быстрые настройки и панель громкости",
+    "hybrid_rendering_launcher": "Использовать Vulkan для стандартного лаунчера",
+    "hybrid_rendering_apps": "Приложения, использующие Vulkan",
+    "hybrid_rendering_apps_summary": "Другие приложения используют OpenGL",
+    "hybrid_rendering_footer": "Изменение выбора закрывает затронутое запущенное приложение. SystemUI перезапускается автоматически. Остальные приложения применят настройку при следующем открытии. Если Vulkan недоступен, приложения используют OpenGL. Чтобы повторить попытку с Vulkan после сбоя при запуске, отключите и снова включите гибридный рендеринг.",
+    "hybrid_rendering_save_failed": "Не удалось сохранить выбор приложений"
   },
-  "plurals": {},
+  "plurals": {
+    "hybrid_rendering_selection": {
+      "one": "Выбрано приложений: %1$d · %2$s",
+      "few": "Выбрано приложений: %1$d · %2$s",
+      "many": "Выбрано приложений: %1$d · %2$s",
+      "other": "Выбрано приложений: %1$d · %2$s"
+    }
+  },
   "arrays": {}
 }

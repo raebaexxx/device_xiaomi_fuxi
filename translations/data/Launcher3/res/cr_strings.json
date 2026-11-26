@@ -383,7 +383,11 @@
     "folder_shape_custom_title": "Своя форма папки",
     "folder_shape_custom_create": "Создать свою форму папки",
     "folder_shape_custom_edit": "Изменить свою форму папки",
-    "folder_shape_normal_only": "Применяется к папкам 1×1. Раскрытые папки автоматически используют стандартную форму."
+    "folder_shape_normal_only": "Применяется к папкам 1×1. Раскрытые папки автоматически используют стандартную форму.",
+    "folder_preview_blur_title": "Размытие предпросмотра папок",
+    "folder_preview_blur_summary": "Размывать фон предпросмотра папок",
+    "folder_shape_circular_expanded_title": "Круглые раскрытые папки",
+    "folder_shape_circular_expanded_summary": "Использовать круглый фон для больших папок. Горизонтальные и вертикальные папки сохраняют форму капсулы."
   },
   "plurals": {},
   "arrays": {

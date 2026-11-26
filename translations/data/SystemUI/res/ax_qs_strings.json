@@ -143,7 +143,11 @@
     "lunaris_qs_photo_sepia": "Сепия",
     "lunaris_qs_photo_warm": "Тёплый",
     "lunaris_qs_photo_cool": "Холодный",
-    "lunaris_qs_photo_dim": "Затемнённый"
+    "lunaris_qs_photo_dim": "Затемнённый",
+    "ax_qs_settings_step_based_volume": "Пошаговая регулировка громкости",
+    "ax_qs_settings_step_based_volume_summary": "Отключите для плавного изменения громкости",
+    "lunaris_qs_two_row_header": "Двухрядный заголовок",
+    "lunaris_qs_two_row_header_summary": "Показывать ярлыки над информацией оператора в быстрых настройках и большие часы над ними в уведомлениях."
   },
   "plurals": {},
   "arrays": {}

@@ -290,7 +290,11 @@
     "lunaris_qs_folder_limit": "Не более 2 папок на панель",
     "lunaris_qs_folder_empty": "Добавьте плитки в редакторе быстрых настроек",
     "lunaris_qs_folder_shape_panel": "Использовать форму панели",
-    "lunaris_qs_folder_resize_hint": "Выберите плитку, затем перетащите её угол для изменения размера. Нажмите на угол, чтобы изменить ширину."
+    "lunaris_qs_folder_resize_hint": "Выберите плитку, затем перетащите её угол для изменения размера. Нажмите на угол, чтобы изменить ширину.",
+    "lunaris_qs_brightness_tile": "Управление яркостью (2×2)",
+    "lunaris_qs_volume_tile": "Управление громкостью (2×2)",
+    "ax_dynamic_bar_notification": "Уведомление",
+    "ax_dynamic_bar_sensitive_content": "Конфиденциальное содержимое"
   },
   "plurals": {
     "quick_settings_internet_hotspot_summary_num_devices": {

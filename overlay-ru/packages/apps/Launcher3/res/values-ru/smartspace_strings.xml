@@ -5,6 +5,7 @@
     <string name="at_a_glance_title">С первого взгляда</string>
     <string name="show_at_a_glance_title">Показывать «С первого взгляда»</string>
     <string name="show_at_a_glance_summary">Показывать Quickspace или Smartspace на главном экране</string>
+    <string name="at_a_glance_black_title">Использовать чёрный текст и значки</string>
     <string name="use_smartspace_title">Использовать Smartspace</string>
     <string name="use_smartspace_on">Smartspace (по умолчанию)</string>
     <string name="use_smartspace_off">Quickspace</string>
