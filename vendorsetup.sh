@@ -40,6 +40,13 @@ _fuxi_apply_patch() {
 _fuxi_apply_patch "frameworks/base" \
     "$_fuxi_patches/frameworks_base/0001-telephony-report-real-hardware-CA.patch"
 
+# A composite Bluetooth gamepad (for example, a DualShock 4) can be added to
+# the input stack one subdevice at a time. The touchpad-only view is briefly
+# mistaken for a fake Bluetooth pointer and the whole device gets disabled;
+# re-enable it once keyboard/gamepad sources show up.
+_fuxi_apply_patch "frameworks/base" \
+    "$_fuxi_patches/frameworks_base/0002-input-reenable-composite-gamepads.patch"
+
 # Settings' new Compose homepage hardcodes its tile labels and search hints.
 # Patch them to resource lookups so the Russian overlay can translate them.
 _fuxi_apply_patch "packages/apps/Settings" \

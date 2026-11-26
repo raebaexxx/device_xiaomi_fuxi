@@ -1,0 +1,48 @@
+diff --git a/services/core/java/com/android/server/input/InputManagerService.java b/services/core/java/com/android/server/input/InputManagerService.java
+index 6466aad3d..1ae20978a 100644
+--- a/services/core/java/com/android/server/input/InputManagerService.java
++++ b/services/core/java/com/android/server/input/InputManagerService.java
+@@ -2489,27 +2489,42 @@ public class InputManagerService extends IInputManager.Stub
+         synchronized (mInputDevicesLock) {
+             devices = mInputDevices;
+         }
++        final ArrayList<Integer> devicesToEnable = new ArrayList<>();
+         synchronized (mInputDevicesLock) {
+             for (int i = mSuppressedBluetoothPointers.size() - 1; i >= 0; i--) {
+                 final int trackedId = mSuppressedBluetoothPointers.keyAt(i);
+                 boolean stillPresent = false;
++                boolean hasRealInputSources = false;
+                 for (InputDevice device : devices) {
+                     if (device.getId() == trackedId) {
+                         stillPresent = true;
++                        hasRealInputSources = (device.getSources()
++                                & (InputDevice.SOURCE_KEYBOARD | InputDevice.SOURCE_GAMEPAD
++                                        | InputDevice.SOURCE_JOYSTICK)) != 0;
+                         break;
+                     }
+                 }
+                 if (!stillPresent) {
+                     mSuppressedBluetoothPointers.removeAt(i);
++                } else if (hasRealInputSources) {
++                    // A composite device may be suppressed before all of its subdevices
++                    // (for example, the gamepad part of a controller) have been added.
++                    // Once it exposes keyboard or gamepad sources, it is not a fake pointer.
++                    mSuppressedBluetoothPointers.removeAt(i);
++                    devicesToEnable.add(trackedId);
+                 }
+             }
+         }
++        for (int id : devicesToEnable) {
++            mNative.enableInputDevice(id);
++        }
+         for (InputDevice device : devices) {
+             final int id = device.getId();
+             if ((device.getSources() & InputDevice.SOURCE_MOUSE) != InputDevice.SOURCE_MOUSE) {
+                 continue;
+             }
+-            if ((device.getSources() & InputDevice.SOURCE_KEYBOARD) == InputDevice.SOURCE_KEYBOARD) {
++            if ((device.getSources() & (InputDevice.SOURCE_KEYBOARD
++                    | InputDevice.SOURCE_GAMEPAD | InputDevice.SOURCE_JOYSTICK)) != 0) {
+                 continue;
+             }
+             final String btAddress = mNative.getBluetoothAddress(id);
