@@ -52,6 +52,13 @@ _fuxi_apply_patch "frameworks/base" \
 _fuxi_apply_patch "packages/apps/Settings" \
     "$_fuxi_patches/packages_apps_Settings/0001-settings-homepage-translations.patch"
 
+# The Singularity "essential notifications" app picker is an AlertDialog with a
+# hardcoded 460dp text area, so it grows to nearly the full screen, and its
+# title row lets the long localized title push the "show system apps" button
+# out of view. Make the dialog wrap its content and cap the list height.
+_fuxi_apply_patch "packages/apps/Settings/Singularity" \
+    "$_fuxi_patches/packages_apps_Settings/0002-essential-notifications-compact-add-dialog.patch"
+
 # DolbyAtmos still has user-facing Compose/Kotlin literals that a resource
 # overlay cannot reach. Move them to string resources so the RU overlay applies.
 _fuxi_apply_patch "packages/apps/DolbyAtmos" \
