@@ -53,9 +53,12 @@ _fuxi_apply_patch "packages/apps/Settings" \
     "$_fuxi_patches/packages_apps_Settings/0001-settings-homepage-translations.patch"
 
 # The Singularity "essential notifications" app picker is an AlertDialog with a
-# hardcoded 460dp text area, so it grows to nearly the full screen, and its
-# title row lets the long localized title push the "show system apps" button
-# out of view. Make the dialog wrap its content and cap the list height.
+# hardcoded 460dp text area, so it grows to nearly the full screen. Adding a
+# weight to the title in the header row is worse: the localized toggle label is
+# longer than the title, the title gets ~25dp of width and renders one letter
+# per line. Let the dialog wrap its content, cap the app list at 320dp, keep
+# the search hint on one line, and move the system-apps toggle into an
+# overflow menu instead of the title row.
 _fuxi_apply_patch "packages/apps/Settings/Singularity" \
     "$_fuxi_patches/packages_apps_Settings/0002-essential-notifications-compact-add-dialog.patch"
 

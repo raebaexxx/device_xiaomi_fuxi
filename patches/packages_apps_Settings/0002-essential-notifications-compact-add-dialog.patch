@@ -1,5 +1,5 @@
 diff --git i/src/org/lunaris/settings/fragments/notifications/EssentialNotificationsSettings.kt w/src/org/lunaris/settings/fragments/notifications/EssentialNotificationsSettings.kt
-index 8280591..315deab 100644
+index 8280591..6db7652 100644
 --- i/src/org/lunaris/settings/fragments/notifications/EssentialNotificationsSettings.kt
 +++ w/src/org/lunaris/settings/fragments/notifications/EssentialNotificationsSettings.kt
 @@ -27,6 +27,7 @@ import androidx.compose.foundation.layout.Spacer
@@ -10,29 +10,132 @@ index 8280591..315deab 100644
  import androidx.compose.foundation.layout.padding
  import androidx.compose.foundation.layout.size
  import androidx.compose.foundation.layout.width
-@@ -462,7 +463,10 @@ private fun AddAppDialog(
-                 horizontalArrangement = Arrangement.SpaceBetween,
-                 verticalAlignment = Alignment.CenterVertically,
-             ) {
+@@ -38,6 +39,7 @@ import androidx.compose.material.icons.Icons
+ import androidx.compose.material.icons.filled.Add
+ import androidx.compose.material.icons.filled.Check
+ import androidx.compose.material.icons.filled.Delete
++import androidx.compose.material.icons.filled.MoreVert
+ import androidx.compose.material.icons.filled.Notifications
+ import androidx.compose.material.icons.filled.Search
+ import androidx.compose.material.icons.rounded.Close
+@@ -46,6 +48,8 @@ import androidx.compose.material3.Button
+ import androidx.compose.material3.ButtonDefaults
+ import androidx.compose.material3.Card
+ import androidx.compose.material3.CardDefaults
++import androidx.compose.material3.DropdownMenu
++import androidx.compose.material3.DropdownMenuItem
+ import androidx.compose.material3.ExperimentalMaterial3Api
+ import androidx.compose.material3.ExperimentalMaterial3ExpressiveApi
+ import androidx.compose.material3.Icon
+@@ -444,6 +448,7 @@ private fun AddAppDialog(
+ ) {
+     var searchQuery by remember { mutableStateOf("") }
+     var showSystemApps by remember { mutableStateOf(false) }
++    var showSystemMenu by remember { mutableStateOf(false) }
+     var pendingSelections by remember { mutableStateOf(setOf<String>()) }
+ 
+     val filtered = allApps.filter { app ->
+@@ -456,52 +461,73 @@ private fun AddAppDialog(
+ 
+     AlertDialog(
+         onDismissRequest = onDismiss,
+-        title = {
+-            Row(
+-                modifier = Modifier.fillMaxWidth(),
+-                horizontalArrangement = Arrangement.SpaceBetween,
+-                verticalAlignment = Alignment.CenterVertically,
+-            ) {
 -                Text(stringResource(R.string.add_apps))
-+                Text(
-+                    stringResource(R.string.add_apps),
-+                    modifier = Modifier.weight(1f, fill = false),
-+                )
-                 TextButton(onClick = { showSystemApps = !showSystemApps }) {
-                     Text(
-                         if (showSystemApps) stringResource(R.string.hide_system_apps)
-@@ -475,8 +479,7 @@ private fun AddAppDialog(
+-                TextButton(onClick = { showSystemApps = !showSystemApps }) {
+-                    Text(
+-                        if (showSystemApps) stringResource(R.string.hide_system_apps)
+-                        else stringResource(R.string.show_system_apps),
+-                        style = MaterialTheme.typography.labelMedium,
+-                    )
+-                }
+-            }
+-        },
++        title = { Text(stringResource(R.string.add_apps)) },
          text = {
              Column(
-                 modifier = Modifier
+-                modifier = Modifier
 -                    .fillMaxWidth()
 -                    .height(460.dp),
-+                    .fillMaxWidth(),
++                modifier = Modifier.fillMaxWidth(),
                  verticalArrangement = Arrangement.spacedBy(10.dp),
              ) {
-                 OutlinedTextField(
-@@ -501,7 +504,7 @@ private fun AddAppDialog(
+-                OutlinedTextField(
+-                    value = searchQuery,
+-                    onValueChange = { searchQuery = it },
+-                    modifier = Modifier.fillMaxWidth(),
+-                    singleLine = true,
+-                    label = { Text(stringResource(R.string.search_apps)) },
+-                    leadingIcon = {
+-                        Icon(Icons.Default.Search, contentDescription = null)
+-                    },
+-                    trailingIcon = {
+-                        if (searchQuery.isNotEmpty()) {
+-                            IconButton(onClick = { searchQuery = "" }) {
+-                                Icon(Icons.Rounded.Close, contentDescription = null)
++                Row(verticalAlignment = Alignment.CenterVertically) {
++                    OutlinedTextField(
++                        value = searchQuery,
++                        onValueChange = { searchQuery = it },
++                        modifier = Modifier.weight(1f),
++                        singleLine = true,
++                        placeholder = {
++                            Text(
++                                stringResource(R.string.search_apps),
++                                maxLines = 1,
++                                overflow = TextOverflow.Ellipsis,
++                            )
++                        },
++                        leadingIcon = {
++                            Icon(Icons.Default.Search, contentDescription = null)
++                        },
++                        trailingIcon = {
++                            if (searchQuery.isNotEmpty()) {
++                                IconButton(onClick = { searchQuery = "" }) {
++                                    Icon(Icons.Rounded.Close, contentDescription = null)
++                                }
+                             }
++                        },
++                    )
++                    Box {
++                        IconButton(onClick = { showSystemMenu = true }) {
++                            Icon(
++                                Icons.Default.MoreVert,
++                                contentDescription = stringResource(
++                                    if (showSystemApps) R.string.hide_system_apps
++                                    else R.string.show_system_apps
++                                ),
++                            )
+                         }
+-                    },
+-                )
++                        DropdownMenu(
++                            expanded = showSystemMenu,
++                            onDismissRequest = { showSystemMenu = false },
++                        ) {
++                            DropdownMenuItem(
++                                text = {
++                                    Text(
++                                        stringResource(
++                                            if (showSystemApps) R.string.hide_system_apps
++                                            else R.string.show_system_apps
++                                        )
++                                    )
++                                },
++                                onClick = {
++                                    showSystemApps = !showSystemApps
++                                    showSystemMenu = false
++                                },
++                            )
++                        }
++                    }
++                }
+ 
+                 if (filtered.isEmpty()) {
                      Box(
                          modifier = Modifier
                              .fillMaxWidth()
@@ -41,7 +144,7 @@ index 8280591..315deab 100644
                          contentAlignment = Alignment.Center,
                      ) {
                          Column(
-@@ -533,7 +536,7 @@ private fun AddAppDialog(
+@@ -533,7 +559,7 @@ private fun AddAppDialog(
                      Column(
                          modifier = Modifier
                              .fillMaxWidth()
